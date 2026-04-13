@@ -6103,7 +6103,7 @@
    "attributes": {
     "array": {
      "list": [
-      { "value": "Main Room", "varType": "string" },
+      { "value": "Main Hall", "varType": "string" },
       { "value": "The Hub", "varType": "string" },
       { "value": "Upstairs @ The Lounge", "varType": "string" },
       { "value": "Workshop", "varType": "string" }
@@ -28784,7 +28784,7 @@
         "start": 0
        }
       ],
-      "text": "Main Room"
+      "text": "Main Hall"
      },
      "varType": "richText"
     },
@@ -29164,7 +29164,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Venue", "varType": "string" },
     "uuid": { "value": "5da1dfcf-f4da-42b2-ab58-ad43c6f5c635", "varType": "string" }
    },
