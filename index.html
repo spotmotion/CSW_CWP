@@ -230,9 +230,11 @@
         resizeViewportAndSurface()
         window.addEventListener("resize", resizeViewportAndSurface)
 
-        // Start paused on frame 0
+        // Autoplay from frame 0
         app.setFrame(0)
-        if (surface) app.render(surface)
+        app.setLoop(true)
+        app.play()
+        runPlaybackLoop()
 
         // Notify parent that the player is ready
         postToParent({
@@ -241,16 +243,7 @@
           endFrame: app.getEndFrame(),
           fps: app.getFPS(),
           resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
-          isPlaying: false,
-        })
-
-        // Read Control Centre attributes and send to parent
-        const activeComp = app.getActiveComp()
-        const ccAttrs = app.getControlCentreAttributes(activeComp)
-        log("Control Centre attributes:", ccAttrs)
-        postToParent({
-          type: "control-centre-ready",
-          attributes: ccAttrs,
+          isPlaying: true,
         })
 
         log("Registering message listener")

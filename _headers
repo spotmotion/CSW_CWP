@@ -2,17 +2,10 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
 
-/*.wasm
+/wasm-lib/CavalryWasm.wasm
   Content-Type: application/wasm
 
-/*.js
-  Content-Type: application/javascript
-
-/wasm-lib/*.wasm
-  Content-Type: application/wasm
-  Cross-Origin-Resource-Policy: cross-origin
-
-/wasm-lib/*.data
+/wasm-lib/CavalryWasm.data
   Cross-Origin-Resource-Policy: cross-origin
 
 /scenes/*.cv
