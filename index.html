@@ -234,4 +234,132 @@
         // Notify parent that the player is ready
         postToParent({
           type: "player-ready",
-          startFrame: app.get
+          startFrame: app.getStartFrame(),
+          endFrame: app.getEndFrame(),
+          fps: app.getFPS(),
+          resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
+          isPlaying: false,
+        })
+
+        log("Registering message listener")
+
+        window.addEventListener("message", (event) => {
+          const data = event.data
+          if (!data || typeof data !== "object") return
+
+          if (data.type === "player-control") {
+            try {
+              switch (data.action) {
+                case "play":
+                  app.play()
+                  runPlaybackLoop()
+                  break
+
+                case "pause":
+                  app.stop()
+                  stopPlaybackLoop()
+                  if (surface) app.render(surface)
+                  emitFrameUpdate()
+                  break
+
+                case "toggle":
+                  if (app.isPlaying()) {
+                    app.stop()
+                    stopPlaybackLoop()
+                    if (surface) app.render(surface)
+                  } else {
+                    app.play()
+                    runPlaybackLoop()
+                  }
+                  emitFrameUpdate()
+                  break
+
+                case "setFrame": {
+                  const frame = data.frame
+                  if (typeof frame === "number") {
+                    app.stop()
+                    stopPlaybackLoop()
+                    app.setFrame(frame)
+                    if (surface) app.render(surface)
+                    emitFrameUpdate()
+                  }
+                  break
+                }
+
+                case "setLoop":
+                  if (typeof data.loop === "boolean") {
+                    app.setLoop(data.loop)
+                  }
+                  break
+
+                case "setPlaybackMode":
+                  if (typeof data.mode === "number") {
+                    app.setPlaybackMode(data.mode)
+                  }
+                  break
+
+                case "setCompTimeMultiplier":
+                  if (typeof data.multiplier === "number") {
+                    app.setCompTimeMultiplier(data.multiplier)
+                  }
+                  break
+
+                case "getState":
+                  postToParent({
+                    type: "player-ready",
+                    startFrame: app.getStartFrame(),
+                    endFrame: app.getEndFrame(),
+                    fps: app.getFPS(),
+                    resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
+                    isPlaying: app.isPlaying(),
+                  })
+                  emitFrameUpdate()
+                  break
+              }
+            } catch (err) {
+              console.error("[CWP] player-control failed", err)
+            }
+            return
+          }
+
+          if (data.type === "set-attribute") {
+            const { path, value } = data
+            if (typeof path !== "string" || !path.includes(".")) return
+
+            try {
+              const nodeId = path.slice(0, path.indexOf("."))
+              const attr = path.slice(path.indexOf(".") + 1)
+
+              app.setAttribute(nodeId, attr, value)
+
+              if (path === "compNode#1.resolution") {
+                const [w, h] = value
+                if (w > 0 && h > 0) {
+                  SCENE_WIDTH = w
+                  SCENE_HEIGHT = h
+                  log("Resolution updated:", w, "x", h)
+                  resizeViewportAndSurface()
+                }
+              }
+
+              if (surface) app.render(surface)
+            } catch (err) {
+              console.error("[CWP] setAttribute failed", err)
+            }
+            return
+          }
+        })
+
+        log("Running ✓")
+      } catch (err) {
+        console.error("[CWP] Fatal error", err)
+        document.body.innerHTML = `
+          <div style="padding:16px;font-family:system-ui;color:#c00">
+            <strong>Cavalry Web Player failed to start.</strong><br/>
+            Open DevTools → Console for details.
+          </div>
+        `
+      }
+    </script>
+  </body>
+</html>
