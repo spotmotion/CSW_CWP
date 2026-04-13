@@ -6048,7 +6048,7 @@
     "uuid": { "value": "fb78f9cf-e3ed-4d15-90b5-bf1bb94a7c5a", "varType": "string" }
    },
    "contextFilter": [ 1 ],
-   "hierarchyOffset": 206.0,
+   "hierarchyOffset": 171.0,
    "nodeId": "compositionReference#36",
    "nodeType": "compositionReference"
   },
@@ -12720,7 +12720,7 @@
     "uuid": { "value": "207f087f-8d6c-4123-9ffc-8e910a58b33f", "varType": "string" }
    },
    "contextFilter": [ 1 ],
-   "hierarchyOffset": 252.0,
+   "hierarchyOffset": 217.0,
    "nodeId": "compositionReference#34",
    "nodeType": "compositionReference"
   },
@@ -13143,7 +13143,7 @@
     "uuid": { "value": "2eb65e31-4fd0-4e3b-aa09-cea0de8dec5d", "varType": "string" }
    },
    "contextFilter": [ 1 ],
-   "hierarchyOffset": 242.0,
+   "hierarchyOffset": 207.0,
    "nodeId": "compositionReference#35",
    "nodeType": "compositionReference"
   },
@@ -29732,7 +29732,7 @@
     "niceName": { "value": "Title Box", "varType": "string" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
-   "hierarchyOffset": 93.0,
+   "hierarchyOffset": 42.0,
    "nodeId": "pointsToCurve#8",
    "nodeType": "pointsToCurve"
   },
@@ -35608,11 +35608,11 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -630.0, "y": -958.3245239257813 },
+       "value": { "x": -630.0, "y": -970.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -960.0, "y": -958.3245239257813 },
+       "value": { "x": -960.0, "y": -970.0 },
        "varType": "double2"
       },
       {
@@ -35844,19 +35844,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -208.88987731933594, "y": -573.8348388671875 },
+       "value": { "x": -313.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 240.75857543945313, "y": -573.8348388671875 },
+       "value": { "x": -97.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 240.75857543945313, "y": 48.68000030517578 },
+       "value": { "x": -97.0, "y": -620.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -208.88987731933594, "y": 48.68000030517578 },
+       "value": { "x": -313.0, "y": -620.0 },
        "varType": "double2"
       }
      ]
@@ -35874,19 +35874,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": 599.9009399414063, "y": -960.0 },
+       "value": { "x": 395.23095703125, "y": -960.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 599.9009399414063, "y": -1002.0 },
+       "value": { "x": 395.23095703125, "y": -1002.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 240.75857543945313, "y": -1002.0 },
+       "value": { "x": -97.0, "y": -1002.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 240.75857543945313, "y": -960.0 },
+       "value": { "x": -97.0, "y": -960.0 },
        "varType": "double2"
       }
      ]
@@ -36065,19 +36065,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -208.88987731933594, "y": 48.68000030517578 },
+       "value": { "x": -313.0, "y": -620.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -208.88987731933594, "y": 737.747802734375 },
+       "value": { "x": -313.0, "y": -125.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -680.0, "y": 737.747802734375 },
+       "value": { "x": -680.0, "y": -125.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -680.0, "y": 48.68000030517578 },
+       "value": { "x": -680.0, "y": -620.0 },
        "varType": "double2"
       }
      ]
@@ -36398,11 +36398,11 @@
        "varType": "double2"
       },
       {
-       "value": { "x": 240.75857543945313, "y": -960.0 },
+       "value": { "x": -97.0, "y": -960.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 240.75857543945313, "y": -840.0 },
+       "value": { "x": -97.0, "y": -840.0 },
        "varType": "double2"
       }
      ]
@@ -42079,7 +42079,7 @@
      "value": { "numValue": -1.0 },
      "varType": "keyData"
     },
-    "timeOffset": { "value": 408.0, "varType": "double" },
+    "timeOffset": { "value": 459.0, "varType": "double" },
     "uuid": { "value": "fee4d356-5515-49b6-adf2-c4cb0c45b72c", "varType": "string" }
    },
    "nodeId": "keyframe#1141",
@@ -43132,7 +43132,7 @@
      "value": { "numValue": -1.0 },
      "varType": "keyData"
     },
-    "timeOffset": { "value": 249.0, "varType": "double" },
+    "timeOffset": { "value": 284.0, "varType": "double" },
     "uuid": { "value": "c7ca1504-dd7e-42cc-8793-bd6cd57e2b92", "varType": "string" }
    },
    "nodeId": "keyframe#1470",
@@ -45166,7 +45166,7 @@
      "value": { "numValue": -1.0 },
      "varType": "keyData"
     },
-    "timeOffset": { "value": 259.0, "varType": "double" },
+    "timeOffset": { "value": 294.0, "varType": "double" },
     "uuid": { "value": "1818bb91-6167-4451-a2d8-aaad95fe1a71", "varType": "string" }
    },
    "nodeId": "keyframe#1588",
@@ -46764,7 +46764,7 @@
      "value": { "numValue": -1.0 },
      "varType": "keyData"
     },
-    "timeOffset": { "value": 295.0, "varType": "double" },
+    "timeOffset": { "value": 330.0, "varType": "double" },
     "uuid": { "value": "4667352b-6a30-4799-95ef-8e9a49726392", "varType": "string" }
    },
    "nodeId": "keyframe#1867",
@@ -48418,19 +48418,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": -19.0, "y": -126.01454162597656 },
+       "value": { "x": -112.90625, "y": -151.50035095214844 },
        "varType": "double2"
       },
       {
-       "value": { "x": -19.0, "y": 125.0 },
+       "value": { "x": -112.90625, "y": 151.7390899658203 },
        "varType": "double2"
       },
       {
-       "value": { "x": -130.0, "y": 125.0 },
+       "value": { "x": -261.77142333984375, "y": 151.7390899658203 },
        "varType": "double2"
       },
       {
-       "value": { "x": -130.0, "y": -126.01454162597656 },
+       "value": { "x": -261.77142333984375, "y": -151.50035095214844 },
        "varType": "double2"
       }
      ]
@@ -48535,19 +48535,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 145.0, "y": -382.0 },
+       "value": { "x": 22.04610824584961, "y": -457.3011169433594 },
        "varType": "double2"
       },
       {
-       "value": { "x": -19.0, "y": -382.0 },
+       "value": { "x": -269.88983154296875, "y": -457.3011169433594 },
        "varType": "double2"
       },
       {
-       "value": { "x": -19.0, "y": -126.01454162597656 },
+       "value": { "x": -269.88983154296875, "y": -214.55078125 },
        "varType": "double2"
       },
       {
-       "value": { "x": 145.0, "y": -126.01454162597656 },
+       "value": { "x": 22.04610824584961, "y": -214.55078125 },
        "varType": "double2"
       }
      ]
@@ -48674,11 +48674,11 @@
     "array": {
      "list": [
       {
-       "value": { "x": 1160.0, "y": 652.6283569335938 },
+       "value": { "x": 1139.8309326171875, "y": 725.9375 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1252.0, "y": 652.6283569335938 },
+       "value": { "x": 1252.0, "y": 725.9375 },
        "varType": "double2"
       },
       {
@@ -48686,7 +48686,7 @@
        "varType": "double2"
       },
       {
-       "value": { "x": 1160.0, "y": 773.0 },
+       "value": { "x": 1139.8309326171875, "y": 773.0 },
        "varType": "double2"
       }
      ]
