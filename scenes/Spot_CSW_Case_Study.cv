@@ -1,5 +1,17 @@
 {
  "activeComp": "compNode#1",
+ "assets": [
+  {
+   "data": { "filePath": "@project/../../../../../Library/Fonts/SpaceGrotesk-VariableFont_wght.ttf" },
+   "nodeId": "asset#3",
+   "type": "file"
+  },
+  {
+   "data": { "filePath": "@project/../../../../../Library/Fonts/Inter-VariableFont_slnt,wght.ttf" },
+   "nodeId": "asset#2",
+   "type": "file"
+  }
+ ],
  "connections": [
   { "from": "value#34.id", "to": "frame#2.time" },
   { "from": "compNode#17.fps", "to": "frame#2.fps" },
@@ -3544,7 +3556,7 @@
    "nodeId": "assetGroup#7"
   },
   {
-   "children": [ "hiddenFolder#587" ],
+   "children": [ "asset#3", "asset#2", "hiddenFolder#587" ],
    "nodeId": "assetGroup#9"
   },
   {
@@ -17394,6 +17406,15 @@
    },
    "nodeId": "colorArray#1",
    "nodeType": "colorArray"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 12, "varType": "int" },
+    "niceName": { "value": "SpaceGrotesk-VariableFont_wght", "varType": "string" },
+    "uuid": { "value": "3d094bbc-3e12-42f1-8d8b-0cc3621a6a89", "varType": "string" }
+   },
+   "nodeId": "asset#3",
+   "nodeType": "asset"
   },
   {
    "attributes": {
@@ -41076,6 +41097,15 @@
    },
    "nodeId": "keyframe#601",
    "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 12, "varType": "int" },
+    "niceName": { "value": "Inter-VariableFont_slnt,wght", "varType": "string" },
+    "uuid": { "value": "6e4a9a60-03a1-4420-bd29-8d5eca4a1d03", "varType": "string" }
+   },
+   "nodeId": "asset#2",
+   "nodeType": "asset"
   },
   {
    "attributes": {
