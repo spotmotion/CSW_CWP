@@ -1,5 +1,5 @@
 {
- "activeComp": "compNode#16",
+ "activeComp": "compNode#1",
  "assets": [
   {
    "data": { "filePath": "@project/../../../../../Library/Fonts/Inter-VariableFont_slnt,wght.ttf" },
@@ -28944,10 +28944,6 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Speaker - Centre", "varType": "string" },
-    "pivot": {
-     "value": { "x": 0.0, "y": 0.0 },
-     "varType": "double2"
-    },
     "position": {
      "value": { "x": 190.50099182128906, "y": 335.20849609375, "z": 0.0 },
      "varType": "double3"
@@ -49430,7 +49426,7 @@
   {
    "attributes": {
     "colorId": { "value": 0, "varType": "int" },
-    "first": { "instanceName": "Descender Offset", "value": 0.0, "varType": "double" },
+    "first": { "instanceName": "Descender Offset" },
     "niceName": { "value": "Offset", "varType": "string" },
     "operation": { "value": 0, "varType": "enum" },
     "second": { "instanceName": "User Offset", "value": 0.0, "varType": "double" },
