@@ -1,5 +1,5 @@
 {
- "activeComp": "compNode#1",
+ "activeComp": "compNode#16",
  "assets": [
   {
    "data": { "filePath": "@project/../../../../../Library/Fonts/Inter-VariableFont_slnt,wght.ttf" },
@@ -1487,6 +1487,7 @@
   { "from": "math#7.id", "to": "sequence#7.sequence.y" },
   { "from": "visibilityCurve#244.out", "to": "group#15.on" },
   { "from": "visibilityCurve#181.out", "to": "group#10.on" },
+  { "from": "ifElse#7.id", "to": "textShape#12.pivot.y" },
   { "from": "stringArray#1.id", "to": "textShape#12.text" },
   { "from": "pointsToCurve#27.id", "to": "textShape#12.masks.0.id" },
   { "from": "visibilityCurve#520.out", "to": "textShape#12.on" },
@@ -1502,6 +1503,7 @@
   { "from": "animationCurve#213.out", "to": "textShape#1.position.x" },
   { "from": "colorMaterial#561.id", "to": "textShape#1.material" },
   { "from": "animationCurve#212.out", "to": "textShape#1.position.y" },
+  { "from": "math#11.id", "to": "textShape#10.pivot.y" },
   { "from": "pointsToCurve#26.id", "to": "textShape#10.masks.0.id" },
   { "from": "string#8.id", "to": "textShape#10.text" },
   { "from": "visibilityCurve#512.out", "to": "textShape#10.on" },
@@ -2417,7 +2419,17 @@
   { "from": "duplicator#42.id", "to": "getSubMeshTransform#138.inputShape" },
   { "from": "duplicator#42.id", "to": "getSubMeshTransform#139.inputShape" },
   { "from": "duplicator#42.id", "to": "getSubMeshTransform#140.inputShape" },
-  { "from": "duplicator#42.id", "to": "getSubMeshTransform#141.inputShape" }
+  { "from": "duplicator#42.id", "to": "getSubMeshTransform#141.inputShape" },
+  { "from": "stringArray#2.arrayIndex", "to": "comparison#4.first" },
+  { "from": "ifElse#5.condition", "to": "ifElse#4.condition" },
+  { "from": "value#36.id", "to": "ifElse#4.first" },
+  { "from": "value#35.id", "to": "ifElse#4.second" },
+  { "from": "value#43.value", "to": "math#11.second" },
+  { "from": "ifElse#4.id", "to": "math#11.first" },
+  { "from": "boundingBox#1.size.y", "to": "value#36.value" },
+  { "from": "value#42.id", "to": "ifElse#7.second" },
+  { "from": "value#41.id", "to": "ifElse#7.first" },
+  { "from": "comparison#4.id", "to": "ifElse#7.condition" }
  ],
  "controlCenter": {
   "compNode#1": {
@@ -2425,7 +2437,9 @@
     { "path": "string#12.string" },
     { "path": "string#13.string" },
     { "path": "string#14.string" },
-    { "path": "stringArray#2.arrayIndex" }
+    { "path": "stringArray#2.arrayIndex" },
+    { "path": "value#43.value" },
+    { "path": "ifElse#5.condition" }
    ],
    "footerScript": "",
    "headerScript": ""
@@ -3900,7 +3914,7 @@
    "nodeId": "textShape#1"
   },
   {
-   "children": [ "align#7", "hiddenFolder#533" ],
+   "children": [ "math#11", "ifElse#4", "align#7", "hiddenFolder#533" ],
    "nodeId": "textShape#10"
   },
   {
@@ -3924,7 +3938,7 @@
    "nodeId": "textShape#13"
   },
   {
-   "children": [ "textShape#12", "stringArray#1", "hiddenFolder#541" ],
+   "children": [ "ifElse#7", "textShape#12", "stringArray#1", "hiddenFolder#541" ],
    "nodeId": "group#35"
   },
   {
@@ -3972,7 +3986,7 @@
    "nodeId": "group#29"
   },
   {
-   "children": [ "string#12", "stringArray#2", "string#13", "string#14", "hiddenFolder#582" ],
+   "children": [ "string#12", "value#43", "ifElse#5", "stringArray#2", "comparison#4", "string#13", "string#14", "hiddenFolder#582" ],
    "nodeId": "group#38"
   },
   {
@@ -5458,6 +5472,14 @@
   {
    "children": [ "hiddenFolder#480" ],
    "nodeId": "imageShader#3"
+  },
+  {
+   "children": [ "value#36", "value#35" ],
+   "nodeId": "ifElse#4"
+  },
+  {
+   "children": [ "value#41", "value#42" ],
+   "nodeId": "ifElse#7"
   }
  ],
  "nodes": [
@@ -6109,10 +6131,10 @@
       { "value": "Workshop", "varType": "string" }
      ]
     },
+    "arrayIndex": { "value": 3, "varType": "int" },
     "autoIndex": { "value": false, "varType": "bool" },
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Venue Dropdown", "varType": "string" },
-    "pinned": { "value": true, "varType": "bool" },
     "uuid": { "value": "f921474c-1fdc-4156-9dfb-b3656711522b", "varType": "string" }
    },
    "hierarchyOffset": -46.0,
@@ -10519,7 +10541,7 @@
       { "value": "Workshop", "varType": "string" }
      ]
     },
-    "arrayIndex": { "instanceName": "Venue" },
+    "arrayIndex": { "instanceName": "Venue", "value": 3, "varType": "int" },
     "autoIndex": { "value": false, "varType": "bool" },
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Venue Dropdown", "varType": "string" },
@@ -28685,7 +28707,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Speaker(s)", "varType": "string" },
     "uuid": { "value": "ff8559a1-fa3c-4341-ac1c-d9fc2d476b92", "varType": "string" }
    },
@@ -28779,12 +28800,12 @@
      "value": {
       "overrides": [
        {
-        "end": 9,
+        "end": 8,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "Main Hall"
+      "text": "Workshop"
      },
      "varType": "richText"
     },
@@ -28918,12 +28939,15 @@
      ]
     },
     "fontSize": { "value": 68.0, "varType": "double" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "horizontalAlignment": { "value": 1, "varType": "enum" },
     "masks": {
      "list": [ {} ]
     },
     "niceName": { "value": "Speaker - Centre", "varType": "string" },
+    "pivot": {
+     "value": { "x": 0.0, "y": 0.0 },
+     "varType": "double2"
+    },
     "position": {
      "value": { "x": 190.50099182128906, "y": 335.20849609375, "z": 0.0 },
      "varType": "double3"
@@ -28932,12 +28956,12 @@
      "value": {
       "overrides": [
        {
-        "end": 12,
+        "end": 25,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "Speaker Name"
+      "text": "Max Lynch & Dominic North"
      },
      "varType": "richText"
     },
@@ -29054,12 +29078,12 @@
      "value": {
       "overrides": [
        {
-        "end": 12,
+        "end": 25,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "Speaker Name"
+      "text": "Max Lynch & Dominic North"
      },
      "varType": "richText"
     },
@@ -29229,6 +29253,7 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Title", "varType": "string" },
     "uuid": { "value": "ff8559a1-fa3c-4341-ac1c-d9fc2d476b92", "varType": "string" }
    },
@@ -29251,7 +29276,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Boxes", "varType": "string" },
     "uuid": { "value": "c03d60ee-6746-4927-9d50-9add60db7c9f", "varType": "string" }
    },
@@ -29388,7 +29412,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "DATA", "varType": "string" },
     "uuid": { "value": "8b1ef64f-5715-4aab-929d-7f7115f129c8", "varType": "string" }
    },
@@ -29806,7 +29829,6 @@
     "close": { "value": true, "varType": "bool" },
     "colorId": { "value": 7, "varType": "int" },
     "hidden": { "value": true, "varType": "bool" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Speaker Box", "varType": "string" },
     "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
@@ -33379,7 +33401,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Speaker(s)", "varType": "string" },
-    "string": { "value": "Speaker Name", "varType": "string" },
+    "string": { "value": "Max Lynch & Dominic North", "varType": "string" },
     "uuid": { "value": "f55745a2-9147-46fd-846d-eec6599d130b", "varType": "string" }
    },
    "nodeId": "string#8",
@@ -33616,7 +33638,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Speaker(s)", "varType": "string" },
-    "string": { "instanceName": "Speaker", "value": "Speaker Name", "varType": "string" },
+    "string": { "instanceName": "Speaker", "value": "Max Lynch & Dominic North", "varType": "string" },
     "uuid": { "value": "f55745a2-9147-46fd-846d-eec6599d130b", "varType": "string" }
    },
    "nodeId": "string#12",
@@ -49381,6 +49403,110 @@
    },
    "nodeId": "keyframe#601",
    "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 0, "varType": "int" },
+    "first": { "value": 3.0, "varType": "double" },
+    "niceName": { "value": "Venue Descender Offset", "varType": "string" },
+    "operation": { "value": 5, "varType": "enum" },
+    "second": { "value": 2.0, "varType": "double" },
+    "uuid": { "value": "910d1053-36e7-4595-a2ea-78c36b570862", "varType": "string" }
+   },
+   "nodeId": "comparison#4",
+   "nodeType": "comparison"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Descender IfElse", "varType": "string" },
+    "uuid": { "value": "688c892c-e71e-472a-9269-c3c8b7d6cff2", "varType": "string" }
+   },
+   "hierarchyOffset": -11.0,
+   "nodeId": "ifElse#4",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 0, "varType": "int" },
+    "first": { "instanceName": "Descender Offset", "value": 0.0, "varType": "double" },
+    "niceName": { "value": "Offset", "varType": "string" },
+    "operation": { "value": 0, "varType": "enum" },
+    "second": { "instanceName": "User Offset", "value": 0.0, "varType": "double" },
+    "uuid": { "value": "b09ff053-9756-464d-b2c9-78c30da82a1e", "varType": "string" }
+   },
+   "hierarchyOffset": -11.0,
+   "nodeId": "math#11",
+   "nodeType": "math"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "HasDescenders", "varType": "string" },
+    "uuid": { "value": "393034f7-513e-49e3-8019-82f39711be9b", "varType": "string" },
+    "value": { "expression": "*.04", "expressionEnabled": true, "value": 6.89667968, "varType": "double" }
+   },
+   "nodeId": "value#36",
+   "nodeType": "value"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "NoDescenders", "varType": "string" },
+    "uuid": { "value": "393034f7-513e-49e3-8019-82f39711be9b", "varType": "string" }
+   },
+   "nodeId": "value#35",
+   "nodeType": "value"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Speaker Descener Offset", "varType": "string" },
+    "uuid": { "value": "688c892c-e71e-472a-9269-c3c8b7d6cff2", "varType": "string" }
+   },
+   "hierarchyOffset": -11.0,
+   "nodeId": "ifElse#5",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "Speaker User Offset", "varType": "string" },
+    "uuid": { "value": "85a68ac9-11b5-4be3-a6b8-eda28dbee371", "varType": "string" }
+   },
+   "nodeId": "value#43",
+   "nodeType": "value"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "HasDescenders", "varType": "string" },
+    "uuid": { "value": "393034f7-513e-49e3-8019-82f39711be9b", "varType": "string" },
+    "value": { "value": 3.0, "varType": "double" }
+   },
+   "nodeId": "value#41",
+   "nodeType": "value"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "NoDescenders", "varType": "string" },
+    "uuid": { "value": "393034f7-513e-49e3-8019-82f39711be9b", "varType": "string" }
+   },
+   "nodeId": "value#42",
+   "nodeType": "value"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "niceName": { "value": "Descender IfElse", "varType": "string" },
+    "uuid": { "value": "688c892c-e71e-472a-9269-c3c8b7d6cff2", "varType": "string" }
+   },
+   "hierarchyOffset": -46.0,
+   "nodeId": "ifElse#7",
+   "nodeType": "ifElse"
   }
  ],
  "other": {
