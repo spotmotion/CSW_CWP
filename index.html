@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cavalry Web Player – Creative Southwest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        overflow: hidden;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #viewport {
+        position: relative;
+        background: transparent;
+      }
+
+      canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="viewport">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <script type="module">
+      const log = (...args) => console.log("[CWP]", ...args)
+
+      const canvas = document.getElementById("canvas")
+      const viewport = document.getElementById("viewport")
+
+      let SCENE_WIDTH = 1080
+      let SCENE_HEIGHT = 1920
+
+      let Module
+      let app
+      let surface
+      let animationFrameId = 0
+      let playbackLoopRunning = false
+
+      // Post a message to the parent frame (Framer)
+      function postToParent(message) {
+        window.parent.postMessage(message, "*")
+      }
+
+      // Emit the current frame state to the parent
+      function emitFrameUpdate() {
+        if (!app) return
+        postToParent({
+          type: "frame-update",
+          currentFrame: app.getFrame(),
+          startFrame: app.getStartFrame(),
+          endFrame: app.getEndFrame(),
+          isPlaying: app.isPlaying(),
+        })
+      }
+
+      async function writeFile(module, path) {
+        const response = await fetch(path)
+        if (!response.ok) {
+          throw new Error(`Failed to fetch ${path}: ${response.status} ${response.statusText}`)
+        }
+        const filename = path.split("/").pop()
+        const asset = await response.arrayBuffer()
+        module.FS.writeFile(filename, new Uint8Array(asset))
+        return filename
+      }
+
+      function resizeViewportAndSurface() {
+        if (!Module) return
+
+        const winW = window.innerWidth
+        const winH = window.innerHeight
+
+        const compAspect = SCENE_WIDTH / SCENE_HEIGHT
+
+        let renderW, renderH
+
+        if (compAspect >= 1) {
+          renderW = winW
+          renderH = Math.round(winW / compAspect)
+          if (renderH > winH) {
+            renderH = winH
+            renderW = Math.round(winH * compAspect)
+          }
+        } else {
+          renderH = winH
+          renderW = Math.round(winH * compAspect)
+          if (renderW > winW) {
+            renderW = winW
+            renderH = Math.round(winW / compAspect)
+          }
+        }
+
+        viewport.style.width = renderW + "px"
+        viewport.style.height = renderH + "px"
+
+        const dpr = window.devicePixelRatio || 1
+
+        canvas.width = renderW * dpr
+        canvas.height = renderH * dpr
+        canvas.style.width = renderW + "px"
+        canvas.style.height = renderH + "px"
+
+        surface = Module.makeWebGLSurfaceFromElement(canvas, renderW * dpr, renderH * dpr)
+
+        if (app && surface) {
+          app.render(surface)
+        }
+      }
+
+      function runPlaybackLoop() {
+        if (!app || !surface) return
+        if (playbackLoopRunning) return
+
+        playbackLoopRunning = true
+
+        function tick(time) {
+          if (!app || !surface || !app.isPlaying()) {
+            playbackLoopRunning = false
+            animationFrameId = 0
+            emitFrameUpdate()
+            return
+          }
+
+          const status = app.tick(surface, time)
+
+          if (status.frameChanged) {
+            postToParent({
+              type: "frame-update",
+              currentFrame: status.currentFrame,
+              startFrame: app.getStartFrame(),
+              endFrame: app.getEndFrame(),
+              isPlaying: true,
+              fps: status.actualFPS,
+            })
+          }
+
+          animationFrameId = requestAnimationFrame(tick)
+        }
+
+        animationFrameId = requestAnimationFrame(tick)
+      }
+
+      function stopPlaybackLoop() {
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId)
+        }
+        animationFrameId = 0
+        playbackLoopRunning = false
+      }
+
+      try {
+        log("Importing CavalryWasm.js")
+        const CavalryModule = await import("/CavalryWasm.js")
+
+        log("Initialising module")
+        Module = await CavalryModule.default({
+          canvas,
+          locateFile: (path) => `/wasm-lib/${path}`,
+        })
+
+        // Auto-load fonts and images from the scene
+        const loadedAssets = new Set()
+
+        window.addEventListener("cavalryAutoLoadAsset", async (event) => {
+          const { type, assetId, filename } = event.detail
+          const key = `${assetId}:${filename}`
+          if (loadedAssets.has(key)) {
+            log("Skipping already-loaded asset:", filename)
+            return
+          }
+          loadedAssets.add(key)
+
+          if (type === "font") {
+            log("Auto-loading font:", filename)
+            const response = await fetch("/" + filename)
+            if (!response.ok) throw new Error(`Failed to fetch font: ${filename}`)
+            const data = await response.arrayBuffer()
+            Module.FS.writeFile(filename, new Uint8Array(data))
+            app.replaceFontAsset(filename, assetId)
+            if (surface) app.render(surface)
+            log("Font loaded:", filename)
+          }
+
+          if (type === "image") {
+            log("Auto-loading image:", filename)
+            const response = await fetch("/" + filename)
+            if (!response.ok) throw new Error(`Failed to fetch image: ${filename}`)
+            const data = await response.arrayBuffer()
+            Module.FS.writeFile(filename, new Uint8Array(data))
+            app.replaceImageAsset(filename, assetId)
+            if (surface) app.render(surface)
+            log("Image loaded:", filename)
+          }
+        })
+
+        log("Loading scene: Spot_CSW_Case_Study.cv")
+        const sceneFile = await writeFile(Module, "/scenes/Spot_CSW_Case_Study.cv")
+
+        log("Creating app")
+        app = Module.Cavalry.MakeWithPath(sceneFile)
+
+        // Read actual scene resolution
+        const res = app.getSceneResolution()
+        if (res && res.width > 0 && res.height > 0) {
+          SCENE_WIDTH = res.width
+          SCENE_HEIGHT = res.height
+          log("Scene resolution:", SCENE_WIDTH, "x", SCENE_HEIGHT)
+        }
+
+        resizeViewportAndSurface()
+        window.addEventListener("resize", resizeViewportAndSurface)
+
+        // Start paused on frame 0
+        app.setFrame(0)
+        if (surface) app.render(surface)
+
+        // Notify parent that the player is ready
+        postToParent({
+          type: "player-ready",
+          startFrame: app.getStartFrame(),
+          endFrame: app.getEndFrame(),
+          fps: app.getFPS(),
+          resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
+          isPlaying: false,
+        })
+
+        // Read Control Centre attributes and send to parent
+        const activeComp = app.getActiveComp()
+        const ccAttrs = app.getControlCentreAttributes(activeComp)
+        log("Control Centre attributes:", ccAttrs)
+        postToParent({
+          type: "control-centre-ready",
+          attributes: ccAttrs,
+        })
+
+        log("Registering message listener")
+
+        window.addEventListener("message", (event) => {
+          const data = event.data
+          if (!data || typeof data !== "object") return
+
+          // Playback control messages
+          if (data.type === "player-control") {
+            try {
+              switch (data.action) {
+                case "play":
+                  app.play()
+                  runPlaybackLoop()
+                  break
+
+                case "pause":
+                  app.stop()
+                  stopPlaybackLoop()
+                  if (surface) app.render(surface)
+                  emitFrameUpdate()
+                  break
+
+                case "toggle":
+                  if (app.isPlaying()) {
+                    app.stop()
+                    stopPlaybackLoop()
+                    if (surface) app.render(surface)
+                  } else {
+                    app.play()
+                    runPlaybackLoop()
+                  }
+                  emitFrameUpdate()
+                  break
+
+                case "setFrame": {
+                  const frame = data.frame
+                  if (typeof frame === "number") {
+                    app.stop()
+                    stopPlaybackLoop()
+                    app.setFrame(frame)
+                    if (surface) app.render(surface)
+                    emitFrameUpdate()
+                  }
+                  break
+                }
+
+                case "setLoop":
+                  if (typeof data.loop === "boolean") {
+                    app.setLoop(data.loop)
+                  }
+                  break
+
+                case "setPlaybackMode":
+                  if (typeof data.mode === "number") {
+                    app.setPlaybackMode(data.mode)
+                  }
+                  break
+
+                case "setCompTimeMultiplier":
+                  if (typeof data.multiplier === "number") {
+                    app.setCompTimeMultiplier(data.multiplier)
+                  }
+                  break
+
+                case "getState":
+                  postToParent({
+                    type: "player-ready",
+                    startFrame: app.getStartFrame(),
+                    endFrame: app.getEndFrame(),
+                    fps: app.getFPS(),
+                    resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
+                    isPlaying: app.isPlaying(),
+                  })
+                  emitFrameUpdate()
+                  break
+              }
+            } catch (err) {
+              console.error("[CWP] player-control failed", err)
+            }
+            return
+          }
+
+          // Attribute update messages (from Framer Control Centre UI)
+          if (data.type === "set-attribute") {
+            const { path, value } = data
+            if (typeof path !== "string" || !path.includes(".")) return
+
+            try {
+              const nodeId = path.slice(0, path.indexOf("."))
+              const attr = path.slice(path.indexOf(".") + 1)
+
+              app.setAttribute(nodeId, attr, value)
+
+              if (path === "compNode#1.resolution") {
+                const [w, h] = value
+                if (w > 0 && h > 0) {
+                  SCENE_WIDTH = w
+                  SCENE_HEIGHT = h
+                  log("Resolution updated:", w, "x", h)
+                  resizeViewportAndSurface()
+                }
+              }
+
+              if (surface) app.render(surface)
+            } catch (err) {
+              console.error("[CWP] setAttribute failed", err)
+            }
+            return
+          }
+        })
+
+        log("Running ✓")
+      } catch (err) {
+        console.error("[CWP] Fatal error", err)
+        document.body.innerHTML = `
+          <div style="padding:16px;font-family:system-ui;color:#c00">
+            <strong>Cavalry Web Player failed to start.</strong><br/>
+            Open DevTools → Console for details.
+          </div>
+        `
+      }
+    </script>
+  </body>
+</html>

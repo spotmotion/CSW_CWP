@@ -1,0 +1,10 @@
+{
+  "appVersion": "2.6.0-beta.1",
+  "buildDate": "2025-12-09T10:18:05.063431Z",
+  "buildType": "Release",
+  "files": [
+    "CavalryWasm.js",
+    "CavalryWasm.wasm",
+    "CavalryWasm.data"
+  ]
+}

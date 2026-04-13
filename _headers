@@ -1,0 +1,19 @@
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/*.wasm
+  Content-Type: application/wasm
+
+/*.js
+  Content-Type: application/javascript
+
+/wasm-lib/*.wasm
+  Content-Type: application/wasm
+  Cross-Origin-Resource-Policy: cross-origin
+
+/wasm-lib/*.data
+  Cross-Origin-Resource-Policy: cross-origin
+
+/scenes/*.cv
+  Cross-Origin-Resource-Policy: cross-origin
