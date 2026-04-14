@@ -21,11 +21,6 @@
   { "from": "visibilityCurve#593.out", "to": "pointsToCurve#37.on" },
   { "from": "glowFilter#2.id", "to": "pointsToCurve#37.filters.0" },
   { "from": "arrayDistribution#37.id", "to": "pointsToCurve#37.generator" },
-  { "from": "compNode#19.id", "to": "compositionReference#41.composition" },
-  { "from": "visibilityCurve#572.out", "to": "compositionReference#41.on" },
-  { "from": "animationCurve#287.out", "to": "compositionReference#41.position.y" },
-  { "from": "animationCurve#288.out", "to": "compositionReference#41.position.x" },
-  { "from": "compNode#1.time", "to": "compositionReference#41.time" },
   { "from": "glowFilter#3.id", "to": "pointsToCurve#36.filters.0" },
   { "from": "visibilityCurve#592.out", "to": "pointsToCurve#36.on" },
   { "from": "arrayDistribution#36.id", "to": "pointsToCurve#36.generator" },
@@ -102,19 +97,6 @@
   { "from": "keyframe#2091.id", "to": "visibilityCurve#574.keyframes.0" },
   { "from": "compNode#19.outActiveAnimationLayer", "to": "visibilityCurve#574.activeAnimationLayer" },
   { "from": "compNode#19.time", "to": "visibilityCurve#574.time" },
-  { "from": "glowFilter#3.id", "to": "compositionReference#40.filters.0" },
-  { "from": "visibilityCurve#571.out", "to": "compositionReference#40.on" },
-  { "from": "compNode#5.id", "to": "compositionReference#40.composition" },
-  { "from": "pointsToCurve#5.id", "to": "compositionReference#40.masks.0.id" },
-  { "from": "subMesh#3.id", "to": "compositionReference#40.deformers.0" },
-  { "from": "compNode#1.time", "to": "compositionReference#40.time" },
-  { "from": "subMesh#3.id", "to": "compositionReference#39.deformers.0" },
-  { "from": "compNode#4.id", "to": "compositionReference#39.composition" },
-  { "from": "visibilityCurve#569.out", "to": "compositionReference#39.on" },
-  { "from": "glowFilter#3.id", "to": "compositionReference#39.filters.0" },
-  { "from": "pointsToCurve#4.id", "to": "compositionReference#39.masks.0.id" },
-  { "from": "compNode#1.time", "to": "compositionReference#39.time" },
-  { "from": "ifElse#10.id", "to": "colorMaterial#680.materialColor" },
   { "from": "shaderArray#1.id", "to": "colorMaterial#728.colorShaders.0.shader" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#728.materialColor" },
   { "from": "getSubMeshTransform#6.id", "to": "arrayDistribution#36.array.2" },
@@ -127,27 +109,10 @@
   { "from": "getSubMeshTransform#31.id", "to": "arrayDistribution#37.array.1" },
   { "from": "getSubMeshTransform#32.id", "to": "arrayDistribution#37.array.0" },
   { "from": "getSubMeshTransform#33.id", "to": "arrayDistribution#37.array.2" },
-  { "from": "keyframe#2061.id", "to": "visibilityCurve#571.keyframes.0" },
-  { "from": "keyframe#2063.id", "to": "visibilityCurve#571.keyframes.1" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#571.activeAnimationLayer" },
-  { "from": "compNode#1.time", "to": "visibilityCurve#571.time" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#592.activeAnimationLayer" },
   { "from": "keyframe#2114.id", "to": "visibilityCurve#592.keyframes.0" },
   { "from": "keyframe#2113.id", "to": "visibilityCurve#592.keyframes.1" },
   { "from": "compNode#1.time", "to": "visibilityCurve#592.time" },
-  { "from": "keyframe#2071.id", "to": "animationCurve#288.keyframes.0" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#288.activeAnimationLayer" },
-  { "from": "keyframe#2072.id", "to": "animationCurve#288.keyframes.1" },
-  { "from": "basicLine#31.position.x", "to": "animationCurve#288.offset" },
-  { "from": "compNode#1.time", "to": "animationCurve#288.time" },
-  { "from": "keyframe#2070.id", "to": "animationCurve#287.keyframes.0" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#287.activeAnimationLayer" },
-  { "from": "basicLine#21.position.y", "to": "animationCurve#287.offset" },
-  { "from": "compNode#1.time", "to": "animationCurve#287.time" },
-  { "from": "keyframe#2069.id", "to": "visibilityCurve#572.keyframes.1" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#572.activeAnimationLayer" },
-  { "from": "compNode#1.time", "to": "visibilityCurve#572.time" },
-  { "from": "keyframe#2068.id", "to": "visibilityCurve#572.keyframes.0" },
   { "from": "boundingBox#7.position", "to": "compositionReference#37.position" },
   { "from": "compNode#18.id", "to": "compositionReference#37.composition" },
   { "from": "visibilityCurve#564.out", "to": "compositionReference#37.on" },
@@ -162,7 +127,6 @@
   { "from": "colorArray#2.array.0", "to": "linearGradientShader#8.gradient.0.color" },
   { "from": "linearGradientShader#10.id", "to": "gradientShader#10.generator" },
   { "from": "compNode#1.resolution", "to": "gradientShader#10.resolution" },
-  { "from": "colorMaterial#680.id", "to": "subMesh#3.material" },
   { "from": "keyframe#2026.id", "to": "visibilityCurve#564.keyframes.1" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#564.activeAnimationLayer" },
   { "from": "keyframe#2027.id", "to": "visibilityCurve#564.keyframes.0" },
@@ -238,8 +202,10 @@
   { "from": "oscillator#1.id", "to": "wave#1.amplitude" },
   { "from": "falloff#1.id", "to": "wave#1.falloffs.0.id" },
   { "from": "frame#1.id", "to": "wave#1.travel" },
+  { "from": "compNode#15.overrides.0", "to": "compositionReference#34.overrides.0.attribute" },
   { "from": "compNode#15.id", "to": "compositionReference#34.composition" },
   { "from": "animationCurve#210.out", "to": "compositionReference#34.position.x" },
+  { "from": "ifElse#10.id", "to": "compositionReference#34.overrides.0.color" },
   { "from": "compNode#1.time", "to": "compositionReference#34.time" },
   { "from": "animationCurve#211.out", "to": "compositionReference#34.position.y" },
   { "from": "visibilityCurve#424.out", "to": "compositionReference#34.on" },
@@ -300,12 +266,12 @@
   { "from": "compNode#1.time", "to": "compositionReference#7.time" },
   { "from": "pointsToCurve#3.id", "to": "compositionReference#7.masks.0.id" },
   { "from": "visibilityCurve#289.out", "to": "compositionReference#7.on" },
+  { "from": "ifElse#10.id", "to": "compositionReference#5.overrides.0.color" },
+  { "from": "compNode#4.overrides.0", "to": "compositionReference#5.overrides.0.attribute" },
   { "from": "visibilityCurve#243.out", "to": "compositionReference#5.on" },
   { "from": "animationCurve#110.out", "to": "compositionReference#5.position.x" },
   { "from": "compNode#1.time", "to": "compositionReference#5.time" },
-  { "from": "pointsToCurve#4.id", "to": "compositionReference#5.masks.0.id" },
   { "from": "animationCurve#125.out", "to": "compositionReference#5.position.y" },
-  { "from": "subMesh#3.id", "to": "compositionReference#5.deformers.0" },
   { "from": "compNode#4.id", "to": "compositionReference#5.composition" },
   { "from": "animationCurve#108.out", "to": "planarCamera#1.position.x" },
   { "from": "animationCurve#214.out", "to": "planarCamera#1.rotation.z" },
@@ -320,11 +286,12 @@
   { "from": "compNode#1.time", "to": "compositionReference#10.time" },
   { "from": "visibilityCurve#296.out", "to": "compositionReference#10.on" },
   { "from": "animationCurve#164.out", "to": "compositionReference#10.position.y" },
+  { "from": "compNode#5.overrides.0", "to": "compositionReference#6.overrides.0.attribute" },
   { "from": "animationCurve#124.out", "to": "compositionReference#6.position.y" },
-  { "from": "subMesh#3.id", "to": "compositionReference#6.deformers.0" },
   { "from": "pointsToCurve#5.id", "to": "compositionReference#6.masks.0.id" },
   { "from": "animationCurve#111.out", "to": "compositionReference#6.position.x" },
   { "from": "compNode#5.id", "to": "compositionReference#6.composition" },
+  { "from": "ifElse#10.id", "to": "compositionReference#6.overrides.0.color" },
   { "from": "compNode#1.time", "to": "compositionReference#6.time" },
   { "from": "visibilityCurve#254.out", "to": "compositionReference#6.on" },
   { "from": "compNode#1.time", "to": "compositionReference#2.time" },
@@ -1036,13 +1003,21 @@
   { "from": "getSubMeshTransform#137.id", "to": "arrayDistribution#33.array.2" },
   { "from": "getSubMeshTransform#136.id", "to": "arrayDistribution#33.array.0" },
   { "from": "gridDistribution#37.id", "to": "sortDistribution#28.input" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#535.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#535.materialColor" },
   { "from": "duplicator#10.id", "to": "getSubMeshTransform#35.inputShape" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#539.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#539.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#528.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#528.materialColor" },
   { "from": "compNode#1.resolution", "to": "gradientShader#1.resolution" },
   { "from": "linearGradientShader#1.id", "to": "gradientShader#1.generator" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#388.colorShaders.0.shader" },
   { "from": "getSubMeshTransform#22.id", "to": "arrayDistribution#6.array.0" },
   { "from": "getSubMeshTransform#23.id", "to": "arrayDistribution#6.array.2" },
   { "from": "getSubMeshTransform#24.id", "to": "arrayDistribution#6.array.1" },
   { "from": "getSubMeshTransform#25.id", "to": "arrayDistribution#6.array.3" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#303.colorShaders.0.shader" },
   { "from": "getSubMeshTransform#27.id", "to": "arrayDistribution#7.array.2" },
   { "from": "getSubMeshTransform#28.id", "to": "arrayDistribution#7.array.1" },
   { "from": "getSubMeshTransform#26.id", "to": "arrayDistribution#7.array.3" },
@@ -1052,18 +1027,36 @@
   { "from": "getSubMeshTransform#8.id", "to": "arrayDistribution#2.array.1" },
   { "from": "getSubMeshTransform#6.id", "to": "arrayDistribution#2.array.2" },
   { "from": "gridDistribution#6.id", "to": "sortDistribution#6.input" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#555.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#555.materialColor" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#293.colorShaders.0.shader" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#299.colorShaders.0.shader" },
   { "from": "gridDistribution#7.id", "to": "sortDistribution#7.input" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#305.colorShaders.0.shader" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#447.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#538.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#538.materialColor" },
   { "from": "ifElse#8.id", "to": "colorMaterial#163.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#537.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#537.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#534.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#534.materialColor" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#390.colorShaders.0.shader" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#394.colorShaders.0.shader" },
   { "from": "getSubMeshTransform#4.id", "to": "arrayDistribution#1.array.2" },
   { "from": "getSubMeshTransform#2.id", "to": "arrayDistribution#1.array.1" },
   { "from": "getSubMeshTransform#3.id", "to": "arrayDistribution#1.array.3" },
   { "from": "getSubMeshTransform#1.id", "to": "arrayDistribution#1.array.0" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#291.colorShaders.0.shader" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#297.colorShaders.1.shader" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#297.colorShaders.0.shader" },
   { "from": "getSubMeshTransform#77.id", "to": "arrayDistribution#19.array.2" },
   { "from": "getSubMeshTransform#74.id", "to": "arrayDistribution#19.array.0" },
   { "from": "getSubMeshTransform#75.id", "to": "arrayDistribution#19.array.3" },
   { "from": "getSubMeshTransform#76.id", "to": "arrayDistribution#19.array.1" },
   { "from": "colorArray#2.array.5", "to": "colorMaterial#311.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#545.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#545.materialColor" },
   { "from": "gradientShader#6.id", "to": "colorMaterial#520.colorShaders.0.shader" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#520.materialColor" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#255.materialColor" },
@@ -1072,9 +1065,13 @@
   { "from": "getSubMeshTransform#79.id", "to": "arrayDistribution#20.array.1" },
   { "from": "getSubMeshTransform#78.id", "to": "arrayDistribution#20.array.3" },
   { "from": "getSubMeshTransform#81.id", "to": "arrayDistribution#20.array.2" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#536.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#536.materialColor" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#522.materialColor" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#392.colorShaders.0.shader" },
   { "from": "colorArray#2.array.5", "to": "colorMaterial#517.materialColor" },
   { "from": "gridDistribution#24.id", "to": "sortDistribution#24.input" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#301.colorShaders.0.shader" },
   { "from": "ifElse#10.id", "to": "colorMaterial#561.materialColor" },
   { "from": "getSubMeshTransform#21.id", "to": "arrayDistribution#5.array.0" },
   { "from": "getSubMeshTransform#19.id", "to": "arrayDistribution#5.array.3" },
@@ -1132,8 +1129,18 @@
   { "from": "getSubMeshTransform#106.id", "to": "arrayDistribution#27.array.2" },
   { "from": "getSubMeshTransform#109.id", "to": "arrayDistribution#27.array.3" },
   { "from": "getSubMeshTransform#107.id", "to": "arrayDistribution#27.array.0" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#549.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#549.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#548.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#548.materialColor" },
   { "from": "gradientShader#1.id", "to": "colorMaterial#445.colorShaders.0.shader" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#445.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#547.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#547.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#554.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#554.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#544.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#544.materialColor" },
   { "from": "getSubMeshTransform#30.id", "to": "arrayDistribution#8.array.3" },
   { "from": "getSubMeshTransform#31.id", "to": "arrayDistribution#8.array.1" },
   { "from": "getSubMeshTransform#32.id", "to": "arrayDistribution#8.array.0" },
@@ -1146,29 +1153,41 @@
   { "from": "getSubMeshTransform#37.id", "to": "arrayDistribution#9.array.2" },
   { "from": "gridDistribution#10.id", "to": "sortDistribution#10.input" },
   { "from": "gridDistribution#11.id", "to": "sortDistribution#11.input" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#532.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#532.materialColor" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#551.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#551.materialColor" },
   { "from": "getSubMeshTransform#13.id", "to": "arrayDistribution#3.array.3" },
   { "from": "getSubMeshTransform#11.id", "to": "arrayDistribution#3.array.2" },
   { "from": "getSubMeshTransform#10.id", "to": "arrayDistribution#3.array.0" },
   { "from": "getSubMeshTransform#12.id", "to": "arrayDistribution#3.array.1" },
   { "from": "gridDistribution#3.id", "to": "sortDistribution#3.input" },
   { "from": "gridDistribution#1.id", "to": "sortDistribution#1.input" },
+  { "from": "colorShader#2.id", "to": "colorMaterial#295.colorShaders.0.shader" },
+  { "from": "colorShader#1.id", "to": "colorMaterial#550.colorShaders.0.shader" },
+  { "from": "ifElse#10.id", "to": "colorMaterial#550.materialColor" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#314.materialColor" },
   { "from": "gridDistribution#4.id", "to": "sortDistribution#4.input" },
   { "from": "gridDistribution#9.id", "to": "sortDistribution#9.input" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#385.colorShaders.0.shader" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#664.materialColor" },
   { "from": "ifElse#9.id", "to": "colorMaterial#183.materialColor" },
   { "from": "gridDistribution#41.id", "to": "sortDistribution#32.input" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#378.colorShaders.0.shader" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#176.materialColor" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#376.colorShaders.0.shader" },
   { "from": "gridDistribution#42.id", "to": "sortDistribution#33.input" },
   { "from": "getSubMeshTransform#140.id", "to": "arrayDistribution#34.array.3" },
   { "from": "getSubMeshTransform#139.id", "to": "arrayDistribution#34.array.2" },
   { "from": "getSubMeshTransform#138.id", "to": "arrayDistribution#34.array.0" },
   { "from": "getSubMeshTransform#141.id", "to": "arrayDistribution#34.array.1" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#374.colorShaders.0.shader" },
   { "from": "getSubMeshTransform#129.id", "to": "arrayDistribution#31.array.1" },
   { "from": "getSubMeshTransform#128.id", "to": "arrayDistribution#31.array.0" },
   { "from": "getSubMeshTransform#126.id", "to": "arrayDistribution#31.array.3" },
   { "from": "getSubMeshTransform#127.id", "to": "arrayDistribution#31.array.2" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#669.materialColor" },
+  { "from": "colorShader#3.id", "to": "colorMaterial#384.colorShaders.0.shader" },
   { "from": "colorArray#2.array.5", "to": "colorMaterial#661.materialColor" },
   { "from": "gridDistribution#39.id", "to": "sortDistribution#30.input" },
   { "from": "duplicator#23.id", "to": "getSubMeshTransform#74.inputShape" },
@@ -1254,10 +1273,6 @@
   { "from": "duplicator#42.id", "to": "getSubMeshTransform#139.inputShape" },
   { "from": "duplicator#42.id", "to": "getSubMeshTransform#140.inputShape" },
   { "from": "duplicator#42.id", "to": "getSubMeshTransform#141.inputShape" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#569.activeAnimationLayer" },
-  { "from": "keyframe#2050.id", "to": "visibilityCurve#569.keyframes.0" },
-  { "from": "keyframe#2051.id", "to": "visibilityCurve#569.keyframes.1" },
-  { "from": "compNode#1.time", "to": "visibilityCurve#569.time" },
   { "from": "compNode#17.fps", "to": "oscillator#8.fps" },
   { "from": "compNode#17.time", "to": "oscillator#8.time" },
   { "from": "compNode#11.fps", "to": "oscillator#4.fps" },
@@ -1718,7 +1733,10 @@
   { "from": "visibilityCurve#110.out", "to": "basicShape#1.on" },
   { "from": "ellipseShape#1.id", "to": "basicShape#1.generator" },
   { "from": "colorMaterial#172.id", "to": "basicShape#1.material" },
+  { "from": "colorShader#3.shaderColor", "to": "compNode#5.overrides.0" },
+  { "from": "colorShader#2.shaderColor", "to": "compNode#4.overrides.0" },
   { "from": "planarCamera#1.id", "to": "compNode#1.cameraTransform.0" },
+  { "from": "colorShader#1.shaderColor", "to": "compNode#15.overrides.0" },
   { "from": "compNode#18.fps", "to": "oscillator#9.fps" },
   { "from": "compNode#18.time", "to": "oscillator#9.time" },
   { "from": "sequence#10.id", "to": "value#44.timeOffset" },
@@ -2733,10 +2751,6 @@
    "nodeId": "pointsToCurve#37"
   },
   {
-   "children": [ "animationCurve#287", "animationCurve#288", "hiddenFolder#612" ],
-   "nodeId": "compositionReference#41"
-  },
-  {
    "children": [ "hiddenFolder#632" ],
    "nodeId": "pointsToCurve#36"
   },
@@ -2813,32 +2827,8 @@
    "nodeId": "visibilityCurve#574"
   },
   {
-   "children": [ "hiddenFolder#611" ],
-   "nodeId": "compositionReference#40"
-  },
-  {
-   "children": [ "hiddenFolder#608" ],
-   "nodeId": "compositionReference#39"
-  },
-  {
-   "children": [ "keyframe#2063", "keyframe#2061" ],
-   "nodeId": "visibilityCurve#571"
-  },
-  {
    "children": [ "keyframe#2113", "keyframe#2114" ],
    "nodeId": "visibilityCurve#592"
-  },
-  {
-   "children": [ "keyframe#2072", "keyframe#2071" ],
-   "nodeId": "animationCurve#288"
-  },
-  {
-   "children": [ "keyframe#2070" ],
-   "nodeId": "animationCurve#287"
-  },
-  {
-   "children": [ "keyframe#2069", "keyframe#2068" ],
-   "nodeId": "visibilityCurve#572"
   },
   {
    "children": [ "animationCurve#278", "hiddenFolder#590" ],
@@ -2855,10 +2845,6 @@
   {
    "children": [ "editableShape#125", "editableShape#123", "editableShape#128", "editableShape#127", "editableShape#115", "editableShape#118", "editableShape#113", "editableShape#121", "editableShape#120", "editableShape#124", "editableShape#117", "editableShape#114", "editableShape#129", "editableShape#126", "editableShape#112", "editableShape#116", "editableShape#122", "editableShape#119" ],
    "nodeId": "compNode#19"
-  },
-  {
-   "children": [ "hiddenFolder#603" ],
-   "nodeId": "subMesh#3"
   },
   {
    "children": [ "keyframe#2026", "keyframe#2027" ],
@@ -3021,7 +3007,7 @@
    "nodeId": "compositionReference#7"
   },
   {
-   "children": [ "compositionReference#39", "subMesh#3", "animationCurve#125", "animationCurve#110", "hiddenFolder#248" ],
+   "children": [ "animationCurve#125", "animationCurve#110", "hiddenFolder#248" ],
    "nodeId": "compositionReference#5"
   },
   {
@@ -3033,7 +3019,7 @@
    "nodeId": "compositionReference#10"
   },
   {
-   "children": [ "compositionReference#40", "animationCurve#124", "animationCurve#111", "hiddenFolder#259" ],
+   "children": [ "animationCurve#124", "animationCurve#111", "hiddenFolder#259" ],
    "nodeId": "compositionReference#6"
   },
   {
@@ -3717,10 +3703,6 @@
    "nodeId": "imageShader#3"
   },
   {
-   "children": [ "keyframe#2051", "keyframe#2050" ],
-   "nodeId": "visibilityCurve#569"
-  },
-  {
    "children": [ "editableShape#39", "editableShape#38", "editableShape#37", "editableShape#36", "editableShape#35", "editableShape#34", "editableShape#33", "editableShape#32", "hiddenFolder#249" ],
    "nodeId": "group#15"
   },
@@ -4285,11 +4267,11 @@
    "nodeId": "compNode#9"
   },
   {
-   "children": [ "group#18" ],
+   "children": [ "colorShader#3", "group#18" ],
    "nodeId": "compNode#5"
   },
   {
-   "children": [ "group#15" ],
+   "children": [ "colorShader#2", "group#15" ],
    "nodeId": "compNode#4"
   },
   {
@@ -4305,11 +4287,11 @@
    "nodeId": "compNode#6"
   },
   {
-   "children": [ "glowFilter#3", "glowFilter#2", "group#38", "textShape#1", "planarCamera#1", "duplicator#5", "pointsToCurve#4", "compositionReference#5", "duplicator#6", "pointsToCurve#5", "compositionReference#6", "duplicator#9", "pointsToCurve#21", "duplicator#1", "duplicator#11", "duplicator#2", "group#10", "cornerPinShape#1", "group#4", "group#3", "group#1", "compositionReference#35", "compositionReference#36", "pointsToCurve#8", "pointsToCurve#37", "compositionReference#41", "compositionReference#34", "pointsToCurve#34", "pointsToCurve#33", "pointsToCurve#31", "pointsToCurve#30", "pointsToCurve#20", "pointsToCurve#19", "pointsToCurve#9", "compositionReference#21", "duplicator#8", "pointsToCurve#7", "compositionReference#12", "duplicator#7", "pointsToCurve#6", "group#21", "duplicator#4", "pointsToCurve#3", "compositionReference#37", "compositionReference#10", "duplicator#3", "boundingBox#7", "pointsToCurve#2", "pointsToCurve#1", "shaderArray#1", "colorArray#2", "backgroundShape#1", "shaderArray#2" ],
+   "children": [ "glowFilter#3", "glowFilter#2", "group#38", "textShape#1", "planarCamera#1", "duplicator#5", "pointsToCurve#4", "compositionReference#5", "duplicator#6", "pointsToCurve#5", "compositionReference#6", "duplicator#9", "pointsToCurve#21", "duplicator#1", "duplicator#11", "duplicator#2", "group#10", "cornerPinShape#1", "group#4", "group#3", "group#1", "compositionReference#35", "compositionReference#36", "pointsToCurve#8", "pointsToCurve#37", "compositionReference#34", "pointsToCurve#34", "pointsToCurve#33", "pointsToCurve#31", "pointsToCurve#30", "pointsToCurve#20", "pointsToCurve#19", "pointsToCurve#9", "compositionReference#21", "duplicator#8", "pointsToCurve#7", "compositionReference#12", "duplicator#7", "pointsToCurve#6", "group#21", "duplicator#4", "pointsToCurve#3", "compositionReference#37", "compositionReference#10", "duplicator#3", "boundingBox#7", "pointsToCurve#2", "pointsToCurve#1", "shaderArray#1", "colorArray#2", "backgroundShape#1", "shaderArray#2" ],
    "nodeId": "compNode#1"
   },
   {
-   "children": [ "editableShape#85", "editableShape#84", "editableShape#86", "editableShape#80", "editableShape#79", "editableShape#82", "editableShape#83", "editableShape#81", "editableShape#91", "editableShape#93", "editableShape#90", "editableShape#89", "editableShape#92", "editableShape#95", "editableShape#94", "editableShape#88", "editableShape#87", "editableShape#78" ],
+   "children": [ "colorShader#1", "editableShape#85", "editableShape#84", "editableShape#86", "editableShape#80", "editableShape#79", "editableShape#82", "editableShape#83", "editableShape#81", "editableShape#91", "editableShape#93", "editableShape#90", "editableShape#89", "editableShape#92", "editableShape#95", "editableShape#94", "editableShape#88", "editableShape#87", "editableShape#78" ],
    "nodeId": "compNode#15"
   },
   {
@@ -5925,14 +5907,6 @@
    "nodeId": "hiddenFolder#596"
   },
   {
-   "children": [ "motionBlurFilter#535", "strokeMaterial#688", "colorMaterial#689", "visibilityCurve#571" ],
-   "nodeId": "hiddenFolder#611"
-  },
-  {
-   "children": [ "strokeMaterial#679", "colorMaterial#680" ],
-   "nodeId": "hiddenFolder#603"
-  },
-  {
    "children": [ "hiddenFolder#621" ],
    "nodeId": "editableShape#119"
   },
@@ -6003,14 +5977,6 @@
   {
    "children": [ "hiddenFolder#620" ],
    "nodeId": "editableShape#115"
-  },
-  {
-   "children": [ "motionBlurFilter#533", "strokeMaterial#684", "colorMaterial#686", "visibilityCurve#569" ],
-   "nodeId": "hiddenFolder#608"
-  },
-  {
-   "children": [ "motionBlurFilter#536", "strokeMaterial#689", "colorMaterial#690", "visibilityCurve#572" ],
-   "nodeId": "hiddenFolder#612"
   },
   {
    "children": [ "strokeMaterial#705", "colorMaterial#705", "motionBlurFilter#541", "strokeMaterial#706", "colorMaterial#714", "visibilityCurve#589" ],
@@ -6096,13 +6062,22 @@
  "nodes": [
   {
    "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Color Shader", "varType": "string" },
+    "uuid": { "value": "15882bd8-a742-43ad-85f0-8fa0bd8b627a", "varType": "string" }
+   },
+   "nodeId": "colorShader#2",
+   "nodeType": "colorShader"
+  },
+  {
+   "attributes": {
     "keyframes": {
      "list": [
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#593",
    "nodeType": "visibilityCurve"
@@ -6120,43 +6095,12 @@
     },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Glow", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 42.0,
    "nodeId": "pointsToCurve#37",
    "nodeType": "pointsToCurve"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 7, "varType": "int" },
-    "hidden": { "value": true, "varType": "bool" },
-    "hierarchy": { "value": false, "varType": "bool" },
-    "is3d": { "value": true, "varType": "bool" },
-    "niceName": { "value": "Logo_Horizontal_White", "varType": "string" },
-    "pivot": {
-     "value": { "x": 529.0, "y": -115.0 },
-     "varType": "double2"
-    },
-    "playAudio": { "value": false, "varType": "bool" },
-    "position": {
-     "value": { "x": 946.0, "y": -453.0, "z": 0.0 },
-     "varType": "double3"
-    },
-    "rotation": {
-     "value": { "x": 0.0, "y": 0.0, "z": -90.0 },
-     "varType": "double3"
-    },
-    "scale": {
-     "aspectRatio": 1.0,
-     "value": { "x": 0.22, "y": 0.22 },
-     "varType": "double2"
-    },
-    "uuid": { "value": "207f087f-8d6c-4123-9ffc-8e910a58b33f", "varType": "string" }
-   },
-   "contextFilter": [ 1 ],
-   "hierarchyOffset": 217.0,
-   "nodeId": "compositionReference#41",
-   "nodeType": "compositionReference"
   },
   {
    "attributes": {
@@ -6170,7 +6114,6 @@
     },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Glow", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "opacity": { "value": 50.0, "varType": "double" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
@@ -6413,86 +6356,16 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 7, "varType": "int" },
-    "deformers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "filters": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "hidden": { "value": true, "varType": "bool" },
-    "is3d": { "value": true, "varType": "bool" },
-    "masks": {
-     "list": [
-      {
-       "compound": {
-        "mode": { "value": 0, "varType": "int" }
-       }
-      }
-     ]
-    },
-    "niceName": { "value": "Glow", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
-    "opacity": { "value": 70.0, "varType": "double" },
-    "playAudio": { "value": false, "varType": "bool" },
-    "time": { "value": 347.0, "varType": "double" },
-    "uuid": { "value": "39eeac3b-a27c-4517-8d53-b7a4e89061d1", "varType": "string" }
-   },
-   "contextFilter": [ 1 ],
-   "nodeId": "compositionReference#40",
-   "nodeType": "compositionReference"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 7, "varType": "int" },
-    "deformers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "filters": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "hidden": { "value": true, "varType": "bool" },
-    "is3d": { "value": true, "varType": "bool" },
-    "masks": {
-     "list": [
-      {
-       "compound": {
-        "mode": { "value": 0, "varType": "int" }
-       }
-      }
-     ]
-    },
-    "niceName": { "value": "Glow", "varType": "string" },
-    "opacity": { "value": 70.0, "varType": "double" },
-    "playAudio": { "value": false, "varType": "bool" },
-    "time": { "value": 347.0, "varType": "double" },
-    "uuid": { "value": "39eeac3b-a27c-4517-8d53-b7a4e89061d1", "varType": "string" }
-   },
-   "contextFilter": [ 1 ],
-   "nodeId": "compositionReference#39",
-   "nodeType": "compositionReference"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "materialColor": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Color Shader", "varType": "string" },
+    "shaderColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
     },
-    "niceName": { "value": "Fill 173", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "e23c21f1-9e9b-4004-ae4b-9f5719f51845", "varType": "string" }
+    "uuid": { "value": "b65d5196-3e4d-41d2-a773-d9c94da2ebbc", "varType": "string" }
    },
-   "nodeId": "colorMaterial#680",
-   "nodeType": "colorMaterial"
+   "nodeId": "colorShader#1",
+   "nodeType": "colorShader"
   },
   {
    "attributes": {
@@ -6928,17 +6801,12 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "materialColor": {
-     "value": { "a": 255, "b": 122, "g": 253, "r": 79 },
-     "varType": "color"
-    },
-    "niceName": { "value": "Fill 176", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "82380202-e105-4066-ac82-07a3f1bf3115", "varType": "string" }
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Color Shader", "varType": "string" },
+    "uuid": { "value": "df9b29ba-ad8d-430f-97d8-dceded287c87", "varType": "string" }
    },
-   "nodeId": "colorMaterial#689",
-   "nodeType": "colorMaterial"
+   "nodeId": "colorShader#3",
+   "nodeType": "colorShader"
   },
   {
    "attributes": {
@@ -6955,16 +6823,6 @@
    },
    "nodeId": "glowFilter#2",
    "nodeType": "glowFilter"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "niceName": { "value": "Fill 177", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "3deb5b9b-7013-4cc3-857c-92513482c9f5", "varType": "string" }
-   },
-   "nodeId": "colorMaterial#690",
-   "nodeType": "colorMaterial"
   },
   {
    "attributes": {
@@ -7035,19 +6893,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 61.0, "y": -458.0 },
+       "value": { "x": 620.0, "y": 830.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 61.0, "y": 461.0 },
+       "value": { "x": 620.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": 461.0 },
+       "value": { "x": 1250.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": -458.0 },
+       "value": { "x": 1250.0, "y": 830.0 },
        "varType": "double2"
       }
      ]
@@ -7080,37 +6938,10 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
-   },
-   "nodeId": "visibilityCurve#571",
-   "nodeType": "visibilityCurve"
-  },
-  {
-   "attributes": {
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#592",
    "nodeType": "visibilityCurve"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "materialColor": {
-     "value": { "a": 255, "b": 122, "g": 253, "r": 79 },
-     "varType": "color"
-    },
-    "niceName": { "value": "Fill 174", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "82380202-e105-4066-ac82-07a3f1bf3115", "varType": "string" }
-   },
-   "nodeId": "colorMaterial#686",
-   "nodeType": "colorMaterial"
   },
   {
    "attributes": {
@@ -7123,54 +6954,6 @@
   },
   {
    "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "value": 347.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#288",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "value": 347.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#287",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "value": 347.0, "varType": "double" }
-   },
-   "nodeId": "visibilityCurve#572",
-   "nodeType": "visibilityCurve"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
@@ -7178,12 +6961,11 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Wave Line 3", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 286.0, "y": 200.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "fb78f9cf-e3ed-4d15-90b5-bf1bb94a7c5a", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7310,23 +7092,13 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 4, "varType": "int" },
-    "niceName": { "value": "Colour Switch Submesh", "varType": "string" },
-    "uuid": { "value": "9aea8fbb-8b09-4aa7-bba4-a033c73dbecb", "varType": "string" }
-   },
-   "hierarchyOffset": -86.0,
-   "nodeId": "subMesh#3",
-   "nodeType": "subMesh"
-  },
-  {
-   "attributes": {
     "keyframes": {
      "list": [
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#564",
    "nodeType": "visibilityCurve"
@@ -7344,7 +7116,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#278",
    "nodeType": "animationCurve"
@@ -7898,13 +7670,40 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logo_Horizontal", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
+    "overrides": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "polyMesh": {
+         "value": {
+          "meshes": [
+           {
+            "address": [ 0 ],
+            "fillType": 0,
+            "path": null
+           }
+          ],
+          "version": 1.0
+         },
+         "varType": "polyMesh"
+        },
+        "richText": { "value": "", "varType": "richText" }
+       }
+      }
+     ]
+    },
     "pivot": {
      "value": { "x": 529.0, "y": -115.0 },
      "varType": "double2"
     },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 946.0, "y": -453.0, "z": 0.0 },
+     "value": { "x": 1191.0, "y": 835.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -7916,7 +7715,7 @@
      "value": { "x": 0.22, "y": 0.22 },
      "varType": "double2"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "207f087f-8d6c-4123-9ffc-8e910a58b33f", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7929,12 +7728,11 @@
     "colorId": { "value": 2, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Bars", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 552.5, "y": -470.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "trackMattes": {
      "list": [ {} ]
     },
@@ -7954,7 +7752,6 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Star 5", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 458.94189453125, "y": 539.2135620117188, "z": 0.0 },
@@ -7965,7 +7762,7 @@
      "value": { "x": 0.65, "y": 0.65 },
      "varType": "double2"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7999,13 +7796,12 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Tears", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -262.0, "y": -280.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "6365cb71-687a-48f9-ae1e-12e5416b051b", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8117,13 +7913,12 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Star 3", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -447.6795654296875, "y": 580.990234375, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8140,13 +7935,12 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Star 4", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -187.6795654296875, "y": 120.99024963378906, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8163,7 +7957,6 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Star 2", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -301.05804443359375, "y": 339.2135314941406, "z": 0.0 },
@@ -8174,7 +7967,7 @@
      "value": { "x": 0.65, "y": 0.65 },
      "varType": "double2"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8185,30 +7978,41 @@
   {
    "attributes": {
     "colorId": { "value": 7, "varType": "int" },
-    "deformers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
-    "masks": {
+    "niceName": { "value": "Creative", "varType": "string" },
+    "overrides": {
      "list": [
       {
        "compound": {
-        "mode": { "value": 0, "varType": "int" }
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "polyMesh": {
+         "value": {
+          "meshes": [
+           {
+            "address": [ 0 ],
+            "fillType": 0,
+            "path": null
+           }
+          ],
+          "version": 1.0
+         },
+         "varType": "polyMesh"
+        },
+        "richText": { "value": "", "varType": "richText" }
        }
       }
      ]
     },
-    "niceName": { "value": "Creative", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -615.5, "y": -1039.0, "z": 0.0 },
+     "value": { "x": -115.5, "y": -289.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "39eeac3b-a27c-4517-8d53-b7a4e89061d1", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8223,16 +8027,12 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Camera", "varType": "string" },
     "position": {
-     "value": { "x": 520.0, "y": 0.0, "z": 879.13 },
+     "value": { "x": 37.66587721771845, "y": 0.0, "z": 879.13 },
      "varType": "double3"
     },
     "resolution": {
      "value": { "x": 1080, "y": 1080 },
      "varType": "int2"
-    },
-    "rotation": {
-     "value": { "x": 0.0, "y": 0.0, "z": 90.0 },
-     "varType": "double3"
     },
     "uuid": { "value": "a7cee0f5-cd0b-41c5-9615-11df551e0c62", "varType": "string" }
    },
@@ -8259,8 +8059,7 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Wave Line", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "fb78f9cf-e3ed-4d15-90b5-bf1bb94a7c5a", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8271,11 +8070,6 @@
   {
    "attributes": {
     "colorId": { "value": 7, "varType": "int" },
-    "deformers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "masks": {
@@ -8288,13 +8082,38 @@
      ]
     },
     "niceName": { "value": "Southwest", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
+    "overrides": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "polyMesh": {
+         "value": {
+          "meshes": [
+           {
+            "address": [ 0 ],
+            "fillType": 0,
+            "path": null
+           }
+          ],
+          "version": 1.0
+         },
+         "varType": "polyMesh"
+        },
+        "richText": { "value": "", "varType": "richText" }
+       }
+      }
+     ]
+    },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -515.5, "y": -910.0, "z": 0.0 },
+     "value": { "x": -15.5, "y": -410.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "39eeac3b-a27c-4517-8d53-b7a4e89061d1", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8311,7 +8130,6 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Star 1", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -121.05810546875, "y": 539.2135620117188, "z": 0.0 },
@@ -8322,7 +8140,7 @@
      "value": { "x": 0.65, "y": 0.65 },
      "varType": "double2"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8335,6 +8153,7 @@
     "colorId": { "value": 7, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Coming Up", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 520.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -8343,7 +8162,7 @@
      "value": { "x": 0.0, "y": 0.0, "z": -90.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "trackMattes": {
      "list": [ {} ]
     },
@@ -8363,13 +8182,12 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Star 1", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 112.32048797607422, "y": 420.9902648925781, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8382,6 +8200,7 @@
     "colorId": { "value": 8, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Wave Line 2", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 520.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -8395,7 +8214,7 @@
      "value": { "x": 1.33, "y": 1.33 },
      "varType": "double2"
     },
-    "time": { "value": 347.0, "varType": "double" },
+    "time": { "value": 136.0, "varType": "double" },
     "timeRemapping": { "value": 58.63453815261044, "varType": "double" },
     "trackMattes": {
      "list": [ {} ]
@@ -8431,7 +8250,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#90",
    "nodeType": "animationCurve"
@@ -8444,7 +8263,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#128",
    "nodeType": "visibilityCurve"
@@ -8457,7 +8276,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#111",
    "nodeType": "visibilityCurve"
@@ -8470,7 +8289,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#191",
    "nodeType": "visibilityCurve"
@@ -8483,7 +8302,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#129",
    "nodeType": "visibilityCurve"
@@ -8496,7 +8315,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#130",
    "nodeType": "visibilityCurve"
@@ -8509,7 +8328,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#193",
    "nodeType": "visibilityCurve"
@@ -8522,7 +8341,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#187",
    "nodeType": "visibilityCurve"
@@ -8535,7 +8354,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#185",
    "nodeType": "visibilityCurve"
@@ -8548,7 +8367,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#134",
    "nodeType": "visibilityCurve"
@@ -8561,7 +8380,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#131",
    "nodeType": "visibilityCurve"
@@ -8574,7 +8393,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#180",
    "nodeType": "visibilityCurve"
@@ -8587,7 +8406,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#189",
    "nodeType": "visibilityCurve"
@@ -8600,7 +8419,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#132",
    "nodeType": "visibilityCurve"
@@ -8613,7 +8432,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#552",
    "nodeType": "visibilityCurve"
@@ -8626,7 +8445,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#127",
    "nodeType": "visibilityCurve"
@@ -8639,7 +8458,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#121",
    "nodeType": "visibilityCurve"
@@ -8652,7 +8471,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#141",
    "nodeType": "visibilityCurve"
@@ -8665,7 +8484,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#150",
    "nodeType": "visibilityCurve"
@@ -8678,7 +8497,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#181",
    "nodeType": "visibilityCurve"
@@ -8728,7 +8547,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#556",
    "nodeType": "visibilityCurve"
@@ -8754,7 +8573,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#176",
    "nodeType": "visibilityCurve"
@@ -8767,7 +8586,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#555",
    "nodeType": "visibilityCurve"
@@ -8780,7 +8599,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#554",
    "nodeType": "visibilityCurve"
@@ -8793,7 +8612,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#553",
    "nodeType": "visibilityCurve"
@@ -8831,7 +8650,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#28",
    "nodeType": "animationCurve"
@@ -8844,7 +8663,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#110",
    "nodeType": "visibilityCurve"
@@ -8940,7 +8759,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#220",
    "nodeType": "visibilityCurve"
@@ -8953,7 +8772,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#439",
    "nodeType": "visibilityCurve"
@@ -8978,7 +8797,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#320",
    "nodeType": "visibilityCurve"
@@ -8991,7 +8810,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#435",
    "nodeType": "visibilityCurve"
@@ -9016,7 +8835,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#178",
    "nodeType": "visibilityCurve"
@@ -9029,7 +8848,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#550",
    "nodeType": "visibilityCurve"
@@ -9042,7 +8861,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#442",
    "nodeType": "visibilityCurve"
@@ -9055,7 +8874,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#551",
    "nodeType": "visibilityCurve"
@@ -9068,7 +8887,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#296",
    "nodeType": "visibilityCurve"
@@ -9081,7 +8900,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#434",
    "nodeType": "visibilityCurve"
@@ -9106,7 +8925,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#440",
    "nodeType": "visibilityCurve"
@@ -9118,7 +8937,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#273",
    "nodeType": "visibilityCurve"
@@ -9131,7 +8951,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#443",
    "nodeType": "visibilityCurve"
@@ -9143,7 +8963,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#278",
    "nodeType": "visibilityCurve"
@@ -9169,7 +8990,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#437",
    "nodeType": "visibilityCurve"
@@ -9182,7 +9003,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#177",
    "nodeType": "visibilityCurve"
@@ -9195,7 +9016,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#139",
    "nodeType": "visibilityCurve"
@@ -9207,7 +9028,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#281",
    "nodeType": "visibilityCurve"
@@ -9220,7 +9042,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#218",
    "nodeType": "visibilityCurve"
@@ -9232,7 +9054,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#275",
    "nodeType": "visibilityCurve"
@@ -9244,7 +9067,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#272",
    "nodeType": "visibilityCurve"
@@ -9269,7 +9093,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#133",
    "nodeType": "visibilityCurve"
@@ -9282,7 +9106,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#140",
    "nodeType": "visibilityCurve"
@@ -9295,7 +9119,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#543",
    "nodeType": "visibilityCurve"
@@ -9308,7 +9132,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#536",
    "nodeType": "visibilityCurve"
@@ -9321,7 +9145,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#345",
    "nodeType": "visibilityCurve"
@@ -9333,7 +9157,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#279",
    "nodeType": "visibilityCurve"
@@ -9346,7 +9171,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#195",
    "nodeType": "visibilityCurve"
@@ -9359,7 +9184,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#546",
    "nodeType": "visibilityCurve"
@@ -9384,7 +9209,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#223",
    "nodeType": "visibilityCurve"
@@ -9397,7 +9222,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#428",
    "nodeType": "visibilityCurve"
@@ -9410,7 +9235,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#449",
    "nodeType": "visibilityCurve"
@@ -9423,7 +9248,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#539",
    "nodeType": "visibilityCurve"
@@ -9436,7 +9261,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#438",
    "nodeType": "visibilityCurve"
@@ -9449,7 +9274,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#194",
    "nodeType": "visibilityCurve"
@@ -9461,7 +9286,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#213",
    "nodeType": "visibilityCurve"
@@ -9473,7 +9299,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#217",
    "nodeType": "visibilityCurve"
@@ -9486,7 +9313,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#221",
    "nodeType": "visibilityCurve"
@@ -9499,7 +9326,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#544",
    "nodeType": "visibilityCurve"
@@ -9512,7 +9339,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#219",
    "nodeType": "visibilityCurve"
@@ -9525,7 +9352,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#300",
    "nodeType": "visibilityCurve"
@@ -9537,7 +9364,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#212",
    "nodeType": "visibilityCurve"
@@ -9549,7 +9377,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#210",
    "nodeType": "visibilityCurve"
@@ -9561,7 +9390,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#214",
    "nodeType": "visibilityCurve"
@@ -9573,7 +9403,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#211",
    "nodeType": "visibilityCurve"
@@ -9586,7 +9417,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#532",
    "nodeType": "visibilityCurve"
@@ -9599,7 +9430,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#254",
    "nodeType": "visibilityCurve"
@@ -9612,7 +9443,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#240",
    "nodeType": "visibilityCurve"
@@ -9624,7 +9455,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#216",
    "nodeType": "visibilityCurve"
@@ -9661,7 +9493,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#526",
    "nodeType": "visibilityCurve"
@@ -9674,7 +9506,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#535",
    "nodeType": "visibilityCurve"
@@ -9687,7 +9519,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#344",
    "nodeType": "visibilityCurve"
@@ -9713,7 +9545,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#179",
    "nodeType": "visibilityCurve"
@@ -9726,7 +9558,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#226",
    "nodeType": "visibilityCurve"
@@ -9739,7 +9571,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#143",
    "nodeType": "visibilityCurve"
@@ -9752,7 +9584,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#537",
    "nodeType": "visibilityCurve"
@@ -9765,7 +9597,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#290",
    "nodeType": "visibilityCurve"
@@ -9803,7 +9635,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#329",
    "nodeType": "visibilityCurve"
@@ -9815,7 +9647,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#274",
    "nodeType": "visibilityCurve"
@@ -9925,7 +9758,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#304",
    "nodeType": "visibilityCurve"
@@ -9938,7 +9771,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#243",
    "nodeType": "visibilityCurve"
@@ -10023,7 +9856,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#424",
    "nodeType": "visibilityCurve"
@@ -10071,7 +9904,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#276",
    "nodeType": "visibilityCurve"
@@ -10096,7 +9930,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#346",
    "nodeType": "visibilityCurve"
@@ -10109,7 +9943,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#432",
    "nodeType": "visibilityCurve"
@@ -10122,7 +9956,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#433",
    "nodeType": "visibilityCurve"
@@ -10147,7 +9981,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#430",
    "nodeType": "visibilityCurve"
@@ -10160,7 +9994,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#105",
    "nodeType": "visibilityCurve"
@@ -10198,7 +10032,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#101",
    "nodeType": "visibilityCurve"
@@ -10211,7 +10045,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#108",
    "nodeType": "visibilityCurve"
@@ -10260,7 +10094,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#239",
    "nodeType": "visibilityCurve"
@@ -10273,7 +10107,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#225",
    "nodeType": "visibilityCurve"
@@ -10293,7 +10127,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#68",
    "nodeType": "animationCurve"
@@ -10310,7 +10144,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#276",
    "nodeType": "animationCurve"
@@ -10343,7 +10177,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#275",
    "nodeType": "animationCurve"
@@ -10363,7 +10197,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#77",
    "nodeType": "animationCurve"
@@ -10384,7 +10218,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#66",
    "nodeType": "animationCurve"
@@ -10423,7 +10257,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#89",
    "nodeType": "animationCurve"
@@ -10441,7 +10275,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationPath#1",
    "nodeType": "animationPath"
@@ -10480,7 +10314,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#74",
    "nodeType": "animationCurve"
@@ -10498,7 +10332,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#111",
    "nodeType": "animationCurve"
@@ -10520,7 +10354,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#57",
    "nodeType": "animationCurve"
@@ -10541,7 +10375,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#75",
    "nodeType": "animationCurve"
@@ -10554,7 +10388,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#107",
    "nodeType": "visibilityCurve"
@@ -10577,7 +10411,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#96",
    "nodeType": "animationCurve"
@@ -10617,7 +10451,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#67",
    "nodeType": "animationCurve"
@@ -10880,7 +10714,7 @@
     "array": {
      "list": [
       {
-       "value": { "x": -19.0, "y": -125.06361389160156 },
+       "value": { "x": -19.0, "y": -125.38206481933594 },
        "varType": "double2"
       },
       {
@@ -10892,7 +10726,7 @@
        "varType": "double2"
       },
       {
-       "value": { "x": -130.0, "y": -125.06361389160156 },
+       "value": { "x": -130.0, "y": -125.38206481933594 },
        "varType": "double2"
       }
      ]
@@ -10916,8 +10750,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 89", "varType": "string" },
@@ -10955,8 +10792,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 79", "varType": "string" },
@@ -10989,8 +10829,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 77", "varType": "string" },
@@ -11075,6 +10918,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11106,11 +10952,11 @@
        "varType": "double2"
       },
       {
-       "value": { "x": -476.7328186035156, "y": -220.0 },
+       "value": { "x": -460.0, "y": -220.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -476.7328186035156, "y": -340.0 },
+       "value": { "x": -460.0, "y": -340.0 },
        "varType": "double2"
       },
       {
@@ -11129,6 +10975,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11164,11 +11013,11 @@
        "varType": "double2"
       },
       {
-       "value": { "x": 620.0, "y": -505.7460021972656 },
+       "value": { "x": 620.0, "y": -502.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": -505.7460021972656 },
+       "value": { "x": 385.0, "y": -502.0 },
        "varType": "double2"
       },
       {
@@ -11284,8 +11133,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 66", "varType": "string" },
@@ -11312,6 +11164,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11326,6 +11181,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11419,6 +11277,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11467,8 +11328,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 85", "varType": "string" },
@@ -11492,7 +11356,7 @@
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "materialColor": {
-     "value": { "a": 255, "b": 219, "g": 213, "r": 197 },
+     "value": { "a": 255, "b": 30, "g": 13, "r": 16 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 3", "varType": "string" },
@@ -11505,8 +11369,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 81", "varType": "string" },
@@ -11519,8 +11386,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 91", "varType": "string" },
@@ -11533,6 +11403,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11561,6 +11434,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11592,19 +11468,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -920.0, "y": -970.0 },
+       "value": { "x": -420.0, "y": -220.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -920.0, "y": -730.0 },
+       "value": { "x": -420.0, "y": 20.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -680.0, "y": -730.0 },
+       "value": { "x": -180.0, "y": 20.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -680.0, "y": -970.0 },
+       "value": { "x": -180.0, "y": -220.0 },
        "varType": "double2"
       }
      ]
@@ -11675,6 +11551,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11781,6 +11660,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {}, {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -11835,19 +11717,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 1085.0, "y": -515.0 },
+       "value": { "x": 1440.0, "y": -1160.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1085.0, "y": -485.0 },
+       "value": { "x": 1440.0, "y": -1160.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1040.0, "y": -485.0 },
+       "value": { "x": 1440.0, "y": -1160.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1040.0, "y": -515.0 },
+       "value": { "x": 1440.0, "y": -1160.0 },
        "varType": "double2"
       }
      ]
@@ -11910,8 +11792,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 68", "varType": "string" },
@@ -11960,19 +11845,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 61.0, "y": -485.0 },
+       "value": { "x": 620.0, "y": -1160.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": -485.0 },
+       "value": { "x": 1250.0, "y": -1160.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": -515.0 },
+       "value": { "x": 1250.0, "y": -1160.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 61.0, "y": -515.0 },
+       "value": { "x": 620.0, "y": -1160.0 },
        "varType": "double2"
       }
      ]
@@ -11997,8 +11882,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 87", "varType": "string" },
@@ -12063,6 +11951,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -12172,6 +12063,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -12187,7 +12081,7 @@
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 145", "varType": "string" },
@@ -12217,11 +12111,11 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -423.7460021972656, "y": -340.0 },
+       "value": { "x": -420.0, "y": -340.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -423.7460021972656, "y": -460.0 },
+       "value": { "x": -420.0, "y": -460.0 },
        "varType": "double2"
       },
       {
@@ -12245,7 +12139,7 @@
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 9", "varType": "string" },
@@ -12697,19 +12591,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": -390.0, "y": 524.0 },
+       "value": { "x": 620.0, "y": 885.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -390.0, "y": 667.0 },
+       "value": { "x": 620.0, "y": 920.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 61.0, "y": 667.0 },
+       "value": { "x": 0.0, "y": 0.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 61.0, "y": 524.0 },
+       "value": { "x": 0.0, "y": 0.0 },
        "varType": "double2"
       }
      ]
@@ -12916,19 +12810,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -313.0, "y": -970.0 },
+       "value": { "x": 187.0, "y": -220.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -920.0, "y": -970.0 },
+       "value": { "x": -420.0, "y": -220.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -920.0, "y": -840.0 },
+       "value": { "x": -420.0, "y": -340.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -313.0, "y": -840.0 },
+       "value": { "x": 187.0, "y": -340.0 },
        "varType": "double2"
       }
      ]
@@ -12982,19 +12876,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": 61.0, "y": -458.0 },
+       "value": { "x": 620.0, "y": 830.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 61.0, "y": 461.0 },
+       "value": { "x": 620.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": 461.0 },
+       "value": { "x": 1250.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": -458.0 },
+       "value": { "x": 1250.0, "y": 830.0 },
        "varType": "double2"
       }
      ]
@@ -13275,8 +13169,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 58", "varType": "string" },
@@ -13289,8 +13186,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 72", "varType": "string" },
@@ -13320,8 +13220,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 60", "varType": "string" },
@@ -13334,8 +13237,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 62", "varType": "string" },
@@ -13358,8 +13264,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 70", "varType": "string" },
@@ -13384,19 +13293,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 61.0, "y": -458.0 },
+       "value": { "x": 620.0, "y": 830.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 61.0, "y": 461.0 },
+       "value": { "x": 620.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": 461.0 },
+       "value": { "x": 1250.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 941.0, "y": -458.0 },
+       "value": { "x": 1250.0, "y": 830.0 },
        "varType": "double2"
       }
      ]
@@ -13618,19 +13527,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 1005.0, "y": 524.0 },
+       "value": { "x": 1405.0, "y": 885.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1005.0, "y": 461.0 },
+       "value": { "x": 1405.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1040.0, "y": 461.0 },
+       "value": { "x": 1440.0, "y": 820.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1040.0, "y": 524.0 },
+       "value": { "x": 1440.0, "y": 885.0 },
        "varType": "double2"
       }
      ]
@@ -13697,8 +13606,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 83", "varType": "string" },
@@ -13711,8 +13623,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 64", "varType": "string" },
@@ -13847,6 +13762,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -13861,8 +13779,11 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 74", "varType": "string" },
@@ -14053,6 +13974,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -14102,7 +14026,7 @@
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "materialColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 19", "varType": "string" },
@@ -14124,6 +14048,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -14194,6 +14121,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -14247,11 +14177,11 @@
     "array": {
      "list": [
       {
-       "value": { "x": 1160.0, "y": 652.896484375 },
+       "value": { "x": 1160.0, "y": 650.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1252.0, "y": 652.896484375 },
+       "value": { "x": 1252.0, "y": 650.0 },
        "varType": "double2"
       },
       {
@@ -14274,6 +14204,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -14290,19 +14223,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 22.04610824584961, "y": -457.3011169433594 },
+       "value": { "x": 145.0, "y": -382.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -269.88983154296875, "y": -457.3011169433594 },
+       "value": { "x": -19.0, "y": -382.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -269.88983154296875, "y": -214.55078125 },
+       "value": { "x": -19.0, "y": -125.38206481933594 },
        "varType": "double2"
       },
       {
-       "value": { "x": 22.04610824584961, "y": -214.55078125 },
+       "value": { "x": 145.0, "y": -125.38206481933594 },
        "varType": "double2"
       }
      ]
@@ -14401,6 +14334,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
@@ -15294,19 +15230,6 @@
   },
   {
    "attributes": {
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "value": 347.0, "varType": "double" }
-   },
-   "nodeId": "visibilityCurve#569",
-   "nodeType": "visibilityCurve"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 4, "varType": "int" },
     "fps": { "value": 25.0, "varType": "double" },
     "frequency": { "value": 0.2, "varType": "double" },
@@ -15755,7 +15678,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Southwest 1", "varType": "string" },
     "position": {
      "value": { "x": -0.46014404296875, "y": 189.5458984375, "z": 0.0 },
@@ -15798,6 +15720,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Coming Up MATTE", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 81.0,
@@ -15826,7 +15749,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "DATA", "varType": "string" },
     "uuid": { "value": "8b1ef64f-5715-4aab-929d-7f7115f129c8", "varType": "string" }
    },
@@ -15856,7 +15778,6 @@
     "colorId": { "value": 8, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 1", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 72.0,
@@ -15954,7 +15875,6 @@
     "colorId": { "value": 5, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Stars Group", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0ba18d8e-a2f0-40ce-b14a-2e1358e0a67a", "varType": "string" }
    },
    "nodeId": "group#21",
@@ -15967,7 +15887,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logomark Warp", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "104d9dbb-d48f-4ace-afb3-92583c21aa92", "varType": "string" }
    },
    "nodeId": "group#10",
@@ -16083,7 +16002,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logo Lines", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "51164711-be3d-4a0a-9151-f8ffa1f6e470", "varType": "string" }
    },
    "hierarchyOffset": 6.0,
@@ -16097,6 +16015,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 11", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16123,7 +16042,6 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 1", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 84.0,
@@ -16136,7 +16054,6 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 4", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 66.0,
@@ -16149,7 +16066,6 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 2", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 66.0,
@@ -16161,6 +16077,7 @@
     "colorId": { "value": 11, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Dots 2", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "shapes": {
      "list": [
       { "varType": "nodeId" }
@@ -16194,6 +16111,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 7", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16300,7 +16218,6 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 3", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 66.0,
@@ -16407,7 +16324,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Dots 1", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "shapes": {
      "list": [
       { "varType": "nodeId" }
@@ -16424,6 +16340,7 @@
     "colorId": { "value": 12, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Title Box Vertices", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "shapes": {
      "list": [
       { "varType": "nodeId" }
@@ -16443,7 +16360,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 2", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 54.0,
@@ -16473,6 +16389,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 5", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16487,6 +16404,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 6", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16500,6 +16418,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 5", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16514,6 +16433,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 7", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16629,6 +16549,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Title Box", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 42.0,
@@ -16642,6 +16563,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 6", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16655,6 +16577,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 9", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16668,6 +16591,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 8", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16681,6 +16605,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 10", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16709,7 +16634,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 4", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 54.0,
@@ -16725,7 +16649,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Central Box", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "nodeId": "pointsToCurve#1",
@@ -16755,6 +16678,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 8", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16768,7 +16692,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 3", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 54.0,
@@ -16822,7 +16745,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#277",
    "nodeType": "visibilityCurve"
@@ -16883,7 +16807,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#431",
    "nodeType": "visibilityCurve"
@@ -16907,7 +16831,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 18.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#280",
    "nodeType": "visibilityCurve"
@@ -16956,7 +16881,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#426",
    "nodeType": "visibilityCurve"
@@ -16969,7 +16894,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#427",
    "nodeType": "visibilityCurve"
@@ -17018,7 +16943,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#422",
    "nodeType": "visibilityCurve"
@@ -17056,7 +16981,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#445",
    "nodeType": "visibilityCurve"
@@ -17069,7 +16994,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#421",
    "nodeType": "visibilityCurve"
@@ -17082,7 +17007,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#429",
    "nodeType": "visibilityCurve"
@@ -17092,7 +17017,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hidden": { "value": true, "varType": "bool" },
     "niceName": { "value": "Dot 4", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "7689c5f9-aa00-4f0c-b0a4-17ba9062fc1c", "varType": "string" }
    },
    "nodeId": "basicShape#7",
@@ -17126,8 +17050,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H9", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": -485.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": -1160.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17141,9 +17066,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V4", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -97.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 385.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17165,6 +17089,7 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V10", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -620.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17188,7 +17113,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hidden": { "value": true, "varType": "bool" },
     "niceName": { "value": "Dot 5", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "7689c5f9-aa00-4f0c-b0a4-17ba9062fc1c", "varType": "string" }
    },
    "nodeId": "basicShape#8",
@@ -17199,7 +17123,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V1", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -630.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17223,8 +17146,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H6", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 461.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 820.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17238,9 +17162,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line R", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -680.0, "y": -90.0, "z": 0.0 },
+     "value": { "x": -180.0, "y": -90.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17267,9 +17190,8 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Top Left", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -920.0, "y": -730.0, "z": 0.0 },
+     "value": { "x": -420.0, "y": 20.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "26f72718-6201-457b-b727-d4566549b40e", "varType": "string" }
@@ -17294,9 +17216,8 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Bottom Right", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -680.0, "y": -970.0, "z": 0.0 },
+     "value": { "x": -180.0, "y": -220.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "a40df1e7-d00c-4d83-8336-057fbd30c5de", "varType": "string" }
@@ -17323,7 +17244,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logomark", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "size": {
      "value": { "x": 479.237548828125, "y": 481.510986328125 },
      "varType": "double2"
@@ -17338,7 +17258,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hidden": { "value": true, "varType": "bool" },
     "niceName": { "value": "Grey Dot", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "7689c5f9-aa00-4f0c-b0a4-17ba9062fc1c", "varType": "string" }
    },
    "nodeId": "basicShape#3",
@@ -17348,9 +17267,8 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Bottom Left", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -920.0, "y": -970.0, "z": 0.0 },
+     "value": { "x": -420.0, "y": -220.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "686a43df-0946-4cdf-9980-abf2922ab7a8", "varType": "string" }
@@ -17375,8 +17293,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V6", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 941.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 1250.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17399,7 +17318,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V5", "varType": "string" },
     "position": {
-     "value": { "x": 61.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 620.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17422,7 +17341,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H5", "varType": "string" },
     "position": {
-     "value": { "x": 500.0, "y": -458.0, "z": 0.0 },
+     "value": { "x": 500.0, "y": 830.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17436,9 +17355,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H1", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -1002.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -502.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17461,8 +17379,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H11", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": -607.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": -1160.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17476,8 +17395,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V12", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1085.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 1440.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17499,8 +17419,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H8", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 667.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 920.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17514,9 +17435,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line L", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -920.0, "y": -90.0, "z": 0.0 },
+     "value": { "x": -420.0, "y": -90.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17534,8 +17454,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V7", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1005.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 1405.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17557,9 +17478,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V3", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -313.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 187.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17581,9 +17501,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line T", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -730.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": 20.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17597,9 +17516,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V2", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -960.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": -460.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17621,9 +17539,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H2", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -960.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -460.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17637,9 +17554,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H3", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -840.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -340.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17653,8 +17569,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H10", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": -515.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": -1160.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17668,8 +17585,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V8", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1040.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 1440.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17691,9 +17609,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H4", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -620.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": 380.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17707,8 +17624,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H12", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 740.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 920.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17722,9 +17640,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line B", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -970.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -220.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17738,8 +17655,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H7", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 524.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 885.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17753,6 +17671,7 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H13", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 850.0, "y": 773.0, "z": 0.0 },
      "varType": "double3"
@@ -17777,8 +17696,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V9", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -390.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": -1120.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17800,6 +17720,7 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V11", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -620.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17883,6 +17804,7 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V13", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 1252.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17919,7 +17841,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hidden": { "value": true, "varType": "bool" },
     "niceName": { "value": "Black Dot", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "7689c5f9-aa00-4f0c-b0a4-17ba9062fc1c", "varType": "string" }
    },
    "nodeId": "basicShape#1",
@@ -17989,7 +17910,13 @@
      "varType": "color"
     },
     "colorId": { "value": 3, "varType": "int" },
+    "inTime": { "value": 18.0, "varType": "double" },
     "niceName": { "value": "Southwest", "varType": "string" },
+    "overrides": {
+     "list": [
+      { "varType": "any" }
+     ]
+    },
     "playbackEnd": { "value": 212, "varType": "int" },
     "resolution": {
      "value": { "x": 825, "y": 110 },
@@ -18008,7 +17935,13 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 100, "varType": "int" },
+    "inTime": { "value": 22.0, "varType": "double" },
     "niceName": { "value": "Creative", "varType": "string" },
+    "overrides": {
+     "list": [
+      { "varType": "any" }
+     ]
+    },
     "playbackEnd": { "value": 100, "varType": "int" },
     "resolution": {
      "value": { "x": 620, "y": 110 },
@@ -18083,7 +18016,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 500, "varType": "int" },
-    "inTime": { "value": 347.0, "varType": "double" },
+    "inTime": { "value": 136.0, "varType": "double" },
     "niceName": { "value": "CSW_ComingUp_withLogo", "varType": "string" },
     "playbackEnd": { "value": 500, "varType": "int" },
     "resolution": {
@@ -18102,8 +18035,13 @@
      "varType": "color"
     },
     "colorId": { "value": 3, "varType": "int" },
-    "inTime": { "value": 86.0, "varType": "double" },
+    "inTime": { "value": 85.0, "varType": "double" },
     "niceName": { "value": "Logo_Horizontal", "varType": "string" },
+    "overrides": {
+     "list": [
+      { "varType": "any" }
+     ]
+    },
     "resolution": {
      "value": { "x": 1058, "y": 230 },
      "varType": "int2"
@@ -18274,9 +18212,8 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Top Right", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -680.0, "y": -730.0, "z": 0.0 },
+     "value": { "x": -180.0, "y": 20.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "a1990140-b72f-49b4-b8b1-e2e9d5fdad31", "varType": "string" }
@@ -18304,7 +18241,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#341",
    "nodeType": "visibilityCurve"
@@ -18317,7 +18254,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#142",
    "nodeType": "visibilityCurve"
@@ -18330,7 +18267,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#343",
    "nodeType": "visibilityCurve"
@@ -18343,7 +18280,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#333",
    "nodeType": "visibilityCurve"
@@ -18356,7 +18293,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#328",
    "nodeType": "visibilityCurve"
@@ -18369,7 +18306,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#331",
    "nodeType": "visibilityCurve"
@@ -18408,7 +18345,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#419",
    "nodeType": "visibilityCurve"
@@ -18421,7 +18358,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#418",
    "nodeType": "visibilityCurve"
@@ -18434,7 +18371,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#423",
    "nodeType": "visibilityCurve"
@@ -18447,7 +18384,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#332",
    "nodeType": "visibilityCurve"
@@ -18484,7 +18421,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#237",
    "nodeType": "visibilityCurve"
@@ -18497,7 +18434,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#291",
    "nodeType": "visibilityCurve"
@@ -18509,7 +18446,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#244",
    "nodeType": "visibilityCurve"
@@ -18546,7 +18484,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#146",
    "nodeType": "visibilityCurve"
@@ -18558,7 +18496,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 22.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#215",
    "nodeType": "visibilityCurve"
@@ -18571,7 +18510,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#289",
    "nodeType": "visibilityCurve"
@@ -18584,7 +18523,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#534",
    "nodeType": "visibilityCurve"
@@ -18597,7 +18536,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#227",
    "nodeType": "visibilityCurve"
@@ -18610,7 +18549,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#547",
    "nodeType": "visibilityCurve"
@@ -18623,7 +18562,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#533",
    "nodeType": "visibilityCurve"
@@ -18636,7 +18575,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#538",
    "nodeType": "visibilityCurve"
@@ -18649,7 +18588,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#228",
    "nodeType": "visibilityCurve"
@@ -18662,7 +18601,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 86.0, "varType": "double" }
+    "time": { "value": 85.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#436",
    "nodeType": "visibilityCurve"
@@ -18701,7 +18640,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#73",
    "nodeType": "animationCurve"
@@ -18791,7 +18730,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#110",
    "nodeType": "animationCurve"
@@ -18810,7 +18749,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#108",
    "nodeType": "animationCurve"
@@ -18828,7 +18767,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#91",
    "nodeType": "animationCurve"
@@ -18845,7 +18784,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#125",
    "nodeType": "animationCurve"
@@ -18901,7 +18840,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#269",
    "nodeType": "animationCurve"
@@ -18919,7 +18858,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#129",
    "nodeType": "animationCurve"
@@ -18939,7 +18878,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#273",
    "nodeType": "animationCurve"
@@ -18959,7 +18898,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#272",
    "nodeType": "animationCurve"
@@ -18979,7 +18918,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#271",
    "nodeType": "animationCurve"
@@ -18999,7 +18938,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#270",
    "nodeType": "animationCurve"
@@ -19016,7 +18955,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#165",
    "nodeType": "animationCurve"
@@ -19068,7 +19007,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#162",
    "nodeType": "animationCurve"
@@ -19088,7 +19027,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#267",
    "nodeType": "animationCurve"
@@ -19108,7 +19047,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#268",
    "nodeType": "animationCurve"
@@ -19125,7 +19064,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#211",
    "nodeType": "animationCurve"
@@ -19143,7 +19082,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#214",
    "nodeType": "animationCurve"
@@ -19163,7 +19102,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#274",
    "nodeType": "animationCurve"
@@ -19199,7 +19138,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#210",
    "nodeType": "animationCurve"
@@ -19216,7 +19155,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#213",
    "nodeType": "animationCurve"
@@ -19234,7 +19173,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#164",
    "nodeType": "animationCurve"
@@ -19253,7 +19192,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#215",
    "nodeType": "animationCurve"
@@ -19273,7 +19212,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#159",
    "nodeType": "animationCurve"
@@ -19290,7 +19229,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#212",
    "nodeType": "animationCurve"
@@ -19310,7 +19249,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#156",
    "nodeType": "animationCurve"
@@ -19328,7 +19267,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#161",
    "nodeType": "animationCurve"
@@ -19347,7 +19286,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#128",
    "nodeType": "animationCurve"
@@ -19367,7 +19306,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#157",
    "nodeType": "animationCurve"
@@ -19385,7 +19324,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#163",
    "nodeType": "animationCurve"
@@ -19405,7 +19344,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#160",
    "nodeType": "animationCurve"
@@ -19442,7 +19381,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#126",
    "nodeType": "animationCurve"
@@ -19462,7 +19401,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#97",
    "nodeType": "animationCurve"
@@ -19481,7 +19420,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#101",
    "nodeType": "animationCurve"
@@ -19552,7 +19491,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#78",
    "nodeType": "animationCurve"
@@ -19640,7 +19579,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#131",
    "nodeType": "animationCurve"
@@ -19710,7 +19649,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#21",
    "nodeType": "animationCurve"
@@ -19730,7 +19669,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#26",
    "nodeType": "animationCurve"
@@ -19750,7 +19689,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#23",
    "nodeType": "animationCurve"
@@ -19785,7 +19724,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#141",
    "nodeType": "animationCurve"
@@ -19802,7 +19741,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#124",
    "nodeType": "animationCurve"
@@ -19821,7 +19760,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#127",
    "nodeType": "animationCurve"
@@ -19840,7 +19779,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 347.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#104",
    "nodeType": "animationCurve"
@@ -19898,7 +19837,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#76",
    "nodeType": "animationCurve"
@@ -19923,7 +19862,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#109",
    "nodeType": "visibilityCurve"
@@ -19936,7 +19875,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#103",
    "nodeType": "visibilityCurve"
@@ -19970,7 +19909,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#65",
    "nodeType": "animationCurve"
@@ -20002,7 +19941,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "animationCurve#44",
    "nodeType": "animationCurve"
@@ -20015,7 +19954,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 347.0, "varType": "double" }
+    "time": { "value": 136.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#452",
    "nodeType": "visibilityCurve"
@@ -26816,7 +26755,6 @@
      "varType": "editablePath2"
     },
     "niceName": { "value": "SVG Layer", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -0.1335906982421875, "y": 1.0337371826171875, "z": 0.0 },
      "varType": "double3"
@@ -30916,8 +30854,9 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Coming up", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 959.0, "y": 451.0, "z": 0.0 },
+     "value": { "x": 1268.0, "y": 810.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -31168,7 +31107,7 @@
         "start": 0
        }
       ],
-      "text": "13:00"
+      "text": "19:00"
      },
      "varType": "richText"
     },
@@ -38338,7 +38277,7 @@
    "attributes": {
     "array": {
      "list": [
-      { "value": "13", "varType": "string" },
+      { "value": "19", "varType": "string" },
       { "value": ":", "varType": "string" },
       { "value": "00", "varType": "string" }
      ]
@@ -38902,7 +38841,7 @@
     "niceName": { "value": "Stroke 159", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -38938,7 +38877,7 @@
     "niceName": { "value": "Stroke 158", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -38974,7 +38913,7 @@
     "niceName": { "value": "Stroke 155", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -39010,7 +38949,7 @@
     "niceName": { "value": "Stroke 156", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -39046,7 +38985,7 @@
     "niceName": { "value": "Stroke 154", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -39122,7 +39061,7 @@
     "niceName": { "value": "Stroke 153", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -39344,7 +39283,7 @@
     "niceName": { "value": "Stroke 101", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -39449,7 +39388,7 @@
     "niceName": { "value": "Stroke 102", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -40849,7 +40788,7 @@
     "niceName": { "value": "Stroke 5", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -40885,7 +40824,7 @@
     "niceName": { "value": "Stroke 6", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -40921,7 +40860,7 @@
     "niceName": { "value": "Stroke 7", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41050,7 +40989,7 @@
     "niceName": { "value": "Stroke 17", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41148,7 +41087,7 @@
     "niceName": { "value": "Stroke 20", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41184,7 +41123,7 @@
     "niceName": { "value": "Stroke 21", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41220,7 +41159,7 @@
     "niceName": { "value": "Stroke 22", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41256,7 +41195,7 @@
     "niceName": { "value": "Stroke 29", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41354,7 +41293,7 @@
     "niceName": { "value": "Stroke 31", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41390,7 +41329,7 @@
     "niceName": { "value": "Stroke 32", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41426,7 +41365,7 @@
     "niceName": { "value": "Stroke 30", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41462,7 +41401,7 @@
     "niceName": { "value": "Stroke 33", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -41498,7 +41437,7 @@
     "niceName": { "value": "Stroke 35", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -42113,7 +42052,7 @@
     "niceName": { "value": "Stroke 157", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -42149,7 +42088,7 @@
     "niceName": { "value": "Stroke 160", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -42440,7 +42379,7 @@
     "niceName": { "value": "Stroke 4", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -43105,7 +43044,7 @@
     "niceName": { "value": "Stroke 168", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -43234,7 +43173,7 @@
     "niceName": { "value": "Stroke 167", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -45523,7 +45462,7 @@
     "niceName": { "value": "Stroke 126", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -45559,7 +45498,7 @@
     "niceName": { "value": "Stroke 125", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -45595,7 +45534,7 @@
     "niceName": { "value": "Stroke 127", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -45631,7 +45570,7 @@
     "niceName": { "value": "Stroke 128", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "strokeColor": {
-     "value": { "a": 255, "b": 191, "g": 184, "r": 162 },
+     "value": { "a": 255, "b": 68, "g": 30, "r": 36 },
      "varType": "color"
     },
     "uuid": { "value": "d9e9c405-c54f-4a4c-92fa-d416f6f96c9b", "varType": "string" },
@@ -49781,7 +49720,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Time", "varType": "string" },
-    "string": { "value": "13:00", "varType": "string" },
+    "string": { "value": "19:00", "varType": "string" },
     "uuid": { "value": "f55745a2-9147-46fd-846d-eec6599d130b", "varType": "string" }
    },
    "hierarchyOffset": 26.0,
@@ -51374,17 +51313,8 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 14, "varType": "int" },
-    "niceName": { "value": "Motion Blur 153", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "95c65c64-d216-4eaa-a10e-7384492b876f", "varType": "string" }
-   },
-   "nodeId": "motionBlurFilter#536",
-   "nodeType": "motionBlurFilter"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Canvas Contrast Switcher", "varType": "string" },
     "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
    },
@@ -51831,7 +51761,7 @@
   {
    "attributes": {
     "colorId": { "value": 0, "varType": "int" },
-    "first": { "value": 13.0, "varType": "double" },
+    "first": { "value": 19.0, "varType": "double" },
     "niceName": { "value": "Check Time", "varType": "string" },
     "operation": { "value": 5, "varType": "enum" },
     "second": { "value": 18.0, "varType": "double" },
@@ -51844,7 +51774,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Hours", "varType": "string" },
-    "string": { "value": "13", "varType": "string" },
+    "string": { "value": "19", "varType": "string" },
     "uuid": { "value": "018ad3ed-7f2b-4fa9-a71d-7abdd13ec4b9", "varType": "string" }
    },
    "nodeId": "string#16",
@@ -52002,37 +51932,6 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "gradient": {
-     "list": [
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-         "varType": "color"
-        }
-       }
-      },
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
-         "varType": "color"
-        },
-        "position": { "value": 1.0, "varType": "double" }
-       }
-      }
-     ]
-    },
-    "niceName": { "value": "Stroke 174", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "c33e2c74-ba12-46ed-a220-190274f2604a", "varType": "string" }
-   },
-   "nodeId": "strokeMaterial#684",
-   "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "gradient": {
      "list": [
@@ -52166,16 +52065,6 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 14, "varType": "int" },
-    "niceName": { "value": "Motion Blur 152", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "baff0e8e-fdaf-43e2-b006-a41fc9e425b6", "varType": "string" }
-   },
-   "nodeId": "motionBlurFilter#535",
-   "nodeType": "motionBlurFilter"
-  },
-  {
-   "attributes": {
     "niceName": { "value": "subUINodes", "varType": "string" },
     "uuid": { "value": "3434bbc0-28a3-4f75-a53b-be07640d7e69", "varType": "string" }
    },
@@ -52185,6 +52074,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Canvas Switcher", "varType": "string" },
     "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
    },
@@ -52209,57 +52099,8 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 14, "varType": "int" },
-    "niceName": { "value": "Motion Blur 151", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "baff0e8e-fdaf-43e2-b006-a41fc9e425b6", "varType": "string" }
-   },
-   "nodeId": "motionBlurFilter#533",
-   "nodeType": "motionBlurFilter"
-  },
-  {
-   "attributes": {
-    "niceName": { "value": "subUINodes", "varType": "string" },
-    "uuid": { "value": "f041988e-07dd-4b50-88b7-eeb54886ab56", "varType": "string" }
-   },
-   "nodeId": "hiddenFolder#611",
-   "nodeType": "hiddenFolder"
-  },
-  {
-   "attributes": {
-    "niceName": { "value": "subUINodes", "varType": "string" },
-    "uuid": { "value": "44f4aadf-620b-4db8-8257-ca4a8ec21ea0", "varType": "string" }
-   },
-   "nodeId": "hiddenFolder#603",
-   "nodeType": "hiddenFolder"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": -1.0, "varType": "double" },
-    "uuid": { "value": "fc5f9c56-59c2-4d79-a6da-a9d303fcda45", "varType": "string" }
-   },
-   "nodeId": "keyframe#2050",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": -1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 415.0, "varType": "double" },
-    "uuid": { "value": "5fad3e38-d878-40da-ace9-ec2da02839cb", "varType": "string" }
-   },
-   "nodeId": "keyframe#2051",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Text Switcher", "varType": "string" },
     "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
    },
@@ -52647,68 +52488,6 @@
     "width": { "value": 0.0, "varType": "double" }
    },
    "nodeId": "strokeMaterial#720",
-   "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "gradient": {
-     "list": [
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-         "varType": "color"
-        }
-       }
-      },
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
-         "varType": "color"
-        },
-        "position": { "value": 1.0, "varType": "double" }
-       }
-      }
-     ]
-    },
-    "niceName": { "value": "Stroke 176", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "c33e2c74-ba12-46ed-a220-190274f2604a", "varType": "string" }
-   },
-   "nodeId": "strokeMaterial#688",
-   "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "gradient": {
-     "list": [
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-         "varType": "color"
-        }
-       }
-      },
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
-         "varType": "color"
-        },
-        "position": { "value": 1.0, "varType": "double" }
-       }
-      }
-     ]
-    },
-    "niceName": { "value": "Stroke 173", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "3049c9d9-d0c6-429f-9665-2589b7911303", "varType": "string" }
-   },
-   "nodeId": "strokeMaterial#679",
    "nodeType": "strokeMaterial"
   },
   {
@@ -53469,108 +53248,6 @@
    },
    "nodeId": "strokeMaterial#705",
    "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "gradient": {
-     "list": [
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-         "varType": "color"
-        }
-       }
-      },
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
-         "varType": "color"
-        },
-        "position": { "value": 1.0, "varType": "double" }
-       }
-      }
-     ]
-    },
-    "niceName": { "value": "Stroke 177", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "40e3b9ed-1146-471b-8d01-79455ad77c83", "varType": "string" }
-   },
-   "nodeId": "strokeMaterial#689",
-   "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": -1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 284.0, "varType": "double" },
-    "uuid": { "value": "c7ca1504-dd7e-42cc-8793-bd6cd57e2b92", "varType": "string" }
-   },
-   "nodeId": "keyframe#2069",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "uuid": { "value": "852bd5b1-d6ae-463c-b086-20110ec8d196", "varType": "string" }
-   },
-   "nodeId": "keyframe#2068",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": {
-      "interpolation": 0,
-      "leftBez": { "x": -5.324675324675326, "y": -0.41558441558441217 },
-      "locked": true,
-      "numValue": 5.0,
-      "rightBez": { "x": 5.939999999999998, "y": -2.206485849056662 },
-      "weightLocked": true
-     },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 10.0, "varType": "double" },
-    "uuid": { "value": "42634499-ce68-4964-b089-e60d11367977", "varType": "string" }
-   },
-   "nodeId": "keyframe#2071",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": {
-      "interpolation": 0,
-      "leftBez": { "x": -15.2, "y": 0.0 },
-      "locked": true,
-      "numValue": -59.0,
-      "rightBez": { "x": 0.7272727272727195, "y": 32.41558441558441 },
-      "weightLocked": true
-     },
-     "varType": "keyData"
-    },
-    "uuid": { "value": "61484c22-a467-4aed-a24b-770c558ed78f", "varType": "string" }
-   },
-   "nodeId": "keyframe#2072",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": 5.0 },
-     "varType": "keyData"
-    },
-    "uuid": { "value": "400a3bb0-0580-41c5-8a27-3ef37ae44a6a", "varType": "string" }
-   },
-   "nodeId": "keyframe#2070",
-   "nodeType": "keyframe"
   },
   {
    "attributes": {
@@ -57257,46 +56934,6 @@
    },
    "nodeId": "strokeMaterial#691",
    "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "niceName": { "value": "subUINodes", "varType": "string" },
-    "uuid": { "value": "f041988e-07dd-4b50-88b7-eeb54886ab56", "varType": "string" }
-   },
-   "nodeId": "hiddenFolder#608",
-   "nodeType": "hiddenFolder"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": -1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 90.0, "varType": "double" },
-    "uuid": { "value": "5fad3e38-d878-40da-ace9-ec2da02839cb", "varType": "string" }
-   },
-   "nodeId": "keyframe#2063",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": -1.0, "varType": "double" },
-    "uuid": { "value": "fc5f9c56-59c2-4d79-a6da-a9d303fcda45", "varType": "string" }
-   },
-   "nodeId": "keyframe#2061",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "niceName": { "value": "subUINodes", "varType": "string" },
-    "uuid": { "value": "a0b488ae-724c-4521-afef-e7331514da8d", "varType": "string" }
-   },
-   "nodeId": "hiddenFolder#612",
-   "nodeType": "hiddenFolder"
   },
   {
    "attributes": {
