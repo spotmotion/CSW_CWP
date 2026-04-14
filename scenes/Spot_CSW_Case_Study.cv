@@ -13,15 +13,22 @@
   }
  ],
  "connections": [
+  { "from": "linearGradientShader#22.id", "to": "gradientShader#22.generator" },
+  { "from": "compNode#1.resolution", "to": "gradientShader#22.resolution" },
+  { "from": "colorArray#2.array.1", "to": "linearGradientShader#22.gradient.1.color" },
+  { "from": "colorArray#2.array.1", "to": "linearGradientShader#22.gradient.0.color" },
+  { "from": "visibilityCurve#594.out", "to": "group#39.on" },
   { "from": "keyframe#2116.id", "to": "visibilityCurve#593.keyframes.0" },
   { "from": "compNode#1.time", "to": "visibilityCurve#593.time" },
   { "from": "keyframe#2115.id", "to": "visibilityCurve#593.keyframes.1" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#593.activeAnimationLayer" },
+  { "from": "keyframe#2118.id", "to": "visibilityCurve#594.keyframes.1" },
+  { "from": "keyframe#2117.id", "to": "visibilityCurve#594.keyframes.0" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#594.activeAnimationLayer" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#594.time" },
   { "from": "colorMaterial#729.id", "to": "pointsToCurve#37.material" },
   { "from": "visibilityCurve#593.out", "to": "pointsToCurve#37.on" },
-  { "from": "glowFilter#2.id", "to": "pointsToCurve#37.filters.0" },
   { "from": "arrayDistribution#37.id", "to": "pointsToCurve#37.generator" },
-  { "from": "glowFilter#3.id", "to": "pointsToCurve#36.filters.0" },
   { "from": "visibilityCurve#592.out", "to": "pointsToCurve#36.on" },
   { "from": "arrayDistribution#36.id", "to": "pointsToCurve#36.generator" },
   { "from": "colorMaterial#728.id", "to": "pointsToCurve#36.material" },
@@ -97,6 +104,7 @@
   { "from": "keyframe#2091.id", "to": "visibilityCurve#574.keyframes.0" },
   { "from": "compNode#19.outActiveAnimationLayer", "to": "visibilityCurve#574.activeAnimationLayer" },
   { "from": "compNode#19.time", "to": "visibilityCurve#574.time" },
+  { "from": "colorArray#4.id", "to": "colorShader#4.shaderColor" },
   { "from": "shaderArray#1.id", "to": "colorMaterial#728.colorShaders.0.shader" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#728.materialColor" },
   { "from": "getSubMeshTransform#6.id", "to": "arrayDistribution#36.array.2" },
@@ -990,11 +998,12 @@
   { "from": "keyframe#390.id", "to": "animationCurve#67.keyframes.1" },
   { "from": "value#2.id", "to": "animationCurve#67.offset" },
   { "from": "keyframe#663.id", "to": "animationCurve#67.keyframes.2" },
-  { "from": "shaderArray#1.id", "to": "colorMaterial#259.colorShaders.0.shader" },
-  { "from": "colorArray#2.array.0", "to": "colorMaterial#259.materialColor" },
+  { "from": "shaderArray#4.id", "to": "colorMaterial#259.colorShaders.0.shader" },
+  { "from": "ifElse#11.id", "to": "colorMaterial#259.materialColor" },
   { "from": "gridDistribution#5.id", "to": "sortDistribution#5.input" },
   { "from": "compNode#1.resolution", "to": "gradientShader#2.resolution" },
   { "from": "linearGradientShader#2.id", "to": "gradientShader#2.generator" },
+  { "from": "shaderArray#5.id", "to": "colorMaterial#658.colorShaders.0.shader" },
   { "from": "colorArray#2.array.5", "to": "colorMaterial#658.materialColor" },
   { "from": "duplicator#9.id", "to": "getSubMeshTransform#30.inputShape" },
   { "from": "gridDistribution#8.id", "to": "sortDistribution#8.input" },
@@ -1010,8 +1019,10 @@
   { "from": "ifElse#10.id", "to": "colorMaterial#539.materialColor" },
   { "from": "colorShader#1.id", "to": "colorMaterial#528.colorShaders.0.shader" },
   { "from": "ifElse#10.id", "to": "colorMaterial#528.materialColor" },
+  { "from": "colorShader#4.id", "to": "colorMaterial#409.colorShaders.0.shader" },
   { "from": "compNode#1.resolution", "to": "gradientShader#1.resolution" },
   { "from": "linearGradientShader#1.id", "to": "gradientShader#1.generator" },
+  { "from": "colorShader#4.id", "to": "colorMaterial#410.colorShaders.0.shader" },
   { "from": "colorShader#3.id", "to": "colorMaterial#388.colorShaders.0.shader" },
   { "from": "getSubMeshTransform#22.id", "to": "arrayDistribution#6.array.0" },
   { "from": "getSubMeshTransform#23.id", "to": "arrayDistribution#6.array.2" },
@@ -1033,6 +1044,7 @@
   { "from": "colorShader#2.id", "to": "colorMaterial#299.colorShaders.0.shader" },
   { "from": "gridDistribution#7.id", "to": "sortDistribution#7.input" },
   { "from": "colorShader#2.id", "to": "colorMaterial#305.colorShaders.0.shader" },
+  { "from": "shaderArray#6.id", "to": "colorMaterial#447.colorShaders.0.shader" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#447.materialColor" },
   { "from": "colorShader#1.id", "to": "colorMaterial#538.colorShaders.0.shader" },
   { "from": "ifElse#10.id", "to": "colorMaterial#538.materialColor" },
@@ -1054,13 +1066,14 @@
   { "from": "getSubMeshTransform#74.id", "to": "arrayDistribution#19.array.0" },
   { "from": "getSubMeshTransform#75.id", "to": "arrayDistribution#19.array.3" },
   { "from": "getSubMeshTransform#76.id", "to": "arrayDistribution#19.array.1" },
+  { "from": "shaderArray#5.id", "to": "colorMaterial#311.colorShaders.0.shader" },
   { "from": "colorArray#2.array.5", "to": "colorMaterial#311.materialColor" },
   { "from": "colorShader#1.id", "to": "colorMaterial#545.colorShaders.0.shader" },
   { "from": "ifElse#10.id", "to": "colorMaterial#545.materialColor" },
-  { "from": "gradientShader#6.id", "to": "colorMaterial#520.colorShaders.0.shader" },
+  { "from": "shaderArray#8.id", "to": "colorMaterial#520.colorShaders.0.shader" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#520.materialColor" },
+  { "from": "shaderArray#10.id", "to": "colorMaterial#255.colorShaders.0.shader" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#255.materialColor" },
-  { "from": "shaderArray#1.id", "to": "colorMaterial#255.colorShaders.0.shader" },
   { "from": "getSubMeshTransform#80.id", "to": "arrayDistribution#20.array.0" },
   { "from": "getSubMeshTransform#79.id", "to": "arrayDistribution#20.array.1" },
   { "from": "getSubMeshTransform#78.id", "to": "arrayDistribution#20.array.3" },
@@ -1069,6 +1082,7 @@
   { "from": "ifElse#10.id", "to": "colorMaterial#536.materialColor" },
   { "from": "colorArray#2.array.0", "to": "colorMaterial#522.materialColor" },
   { "from": "colorShader#3.id", "to": "colorMaterial#392.colorShaders.0.shader" },
+  { "from": "shaderArray#5.id", "to": "colorMaterial#517.colorShaders.0.shader" },
   { "from": "colorArray#2.array.5", "to": "colorMaterial#517.materialColor" },
   { "from": "gridDistribution#24.id", "to": "sortDistribution#24.input" },
   { "from": "colorShader#2.id", "to": "colorMaterial#301.colorShaders.0.shader" },
@@ -1166,10 +1180,12 @@
   { "from": "colorShader#2.id", "to": "colorMaterial#295.colorShaders.0.shader" },
   { "from": "colorShader#1.id", "to": "colorMaterial#550.colorShaders.0.shader" },
   { "from": "ifElse#10.id", "to": "colorMaterial#550.materialColor" },
+  { "from": "shaderArray#6.id", "to": "colorMaterial#314.colorShaders.0.shader" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#314.materialColor" },
   { "from": "gridDistribution#4.id", "to": "sortDistribution#4.input" },
   { "from": "gridDistribution#9.id", "to": "sortDistribution#9.input" },
   { "from": "colorShader#3.id", "to": "colorMaterial#385.colorShaders.0.shader" },
+  { "from": "shaderArray#6.id", "to": "colorMaterial#664.colorShaders.0.shader" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#664.materialColor" },
   { "from": "ifElse#9.id", "to": "colorMaterial#183.materialColor" },
   { "from": "gridDistribution#41.id", "to": "sortDistribution#32.input" },
@@ -1186,8 +1202,10 @@
   { "from": "getSubMeshTransform#128.id", "to": "arrayDistribution#31.array.0" },
   { "from": "getSubMeshTransform#126.id", "to": "arrayDistribution#31.array.3" },
   { "from": "getSubMeshTransform#127.id", "to": "arrayDistribution#31.array.2" },
+  { "from": "shaderArray#6.id", "to": "colorMaterial#669.colorShaders.0.shader" },
   { "from": "colorArray#2.array.2", "to": "colorMaterial#669.materialColor" },
   { "from": "colorShader#3.id", "to": "colorMaterial#384.colorShaders.0.shader" },
+  { "from": "shaderArray#5.id", "to": "colorMaterial#661.colorShaders.0.shader" },
   { "from": "colorArray#2.array.5", "to": "colorMaterial#661.materialColor" },
   { "from": "gridDistribution#39.id", "to": "sortDistribution#30.input" },
   { "from": "duplicator#23.id", "to": "getSubMeshTransform#74.inputShape" },
@@ -2303,7 +2321,6 @@
   { "from": "visibilityCurve#213.out", "to": "editableShape#35.on" },
   { "from": "colorMaterial#297.id", "to": "editableShape#35.material" },
   { "from": "strokeMaterial#296.id", "to": "editableShape#35.stroke" },
-  { "from": "glowFilter#2.id", "to": "editableShape#2.filters.0" },
   { "from": "colorMaterial#205.id", "to": "editableShape#2.material" },
   { "from": "visibilityCurve#150.out", "to": "editableShape#2.on" },
   { "from": "animationPath#1.out", "to": "editableShape#2.inputPath" },
@@ -2479,7 +2496,6 @@
   { "from": "gradientShader#2.id", "to": "shaderArray#1.array.3" },
   { "from": "gradientShader#10.id", "to": "shaderArray#1.array.5" },
   { "from": "gradientShader#7.id", "to": "shaderArray#1.array.2" },
-  { "from": "value#45.id", "to": "shaderArray#1.arrayIndex" },
   { "from": "gradientShader#8.id", "to": "shaderArray#1.array.0" },
   { "from": "stringManipulator#10.id", "to": "string#13.manipulators.0" },
   { "from": "pointsToCurve#27.id", "to": "boundingBox#3.inputShapes.0" },
@@ -2702,7 +2718,46 @@
   { "from": "visibilityCurve#578.out", "to": "editableShape#112.on" },
   { "from": "visibilityCurve#580.out", "to": "editableShape#115.on" },
   { "from": "colorMaterial#718.id", "to": "editableShape#115.material" },
-  { "from": "strokeMaterial#694.id", "to": "editableShape#115.stroke" }
+  { "from": "strokeMaterial#694.id", "to": "editableShape#115.stroke" },
+  { "from": "colorArray#2.array.4", "to": "colorArray#4.array.0" },
+  { "from": "colorArray#2.array.2", "to": "colorArray#4.array.1" },
+  { "from": "ifElse#15.id", "to": "colorArray#4.arrayIndex" },
+  { "from": "gradientShader#8.id", "to": "shaderArray#4.array.0" },
+  { "from": "gradientShader#2.id", "to": "shaderArray#4.array.1" },
+  { "from": "ifElse#11.id", "to": "shaderArray#4.arrayIndex" },
+  { "from": "value#48.id", "to": "ifElse#13.second" },
+  { "from": "value#47.id", "to": "ifElse#13.first" },
+  { "from": "comparison#5.id", "to": "ifElse#13.condition" },
+  { "from": "value#48.id", "to": "ifElse#11.second" },
+  { "from": "value#47.id", "to": "ifElse#11.first" },
+  { "from": "comparison#5.id", "to": "ifElse#11.condition" },
+  { "from": "gradientShader#22.id", "to": "shaderArray#5.array.0" },
+  { "from": "gradientShader#9.id", "to": "shaderArray#5.array.1" },
+  { "from": "ifElse#13.id", "to": "shaderArray#5.arrayIndex" },
+  { "from": "comparison#5.id", "to": "ifElse#16.condition" },
+  { "from": "value#47.id", "to": "ifElse#16.first" },
+  { "from": "value#48.id", "to": "ifElse#16.second" },
+  { "from": "gradientShader#6.id", "to": "shaderArray#8.array.1" },
+  { "from": "ifElse#16.id", "to": "shaderArray#8.arrayIndex" },
+  { "from": "gradientShader#8.id", "to": "shaderArray#8.array.0" },
+  { "from": "comparison#5.id", "to": "ifElse#14.condition" },
+  { "from": "value#47.id", "to": "ifElse#14.first" },
+  { "from": "value#48.id", "to": "ifElse#14.second" },
+  { "from": "gradientShader#2.id", "to": "shaderArray#10.array.1" },
+  { "from": "gradientShader#22.id", "to": "shaderArray#10.array.0" },
+  { "from": "ifElse#18.id", "to": "shaderArray#10.arrayIndex" },
+  { "from": "gradientShader#10.id", "to": "shaderArray#7.array.0" },
+  { "from": "ifElse#15.id", "to": "shaderArray#7.arrayIndex" },
+  { "from": "gradientShader#7.id", "to": "shaderArray#7.array.1" },
+  { "from": "comparison#5.id", "to": "ifElse#18.condition" },
+  { "from": "value#47.id", "to": "ifElse#18.first" },
+  { "from": "value#48.id", "to": "ifElse#18.second" },
+  { "from": "value#48.id", "to": "ifElse#15.second" },
+  { "from": "value#47.id", "to": "ifElse#15.first" },
+  { "from": "comparison#5.id", "to": "ifElse#15.condition" },
+  { "from": "gradientShader#7.id", "to": "shaderArray#6.array.1" },
+  { "from": "ifElse#14.id", "to": "shaderArray#6.arrayIndex" },
+  { "from": "gradientShader#8.id", "to": "shaderArray#6.array.0" }
  ],
  "controlCenter": {
   "compNode#1": {
@@ -2713,7 +2768,6 @@
     { "path": "stringArray#2.arrayIndex" },
     { "path": "value#43.value" },
     { "path": "ifElse#5.condition" },
-    { "path": "value#45.value" },
     { "path": "string#16.string" },
     { "path": "string#15.string" }
    ],
@@ -2743,8 +2797,20 @@
  "labelColors": "Pastel",
  "nodeMeta": [
   {
+   "children": [ "hiddenFolder#644" ],
+   "nodeId": "gradientShader#22"
+  },
+  {
+   "children": [ "comparison#5", "ifElse#8", "ifElse#9", "ifElse#13", "ifElse#15", "ifElse#14", "ifElse#16", "ifElse#18", "ifElse#11", "ifElse#10", "hiddenFolder#641" ],
+   "nodeId": "group#39"
+  },
+  {
    "children": [ "keyframe#2115", "keyframe#2116" ],
    "nodeId": "visibilityCurve#593"
+  },
+  {
+   "children": [ "keyframe#2118", "keyframe#2117" ],
+   "nodeId": "visibilityCurve#594"
   },
   {
    "children": [ "hiddenFolder#633" ],
@@ -3715,7 +3781,7 @@
    "nodeId": "pointsToCurve#21"
   },
   {
-   "children": [ "comparison#5", "ifElse#8", "ifElse#9", "ifElse#10", "value#45", "string#12", "value#43", "ifElse#5", "stringArray#2", "comparison#4", "string#13", "string#14", "hiddenFolder#582" ],
+   "children": [ "value#47", "value#48", "group#39", "string#12", "value#43", "ifElse#5", "stringArray#2", "comparison#4", "string#13", "string#14", "hiddenFolder#582" ],
    "nodeId": "group#38"
   },
   {
@@ -4287,7 +4353,7 @@
    "nodeId": "compNode#6"
   },
   {
-   "children": [ "glowFilter#3", "glowFilter#2", "group#38", "textShape#1", "planarCamera#1", "duplicator#5", "pointsToCurve#4", "compositionReference#5", "duplicator#6", "pointsToCurve#5", "compositionReference#6", "duplicator#9", "pointsToCurve#21", "duplicator#1", "duplicator#11", "duplicator#2", "group#10", "cornerPinShape#1", "group#4", "group#3", "group#1", "compositionReference#35", "compositionReference#36", "pointsToCurve#8", "pointsToCurve#37", "compositionReference#34", "pointsToCurve#34", "pointsToCurve#33", "pointsToCurve#31", "pointsToCurve#30", "pointsToCurve#20", "pointsToCurve#19", "pointsToCurve#9", "compositionReference#21", "duplicator#8", "pointsToCurve#7", "compositionReference#12", "duplicator#7", "pointsToCurve#6", "group#21", "duplicator#4", "pointsToCurve#3", "compositionReference#37", "compositionReference#10", "duplicator#3", "boundingBox#7", "pointsToCurve#2", "pointsToCurve#1", "shaderArray#1", "colorArray#2", "backgroundShape#1", "shaderArray#2" ],
+   "children": [ "group#38", "textShape#1", "planarCamera#1", "duplicator#5", "pointsToCurve#4", "compositionReference#5", "duplicator#6", "pointsToCurve#5", "compositionReference#6", "duplicator#9", "pointsToCurve#21", "duplicator#1", "duplicator#11", "duplicator#2", "group#10", "cornerPinShape#1", "group#4", "group#3", "group#1", "compositionReference#35", "compositionReference#36", "pointsToCurve#8", "pointsToCurve#37", "compositionReference#34", "pointsToCurve#34", "pointsToCurve#33", "pointsToCurve#31", "pointsToCurve#30", "pointsToCurve#20", "pointsToCurve#19", "pointsToCurve#9", "compositionReference#21", "duplicator#8", "pointsToCurve#7", "compositionReference#12", "duplicator#7", "pointsToCurve#6", "group#21", "duplicator#4", "pointsToCurve#3", "compositionReference#37", "compositionReference#10", "duplicator#3", "boundingBox#7", "pointsToCurve#2", "pointsToCurve#1", "shaderArray#1", "colorArray#2", "backgroundShape#1", "shaderArray#2" ],
    "nodeId": "compNode#1"
   },
   {
@@ -4303,7 +4369,7 @@
    "nodeId": "compNode#12"
   },
   {
-   "children": [ "value#15", "value#18", "sequence#5", "math#6", "keyframe#1025", "group#19" ],
+   "children": [ "colorShader#4", "value#15", "value#18", "sequence#5", "math#6", "keyframe#1025", "group#19" ],
    "nodeId": "compNode#8"
   },
   {
@@ -5783,7 +5849,7 @@
    "nodeId": "hiddenFolder#312"
   },
   {
-   "children": [ "gradientShader#8", "gradientShader#1", "gradientShader#7", "gradientShader#2", "gradientShader#9", "gradientShader#10" ],
+   "children": [ "gradientShader#8", "gradientShader#22", "gradientShader#1", "gradientShader#7", "gradientShader#2", "gradientShader#9", "gradientShader#10" ],
    "nodeId": "shaderArray#1"
   },
   {
@@ -6057,6 +6123,38 @@
   {
    "children": [ "motionBlurFilter#557", "colorMaterial#729", "arrayDistribution#37", "strokeMaterial#728", "visibilityCurve#593" ],
    "nodeId": "hiddenFolder#633"
+  },
+  {
+   "children": [ "shaderArray#5" ],
+   "nodeId": "ifElse#13"
+  },
+  {
+   "children": [ "shaderArray#4" ],
+   "nodeId": "ifElse#11"
+  },
+  {
+   "children": [ "shaderArray#8" ],
+   "nodeId": "ifElse#16"
+  },
+  {
+   "children": [ "motionBlurFilter#558", "strokeMaterial#729", "colorMaterial#730", "visibilityCurve#594" ],
+   "nodeId": "hiddenFolder#641"
+  },
+  {
+   "children": [ "shaderArray#6" ],
+   "nodeId": "ifElse#14"
+  },
+  {
+   "children": [ "shaderArray#10" ],
+   "nodeId": "ifElse#18"
+  },
+  {
+   "children": [ "colorArray#4", "shaderArray#7" ],
+   "nodeId": "ifElse#15"
+  },
+  {
+   "children": [ "radialGradientShader#18", "conicalGradientShader#18", "shapeGradientShader#18", "linearGradientShader#22" ],
+   "nodeId": "hiddenFolder#644"
   }
  ],
  "nodes": [
@@ -6071,15 +6169,83 @@
   },
   {
    "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Hero Alt", "varType": "string" },
+    "pinned": { "value": true, "varType": "bool" },
+    "screenSpace": { "value": true, "varType": "bool" },
+    "uuid": { "value": "032558d1-b784-4645-af66-99fdc6c88892", "varType": "string" }
+   },
+   "nodeId": "gradientShader#22",
+   "nodeType": "gradientShader"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 49, "g": 183, "r": 241 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 49, "g": 183, "r": 241 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Linear Gradient 10", "varType": "string" },
+    "offset": {
+     "value": { "x": 0.0, "y": 310.0 },
+     "varType": "double2"
+    },
+    "rotation": { "value": -45.0, "varType": "double" },
+    "uuid": { "value": "441dd1f1-4508-41dd-a6af-a13e9fff0929", "varType": "string" }
+   },
+   "nodeId": "linearGradientShader#22",
+   "nodeType": "linearGradientShader"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 16, "varType": "int" },
+    "niceName": { "value": "Night Mode Switchers", "varType": "string" },
+    "uuid": { "value": "89bf5d08-eb82-4afc-859f-67d6c2de28ee", "varType": "string" }
+   },
+   "nodeId": "group#39",
+   "nodeType": "group"
+  },
+  {
+   "attributes": {
     "keyframes": {
      "list": [
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#593",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 286.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#594",
    "nodeType": "visibilityCurve"
   },
   {
@@ -6088,14 +6254,8 @@
     "blendMode": { "value": 12, "varType": "enum" },
     "close": { "value": true, "varType": "bool" },
     "colorId": { "value": 12, "varType": "int" },
-    "filters": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Glow", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 42.0,
@@ -6107,13 +6267,9 @@
     "bezier": { "value": false, "varType": "bool" },
     "close": { "value": true, "varType": "bool" },
     "colorId": { "value": 8, "varType": "int" },
-    "filters": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Glow", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "opacity": { "value": 50.0, "varType": "double" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
@@ -6353,6 +6509,30 @@
    },
    "nodeId": "visibilityCurve#574",
    "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "materialColor": {
+     "value": { "a": 255, "b": 255, "g": 100, "r": 100 },
+     "varType": "color"
+    },
+    "niceName": { "value": "Fill 180", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "99ade4d0-bf9b-42c3-a1f2-d649714e2357", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#730",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "False", "varType": "string" },
+    "uuid": { "value": "71e5b699-cbd7-4d05-afb7-fe661cff48f3", "varType": "string" },
+    "value": { "value": 1.0, "varType": "double" }
+   },
+   "nodeId": "value#48",
+   "nodeType": "value"
   },
   {
    "attributes": {
@@ -6810,19 +6990,25 @@
   },
   {
    "attributes": {
-    "blur": {
-     "value": { "x": 40, "y": 40 },
-     "varType": "int2"
-    },
-    "colorId": { "value": 14, "varType": "int" },
-    "hidden": { "value": true, "varType": "bool" },
-    "intensity": { "value": 0.75, "varType": "double" },
-    "matteTileMode": { "value": 2, "varType": "enum" },
-    "niceName": { "value": "Logomark Glow", "varType": "string" },
-    "uuid": { "value": "dac2ae3f-1989-4ca5-af5e-f3fdfa50c698", "varType": "string" }
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "True", "varType": "string" },
+    "uuid": { "value": "71e5b699-cbd7-4d05-afb7-fe661cff48f3", "varType": "string" }
    },
-   "nodeId": "glowFilter#2",
-   "nodeType": "glowFilter"
+   "nodeId": "value#47",
+   "nodeType": "value"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Color Shader", "varType": "string" },
+    "shaderColor": {
+     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "varType": "color"
+    },
+    "uuid": { "value": "d508d83c-b2f7-4fc9-be96-58f21c11e67b", "varType": "string" }
+   },
+   "nodeId": "colorShader#4",
+   "nodeType": "colorShader"
   },
   {
    "attributes": {
@@ -6847,19 +7033,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": 187.0, "y": 20.0 },
+       "value": { "x": -313.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": 20.0 },
+       "value": { "x": -97.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": 380.0 },
+       "value": { "x": -97.0, "y": -620.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 187.0, "y": 380.0 },
+       "value": { "x": -313.0, "y": -620.0 },
        "varType": "double2"
       }
      ]
@@ -6893,19 +7079,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 620.0, "y": 830.0 },
+       "value": { "x": 61.0, "y": -458.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 620.0, "y": 820.0 },
+       "value": { "x": 61.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": 820.0 },
+       "value": { "x": 941.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": 830.0 },
+       "value": { "x": 941.0, "y": -458.0 },
        "varType": "double2"
       }
      ]
@@ -6919,26 +7105,13 @@
   },
   {
    "attributes": {
-    "blendMode": { "value": 1, "varType": "enum" },
-    "colorId": { "value": 14, "varType": "int" },
-    "hidden": { "value": true, "varType": "bool" },
-    "intensity": { "value": 0.75, "varType": "double" },
-    "matteTileMode": { "value": 2, "varType": "enum" },
-    "niceName": { "value": "Text Glow", "varType": "string" },
-    "uuid": { "value": "dac2ae3f-1989-4ca5-af5e-f3fdfa50c698", "varType": "string" }
-   },
-   "nodeId": "glowFilter#3",
-   "nodeType": "glowFilter"
-  },
-  {
-   "attributes": {
     "keyframes": {
      "list": [
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#592",
    "nodeType": "visibilityCurve"
@@ -6961,11 +7134,12 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Wave Line 3", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 286.0, "y": 200.0, "z": 0.0 },
+     "value": { "x": -205.0, "y": -675.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "fb78f9cf-e3ed-4d15-90b5-bf1bb94a7c5a", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7098,7 +7272,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#564",
    "nodeType": "visibilityCurve"
@@ -7116,7 +7290,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#278",
    "nodeType": "animationCurve"
@@ -7501,9 +7675,10 @@
   {
    "attributes": {
     "colorId": { "value": 4, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Tear1 POS", "varType": "string" },
     "uuid": { "value": "fcd19691-eca6-4d6a-95d1-52d3becd3195", "varType": "string" },
-    "value": { "value": -180.0, "varType": "double" }
+    "value": { "value": -268.94312425277195, "varType": "double" }
    },
    "nodeId": "value#15",
    "nodeType": "value"
@@ -7541,9 +7716,10 @@
   {
    "attributes": {
     "colorId": { "value": 4, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Tear2 POS", "varType": "string" },
     "uuid": { "value": "fcd19691-eca6-4d6a-95d1-52d3becd3195", "varType": "string" },
-    "value": { "value": -280.0, "varType": "double" }
+    "value": { "value": -368.94312425277195, "varType": "double" }
    },
    "nodeId": "value#18",
    "nodeType": "value"
@@ -7670,7 +7846,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logo_Horizontal", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "overrides": {
      "list": [
       {
@@ -7703,7 +7878,7 @@
     },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1191.0, "y": 835.0, "z": 0.0 },
+     "value": { "x": 946.0, "y": -453.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -7715,7 +7890,7 @@
      "value": { "x": 0.22, "y": 0.22 },
      "varType": "double2"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "207f087f-8d6c-4123-9ffc-8e910a58b33f", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7728,11 +7903,12 @@
     "colorId": { "value": 2, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Bars", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 552.5, "y": -470.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "trackMattes": {
      "list": [ {} ]
     },
@@ -7762,7 +7938,7 @@
      "value": { "x": 0.65, "y": 0.65 },
      "varType": "double2"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7780,6 +7956,7 @@
      "value": { "x": -100.0, "y": -50.0, "z": 0.0 },
      "varType": "double3"
     },
+    "time": { "value": 36.0, "varType": "double" },
     "uuid": { "value": "8011aa36-0b89-4778-8707-37d7a57c73b5", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7796,12 +7973,13 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Tears", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -262.0, "y": -280.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "6365cb71-687a-48f9-ae1e-12e5416b051b", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7819,6 +7997,7 @@
      "value": { "x": -200.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
+    "time": { "value": 36.0, "varType": "double" },
     "uuid": { "value": "8011aa36-0b89-4778-8707-37d7a57c73b5", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7835,6 +8014,7 @@
      "value": { "x": 100.0, "y": 50.0, "z": 0.0 },
      "varType": "double3"
     },
+    "time": { "value": 36.0, "varType": "double" },
     "uuid": { "value": "8011aa36-0b89-4778-8707-37d7a57c73b5", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7852,6 +8032,7 @@
      "value": { "x": 100.0, "y": -50.0, "z": 0.0 },
      "varType": "double3"
     },
+    "time": { "value": 36.0, "varType": "double" },
     "uuid": { "value": "8011aa36-0b89-4778-8707-37d7a57c73b5", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7869,6 +8050,7 @@
      "value": { "x": -100.0, "y": 50.0, "z": 0.0 },
      "varType": "double3"
     },
+    "time": { "value": 36.0, "varType": "double" },
     "uuid": { "value": "8011aa36-0b89-4778-8707-37d7a57c73b5", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7882,6 +8064,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Tears_Vert 1", "varType": "string" },
     "playAudio": { "value": false, "varType": "bool" },
+    "time": { "value": 36.0, "varType": "double" },
     "uuid": { "value": "8011aa36-0b89-4778-8707-37d7a57c73b5", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7898,6 +8081,7 @@
      "value": { "x": 200.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
+    "time": { "value": 36.0, "varType": "double" },
     "uuid": { "value": "8011aa36-0b89-4778-8707-37d7a57c73b5", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7918,7 +8102,7 @@
      "value": { "x": -447.6795654296875, "y": 580.990234375, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7940,7 +8124,7 @@
      "value": { "x": -187.6795654296875, "y": 120.99024963378906, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7967,7 +8151,7 @@
      "value": { "x": 0.65, "y": 0.65 },
      "varType": "double2"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -7981,6 +8165,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Creative", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "overrides": {
      "list": [
       {
@@ -8009,10 +8194,10 @@
     },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -115.5, "y": -289.0, "z": 0.0 },
+     "value": { "x": -615.5, "y": -1039.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "39eeac3b-a27c-4517-8d53-b7a4e89061d1", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8027,27 +8212,21 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Camera", "varType": "string" },
     "position": {
-     "value": { "x": 37.66587721771845, "y": 0.0, "z": 879.13 },
+     "value": { "x": 520.0, "y": 0.0, "z": 879.13 },
      "varType": "double3"
     },
     "resolution": {
      "value": { "x": 1080, "y": 1080 },
      "varType": "int2"
     },
+    "rotation": {
+     "value": { "x": 0.0, "y": 0.0, "z": 90.0 },
+     "varType": "double3"
+    },
     "uuid": { "value": "a7cee0f5-cd0b-41c5-9615-11df551e0c62", "varType": "string" }
    },
    "nodeId": "planarCamera#1",
    "nodeType": "planarCamera"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 4, "varType": "int" },
-    "niceName": { "value": "Colour Switcher", "varType": "string" },
-    "uuid": { "value": "815c1015-2562-453a-a327-2b7a1359d1d8", "varType": "string" },
-    "value": { "instanceName": "Index", "value": 3.0, "varType": "double" }
-   },
-   "nodeId": "value#45",
-   "nodeType": "value"
   },
   {
    "attributes": {
@@ -8059,7 +8238,8 @@
      "list": [ {} ]
     },
     "niceName": { "value": "Wave Line", "varType": "string" },
-    "time": { "value": 136.0, "varType": "double" },
+    "on": { "value": false, "varType": "bool" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "fb78f9cf-e3ed-4d15-90b5-bf1bb94a7c5a", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8082,6 +8262,7 @@
      ]
     },
     "niceName": { "value": "Southwest", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "overrides": {
      "list": [
       {
@@ -8110,10 +8291,10 @@
     },
     "playAudio": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -15.5, "y": -410.0, "z": 0.0 },
+     "value": { "x": -515.5, "y": -910.0, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "39eeac3b-a27c-4517-8d53-b7a4e89061d1", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8140,7 +8321,7 @@
      "value": { "x": 0.65, "y": 0.65 },
      "varType": "double2"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8153,7 +8334,6 @@
     "colorId": { "value": 7, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Coming Up", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 520.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -8162,7 +8342,7 @@
      "value": { "x": 0.0, "y": 0.0, "z": -90.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "trackMattes": {
      "list": [ {} ]
     },
@@ -8187,7 +8367,7 @@
      "value": { "x": 112.32048797607422, "y": 420.9902648925781, "z": 0.0 },
      "varType": "double3"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "uuid": { "value": "74a730a8-69e3-4bf3-8d5d-c6ef0534ddcf", "varType": "string" }
    },
    "contextFilter": [ 1 ],
@@ -8200,7 +8380,6 @@
     "colorId": { "value": 8, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Wave Line 2", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 520.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -8214,7 +8393,7 @@
      "value": { "x": 1.33, "y": 1.33 },
      "varType": "double2"
     },
-    "time": { "value": 136.0, "varType": "double" },
+    "time": { "value": 286.0, "varType": "double" },
     "timeRemapping": { "value": 58.63453815261044, "varType": "double" },
     "trackMattes": {
      "list": [ {} ]
@@ -8250,7 +8429,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#90",
    "nodeType": "animationCurve"
@@ -8263,7 +8442,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#128",
    "nodeType": "visibilityCurve"
@@ -8276,7 +8455,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#111",
    "nodeType": "visibilityCurve"
@@ -8289,7 +8468,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#191",
    "nodeType": "visibilityCurve"
@@ -8302,7 +8481,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#129",
    "nodeType": "visibilityCurve"
@@ -8315,7 +8494,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#130",
    "nodeType": "visibilityCurve"
@@ -8328,7 +8507,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#193",
    "nodeType": "visibilityCurve"
@@ -8341,7 +8520,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#187",
    "nodeType": "visibilityCurve"
@@ -8354,7 +8533,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#185",
    "nodeType": "visibilityCurve"
@@ -8367,7 +8546,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#134",
    "nodeType": "visibilityCurve"
@@ -8380,7 +8559,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#131",
    "nodeType": "visibilityCurve"
@@ -8393,7 +8572,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#180",
    "nodeType": "visibilityCurve"
@@ -8406,7 +8585,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#189",
    "nodeType": "visibilityCurve"
@@ -8419,7 +8598,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#132",
    "nodeType": "visibilityCurve"
@@ -8432,7 +8611,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#552",
    "nodeType": "visibilityCurve"
@@ -8445,7 +8624,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#127",
    "nodeType": "visibilityCurve"
@@ -8458,7 +8637,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#121",
    "nodeType": "visibilityCurve"
@@ -8471,7 +8650,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#141",
    "nodeType": "visibilityCurve"
@@ -8484,7 +8663,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#150",
    "nodeType": "visibilityCurve"
@@ -8497,7 +8676,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#181",
    "nodeType": "visibilityCurve"
@@ -8534,7 +8713,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#312",
    "nodeType": "visibilityCurve"
@@ -8547,7 +8727,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#556",
    "nodeType": "visibilityCurve"
@@ -8573,7 +8753,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#176",
    "nodeType": "visibilityCurve"
@@ -8586,7 +8766,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#555",
    "nodeType": "visibilityCurve"
@@ -8599,7 +8779,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#554",
    "nodeType": "visibilityCurve"
@@ -8612,7 +8792,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#553",
    "nodeType": "visibilityCurve"
@@ -8630,7 +8810,8 @@
       { "varType": "nodeId" }
      ]
     },
-    "postInfinity": { "value": 1, "varType": "enum" }
+    "postInfinity": { "value": 1, "varType": "enum" },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#135",
    "nodeType": "animationCurve"
@@ -8650,7 +8831,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#28",
    "nodeType": "animationCurve"
@@ -8663,7 +8844,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#110",
    "nodeType": "visibilityCurve"
@@ -8694,7 +8875,8 @@
       { "varType": "nodeId" }
      ]
     },
-    "postInfinity": { "value": 1, "varType": "enum" }
+    "postInfinity": { "value": 1, "varType": "enum" },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#138",
    "nodeType": "animationCurve"
@@ -8711,7 +8893,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#148",
    "nodeType": "animationCurve"
@@ -8759,7 +8942,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#220",
    "nodeType": "visibilityCurve"
@@ -8797,7 +8980,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#320",
    "nodeType": "visibilityCurve"
@@ -8835,7 +9018,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#178",
    "nodeType": "visibilityCurve"
@@ -8848,7 +9031,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#550",
    "nodeType": "visibilityCurve"
@@ -8874,7 +9057,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#551",
    "nodeType": "visibilityCurve"
@@ -8887,7 +9070,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#296",
    "nodeType": "visibilityCurve"
@@ -8912,7 +9095,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#305",
    "nodeType": "visibilityCurve"
@@ -9003,7 +9187,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#177",
    "nodeType": "visibilityCurve"
@@ -9016,7 +9200,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#139",
    "nodeType": "visibilityCurve"
@@ -9042,7 +9226,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#218",
    "nodeType": "visibilityCurve"
@@ -9080,7 +9264,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#309",
    "nodeType": "visibilityCurve"
@@ -9093,7 +9278,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#133",
    "nodeType": "visibilityCurve"
@@ -9106,7 +9291,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#140",
    "nodeType": "visibilityCurve"
@@ -9119,7 +9304,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#543",
    "nodeType": "visibilityCurve"
@@ -9132,7 +9317,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#536",
    "nodeType": "visibilityCurve"
@@ -9145,7 +9330,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#345",
    "nodeType": "visibilityCurve"
@@ -9171,7 +9356,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#195",
    "nodeType": "visibilityCurve"
@@ -9184,7 +9369,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#546",
    "nodeType": "visibilityCurve"
@@ -9209,7 +9394,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#223",
    "nodeType": "visibilityCurve"
@@ -9235,7 +9420,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#449",
    "nodeType": "visibilityCurve"
@@ -9248,7 +9433,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#539",
    "nodeType": "visibilityCurve"
@@ -9274,7 +9459,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#194",
    "nodeType": "visibilityCurve"
@@ -9313,7 +9498,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#221",
    "nodeType": "visibilityCurve"
@@ -9326,7 +9511,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#544",
    "nodeType": "visibilityCurve"
@@ -9339,7 +9524,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#219",
    "nodeType": "visibilityCurve"
@@ -9352,7 +9537,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#300",
    "nodeType": "visibilityCurve"
@@ -9417,7 +9602,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#532",
    "nodeType": "visibilityCurve"
@@ -9430,7 +9615,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#254",
    "nodeType": "visibilityCurve"
@@ -9443,7 +9628,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#240",
    "nodeType": "visibilityCurve"
@@ -9480,7 +9665,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#303",
    "nodeType": "visibilityCurve"
@@ -9493,7 +9679,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#526",
    "nodeType": "visibilityCurve"
@@ -9506,7 +9692,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#535",
    "nodeType": "visibilityCurve"
@@ -9519,7 +9705,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#344",
    "nodeType": "visibilityCurve"
@@ -9545,7 +9731,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#179",
    "nodeType": "visibilityCurve"
@@ -9558,7 +9744,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#226",
    "nodeType": "visibilityCurve"
@@ -9571,7 +9757,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#143",
    "nodeType": "visibilityCurve"
@@ -9584,7 +9770,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#537",
    "nodeType": "visibilityCurve"
@@ -9597,7 +9783,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#290",
    "nodeType": "visibilityCurve"
@@ -9635,7 +9821,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#329",
    "nodeType": "visibilityCurve"
@@ -9758,7 +9944,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#304",
    "nodeType": "visibilityCurve"
@@ -9771,7 +9957,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#243",
    "nodeType": "visibilityCurve"
@@ -9856,7 +10042,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#424",
    "nodeType": "visibilityCurve"
@@ -9930,7 +10116,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#346",
    "nodeType": "visibilityCurve"
@@ -9994,7 +10180,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#105",
    "nodeType": "visibilityCurve"
@@ -10032,7 +10218,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#101",
    "nodeType": "visibilityCurve"
@@ -10045,7 +10231,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#108",
    "nodeType": "visibilityCurve"
@@ -10094,7 +10280,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#239",
    "nodeType": "visibilityCurve"
@@ -10107,7 +10293,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#225",
    "nodeType": "visibilityCurve"
@@ -10127,7 +10313,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#68",
    "nodeType": "animationCurve"
@@ -10144,7 +10330,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#276",
    "nodeType": "animationCurve"
@@ -10177,7 +10363,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#275",
    "nodeType": "animationCurve"
@@ -10197,7 +10383,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#77",
    "nodeType": "animationCurve"
@@ -10218,7 +10404,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#66",
    "nodeType": "animationCurve"
@@ -10257,7 +10443,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#89",
    "nodeType": "animationCurve"
@@ -10275,7 +10461,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationPath#1",
    "nodeType": "animationPath"
@@ -10314,7 +10500,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#74",
    "nodeType": "animationCurve"
@@ -10332,7 +10518,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#111",
    "nodeType": "animationCurve"
@@ -10354,7 +10540,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#57",
    "nodeType": "animationCurve"
@@ -10375,7 +10561,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#75",
    "nodeType": "animationCurve"
@@ -10388,7 +10574,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#107",
    "nodeType": "visibilityCurve"
@@ -10411,7 +10597,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#96",
    "nodeType": "animationCurve"
@@ -10451,7 +10637,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#67",
    "nodeType": "animationCurve"
@@ -10487,7 +10673,7 @@
      "list": [ {} ]
     },
     "materialColor": {
-     "value": { "a": 255, "b": 49, "g": 90, "r": 241 },
+     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
      "varType": "color"
     },
     "niceName": { "value": "Fill 46", "varType": "string" },
@@ -10543,6 +10729,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 34, "g": 49, "r": 38 },
      "varType": "color"
@@ -10714,19 +10903,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": -19.0, "y": -125.38206481933594 },
+       "value": { "x": -180.62168884277344, "y": -177.03125 },
        "varType": "double2"
       },
       {
-       "value": { "x": -19.0, "y": 125.0 },
+       "value": { "x": -180.62168884277344, "y": 177.5 },
        "varType": "double2"
       },
       {
-       "value": { "x": -130.0, "y": 125.0 },
+       "value": { "x": -334.55242919921875, "y": 177.5 },
        "varType": "double2"
       },
       {
-       "value": { "x": -130.0, "y": -125.38206481933594 },
+       "value": { "x": -334.55242919921875, "y": -177.03125 },
        "varType": "double2"
       }
      ]
@@ -10846,6 +11035,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 160, "g": 230, "r": 251 },
      "varType": "color"
@@ -10904,6 +11096,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 160, "g": 230, "r": 251 },
      "varType": "color"
@@ -10948,19 +11143,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -630.0, "y": -220.0 },
+       "value": { "x": -630.0, "y": -970.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -460.0, "y": -220.0 },
+       "value": { "x": -960.0, "y": -970.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -460.0, "y": -340.0 },
+       "value": { "x": -960.0, "y": -840.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -630.0, "y": -340.0 },
+       "value": { "x": -630.0, "y": -840.0 },
        "varType": "double2"
       }
      ]
@@ -11009,19 +11204,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": 620.0, "y": -460.0 },
+       "value": { "x": 395.23095703125, "y": -960.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 620.0, "y": -502.0 },
+       "value": { "x": 395.23095703125, "y": -1002.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": -502.0 },
+       "value": { "x": -97.0, "y": -1002.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": -460.0 },
+       "value": { "x": -97.0, "y": -960.0 },
        "varType": "double2"
       }
      ]
@@ -11049,19 +11244,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": 187.0, "y": 20.0 },
+       "value": { "x": -313.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": 20.0 },
+       "value": { "x": -97.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": 380.0 },
+       "value": { "x": -97.0, "y": -620.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 187.0, "y": 380.0 },
+       "value": { "x": -313.0, "y": -620.0 },
        "varType": "double2"
       }
      ]
@@ -11314,6 +11509,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 160, "g": 230, "r": 251 },
      "varType": "color"
@@ -11468,19 +11666,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -420.0, "y": -220.0 },
+       "value": { "x": -920.0, "y": -970.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -420.0, "y": 20.0 },
+       "value": { "x": -920.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -180.0, "y": 20.0 },
+       "value": { "x": -680.0, "y": -730.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -180.0, "y": -220.0 },
+       "value": { "x": -680.0, "y": -970.0 },
        "varType": "double2"
       }
      ]
@@ -11717,19 +11915,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 1440.0, "y": -1160.0 },
+       "value": { "x": 1085.0, "y": -515.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1440.0, "y": -1160.0 },
+       "value": { "x": 1085.0, "y": -485.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1440.0, "y": -1160.0 },
+       "value": { "x": 1040.0, "y": -485.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1440.0, "y": -1160.0 },
+       "value": { "x": 1040.0, "y": -515.0 },
        "varType": "double2"
       }
      ]
@@ -11744,6 +11942,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 34, "g": 49, "r": 38 },
      "varType": "color"
@@ -11845,19 +12046,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 620.0, "y": -1160.0 },
+       "value": { "x": 61.0, "y": -485.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": -1160.0 },
+       "value": { "x": 941.0, "y": -485.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": -1160.0 },
+       "value": { "x": 941.0, "y": -515.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 620.0, "y": -1160.0 },
+       "value": { "x": 61.0, "y": -515.0 },
        "varType": "double2"
       }
      ]
@@ -11978,6 +12179,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 34, "g": 49, "r": 38 },
      "varType": "color"
@@ -12111,19 +12315,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": -420.0, "y": -340.0 },
+       "value": { "x": -920.0, "y": -840.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -420.0, "y": -460.0 },
+       "value": { "x": -920.0, "y": -960.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": -460.0 },
+       "value": { "x": -92.73685455322266, "y": -960.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 385.0, "y": -340.0 },
+       "value": { "x": -92.73685455322266, "y": -840.0 },
        "varType": "double2"
       }
      ]
@@ -12591,19 +12795,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 620.0, "y": 885.0 },
+       "value": { "x": -390.0, "y": 524.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 620.0, "y": 920.0 },
+       "value": { "x": -390.0, "y": 667.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 0.0, "y": 0.0 },
+       "value": { "x": 61.0, "y": 667.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 0.0, "y": 0.0 },
+       "value": { "x": 61.0, "y": 524.0 },
        "varType": "double2"
       }
      ]
@@ -12876,19 +13080,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": 620.0, "y": 830.0 },
+       "value": { "x": 61.0, "y": -458.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 620.0, "y": 820.0 },
+       "value": { "x": 61.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": 820.0 },
+       "value": { "x": 941.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": 830.0 },
+       "value": { "x": 941.0, "y": -458.0 },
        "varType": "double2"
       }
      ]
@@ -13293,19 +13497,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 620.0, "y": 830.0 },
+       "value": { "x": 61.0, "y": -458.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 620.0, "y": 820.0 },
+       "value": { "x": 61.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": 820.0 },
+       "value": { "x": 941.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1250.0, "y": 830.0 },
+       "value": { "x": 941.0, "y": -458.0 },
        "varType": "double2"
       }
      ]
@@ -13527,19 +13731,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 1405.0, "y": 885.0 },
+       "value": { "x": 1005.0, "y": 524.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1405.0, "y": 820.0 },
+       "value": { "x": 1005.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1440.0, "y": 820.0 },
+       "value": { "x": 1040.0, "y": 461.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1440.0, "y": 885.0 },
+       "value": { "x": 1040.0, "y": 524.0 },
        "varType": "double2"
       }
      ]
@@ -13673,19 +13877,19 @@
      "list": [
       {
        "instanceName": "BR",
-       "value": { "x": 187.0, "y": 380.0 },
+       "value": { "x": -313.0, "y": -620.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": 187.0, "y": 830.0 },
+       "value": { "x": -313.0, "y": -125.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -180.0, "y": 830.0 },
+       "value": { "x": -680.0, "y": -125.0 },
        "varType": "double2"
       },
       {
-       "value": { "x": -180.0, "y": 380.0 },
+       "value": { "x": -680.0, "y": -620.0 },
        "varType": "double2"
       }
      ]
@@ -13836,6 +14040,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 160, "g": 230, "r": 251 },
      "varType": "color"
@@ -14011,6 +14218,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 160, "g": 230, "r": 251 },
      "varType": "color"
@@ -14177,11 +14387,11 @@
     "array": {
      "list": [
       {
-       "value": { "x": 1160.0, "y": 650.0 },
+       "value": { "x": 1128.69091796875, "y": 732.8377685546875 },
        "varType": "double2"
       },
       {
-       "value": { "x": 1252.0, "y": 650.0 },
+       "value": { "x": 1252.0, "y": 732.8377685546875 },
        "varType": "double2"
       },
       {
@@ -14189,7 +14399,7 @@
        "varType": "double2"
       },
       {
-       "value": { "x": 1160.0, "y": 773.0 },
+       "value": { "x": 1128.69091796875, "y": 773.0 },
        "varType": "double2"
       }
      ]
@@ -14223,19 +14433,19 @@
     "array": {
      "list": [
       {
-       "value": { "x": 145.0, "y": -382.0 },
+       "value": { "x": 22.04610824584961, "y": -457.3011169433594 },
        "varType": "double2"
       },
       {
-       "value": { "x": -19.0, "y": -382.0 },
+       "value": { "x": -269.88983154296875, "y": -457.3011169433594 },
        "varType": "double2"
       },
       {
-       "value": { "x": -19.0, "y": -125.38206481933594 },
+       "value": { "x": -269.88983154296875, "y": -214.55078125 },
        "varType": "double2"
       },
       {
-       "value": { "x": 145.0, "y": -125.38206481933594 },
+       "value": { "x": 22.04610824584961, "y": -214.55078125 },
        "varType": "double2"
       }
      ]
@@ -14270,6 +14480,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 160, "g": 230, "r": 251 },
      "varType": "color"
@@ -14361,6 +14574,9 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
+    "colorShaders": {
+     "list": [ {} ]
+    },
     "materialColor": {
      "value": { "a": 255, "b": 34, "g": 49, "r": 38 },
      "varType": "color"
@@ -15694,6 +15910,7 @@
   },
   {
    "attributes": {
+    "arrayIndex": { "value": 36, "varType": "int" },
     "autoIndex": { "value": false, "varType": "bool" },
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Sequence", "varType": "string" },
@@ -15720,7 +15937,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Coming Up MATTE", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 81.0,
@@ -15776,8 +15992,10 @@
     "bezier": { "value": false, "varType": "bool" },
     "close": { "value": true, "varType": "bool" },
     "colorId": { "value": 8, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 1", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 72.0,
@@ -15875,6 +16093,11 @@
     "colorId": { "value": 5, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Stars Group", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
+    "position": {
+     "value": { "x": -401.0, "y": -214.0, "z": 0.0 },
+     "varType": "double3"
+    },
     "uuid": { "value": "0ba18d8e-a2f0-40ce-b14a-2e1358e0a67a", "varType": "string" }
    },
    "nodeId": "group#21",
@@ -15887,6 +16110,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logomark Warp", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "104d9dbb-d48f-4ace-afb3-92583c21aa92", "varType": "string" }
    },
    "nodeId": "group#10",
@@ -16002,6 +16226,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logo Lines", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "51164711-be3d-4a0a-9151-f8ffa1f6e470", "varType": "string" }
    },
    "hierarchyOffset": 6.0,
@@ -16015,7 +16240,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 11", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16042,6 +16266,7 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 1", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 84.0,
@@ -16054,6 +16279,7 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 4", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 66.0,
@@ -16066,6 +16292,7 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 2", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 66.0,
@@ -16077,7 +16304,6 @@
     "colorId": { "value": 11, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Dots 2", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "shapes": {
      "list": [
       { "varType": "nodeId" }
@@ -16111,7 +16337,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 7", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16218,6 +16443,7 @@
     "hidden": { "value": true, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 3", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 66.0,
@@ -16324,6 +16550,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Dots 1", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "shapes": {
      "list": [
       { "varType": "nodeId" }
@@ -16340,7 +16567,6 @@
     "colorId": { "value": 12, "varType": "int" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Title Box Vertices", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "shapes": {
      "list": [
       { "varType": "nodeId" }
@@ -16360,6 +16586,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 2", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 54.0,
@@ -16389,7 +16616,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 5", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16404,7 +16630,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 6", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16418,7 +16643,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 5", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16433,7 +16657,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 7", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16549,7 +16772,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Title Box", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 42.0,
@@ -16563,7 +16785,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 6", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16577,7 +16798,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 9", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16591,7 +16811,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 8", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16605,7 +16824,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Vertices 10", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "ee6b6a8b-c9c6-4aae-9fa0-7d0eaa924b51", "varType": "string" }
    },
    "hierarchyOffset": 12.0,
@@ -16634,6 +16852,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 4", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 54.0,
@@ -16649,6 +16868,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Central Box", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "nodeId": "pointsToCurve#1",
@@ -16678,7 +16898,6 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 8", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 166.0,
@@ -16692,6 +16911,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Box 3", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "0c57a076-38da-4611-8e04-21c375d1ff93", "varType": "string" }
    },
    "hierarchyOffset": 54.0,
@@ -16943,7 +17163,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#422",
    "nodeType": "visibilityCurve"
@@ -16981,7 +17201,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#445",
    "nodeType": "visibilityCurve"
@@ -16994,7 +17214,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#421",
    "nodeType": "visibilityCurve"
@@ -17050,9 +17270,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H9", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": -1160.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": -485.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17066,8 +17285,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V4", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 385.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": -97.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17089,7 +17309,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V10", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -620.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17123,6 +17342,7 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V1", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -630.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17146,9 +17366,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H6", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 820.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 461.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17162,8 +17381,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line R", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -180.0, "y": -90.0, "z": 0.0 },
+     "value": { "x": -680.0, "y": -90.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17190,8 +17410,9 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Top Left", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -420.0, "y": 20.0, "z": 0.0 },
+     "value": { "x": -920.0, "y": -730.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "26f72718-6201-457b-b727-d4566549b40e", "varType": "string" }
@@ -17216,8 +17437,9 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Bottom Right", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -180.0, "y": -220.0, "z": 0.0 },
+     "value": { "x": -680.0, "y": -970.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "a40df1e7-d00c-4d83-8336-057fbd30c5de", "varType": "string" }
@@ -17244,6 +17466,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Logomark", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "size": {
      "value": { "x": 479.237548828125, "y": 481.510986328125 },
      "varType": "double2"
@@ -17267,8 +17490,9 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Bottom Left", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -420.0, "y": -220.0, "z": 0.0 },
+     "value": { "x": -920.0, "y": -970.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "686a43df-0946-4cdf-9980-abf2922ab7a8", "varType": "string" }
@@ -17293,9 +17517,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V6", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1250.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 941.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17318,7 +17541,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V5", "varType": "string" },
     "position": {
-     "value": { "x": 620.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 61.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17341,7 +17564,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H5", "varType": "string" },
     "position": {
-     "value": { "x": 500.0, "y": 830.0, "z": 0.0 },
+     "value": { "x": 500.0, "y": -458.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17355,8 +17578,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H1", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -502.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -1002.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17379,9 +17603,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H11", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": -1160.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": -607.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17395,9 +17618,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V12", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1440.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 1085.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17419,9 +17641,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H8", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 920.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 667.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17435,8 +17656,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line L", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -420.0, "y": -90.0, "z": 0.0 },
+     "value": { "x": -920.0, "y": -90.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17454,9 +17676,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V7", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1405.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 1005.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17478,8 +17699,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V3", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 187.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": -313.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17501,8 +17723,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line T", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": 20.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -730.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17516,8 +17739,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V2", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -460.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": -960.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17539,8 +17763,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H2", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -460.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -960.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17554,8 +17779,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H3", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -340.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -840.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17569,9 +17795,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H10", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": -1160.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": -515.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17585,9 +17810,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V8", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1440.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": 1040.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17609,8 +17833,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H4", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": 380.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -620.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17624,9 +17849,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H12", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 920.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 740.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17640,8 +17864,9 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Logo Line B", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 0.0, "y": -220.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -970.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17655,9 +17880,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H7", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 850.0, "y": 885.0, "z": 0.0 },
+     "value": { "x": 850.0, "y": 524.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "9e0783f1-e401-4a39-aa10-3ccf81dcc3a9", "varType": "string" }
@@ -17671,7 +17895,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "H13", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 850.0, "y": 773.0, "z": 0.0 },
      "varType": "double3"
@@ -17696,9 +17919,8 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V9", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -1120.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": -390.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -17720,7 +17942,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V11", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -620.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17804,7 +18025,6 @@
     "colorId": { "value": 2, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "V13", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": 1252.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
@@ -17841,6 +18061,7 @@
     "colorId": { "value": 2, "varType": "int" },
     "hidden": { "value": true, "varType": "bool" },
     "niceName": { "value": "Black Dot", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "uuid": { "value": "7689c5f9-aa00-4f0c-b0a4-17ba9062fc1c", "varType": "string" }
    },
    "nodeId": "basicShape#1",
@@ -18016,7 +18237,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 500, "varType": "int" },
-    "inTime": { "value": 136.0, "varType": "double" },
+    "inTime": { "value": 286.0, "varType": "double" },
     "niceName": { "value": "CSW_ComingUp_withLogo", "varType": "string" },
     "playbackEnd": { "value": 500, "varType": "int" },
     "resolution": {
@@ -18095,6 +18316,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 45, "varType": "int" },
+    "inTime": { "value": 36.0, "varType": "double" },
     "niceName": { "value": "Tears_Vert", "varType": "string" },
     "playbackEnd": { "value": 45, "varType": "int" },
     "resolution": {
@@ -18114,6 +18336,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 45, "varType": "int" },
+    "inTime": { "value": 36.0, "varType": "double" },
     "niceName": { "value": "Tears", "varType": "string" },
     "playbackEnd": { "value": 45, "varType": "int" },
     "resolution": {
@@ -18212,8 +18435,9 @@
    "attributes": {
     "colorId": { "value": 8, "varType": "int" },
     "niceName": { "value": "Top Right", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": -180.0, "y": 20.0, "z": 0.0 },
+     "value": { "x": -680.0, "y": -730.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "a1990140-b72f-49b4-b8b1-e2e9d5fdad31", "varType": "string" }
@@ -18228,7 +18452,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#310",
    "nodeType": "visibilityCurve"
@@ -18241,7 +18466,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#341",
    "nodeType": "visibilityCurve"
@@ -18254,7 +18479,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#142",
    "nodeType": "visibilityCurve"
@@ -18267,7 +18492,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#343",
    "nodeType": "visibilityCurve"
@@ -18280,7 +18505,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#333",
    "nodeType": "visibilityCurve"
@@ -18293,7 +18518,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#328",
    "nodeType": "visibilityCurve"
@@ -18306,7 +18531,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#331",
    "nodeType": "visibilityCurve"
@@ -18345,7 +18570,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#419",
    "nodeType": "visibilityCurve"
@@ -18358,7 +18583,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#418",
    "nodeType": "visibilityCurve"
@@ -18384,7 +18609,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#332",
    "nodeType": "visibilityCurve"
@@ -18396,7 +18621,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#302",
    "nodeType": "visibilityCurve"
@@ -18408,7 +18634,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#307",
    "nodeType": "visibilityCurve"
@@ -18421,7 +18648,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#237",
    "nodeType": "visibilityCurve"
@@ -18434,7 +18661,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#291",
    "nodeType": "visibilityCurve"
@@ -18459,7 +18686,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#313",
    "nodeType": "visibilityCurve"
@@ -18471,7 +18699,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#311",
    "nodeType": "visibilityCurve"
@@ -18484,7 +18713,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#146",
    "nodeType": "visibilityCurve"
@@ -18510,7 +18739,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#289",
    "nodeType": "visibilityCurve"
@@ -18523,7 +18752,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#534",
    "nodeType": "visibilityCurve"
@@ -18536,7 +18765,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#227",
    "nodeType": "visibilityCurve"
@@ -18549,7 +18778,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#547",
    "nodeType": "visibilityCurve"
@@ -18562,7 +18791,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#533",
    "nodeType": "visibilityCurve"
@@ -18575,7 +18804,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#538",
    "nodeType": "visibilityCurve"
@@ -18588,7 +18817,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#228",
    "nodeType": "visibilityCurve"
@@ -18620,7 +18849,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 0.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#137",
    "nodeType": "animationCurve"
@@ -18640,7 +18869,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#73",
    "nodeType": "animationCurve"
@@ -18658,7 +18887,8 @@
       { "varType": "nodeId" }
      ]
     },
-    "postInfinity": { "value": 1, "varType": "enum" }
+    "postInfinity": { "value": 1, "varType": "enum" },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#136",
    "nodeType": "animationCurve"
@@ -18693,7 +18923,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#145",
    "nodeType": "animationCurve"
@@ -18730,7 +18961,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#110",
    "nodeType": "animationCurve"
@@ -18749,7 +18980,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#108",
    "nodeType": "animationCurve"
@@ -18767,7 +18998,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#91",
    "nodeType": "animationCurve"
@@ -18784,7 +19015,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#125",
    "nodeType": "animationCurve"
@@ -18820,7 +19051,8 @@
       { "varType": "nodeId" }
      ]
     },
-    "postInfinity": { "value": 1, "varType": "enum" }
+    "postInfinity": { "value": 1, "varType": "enum" },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#134",
    "nodeType": "animationCurve"
@@ -18840,7 +19072,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#269",
    "nodeType": "animationCurve"
@@ -18858,7 +19090,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#129",
    "nodeType": "animationCurve"
@@ -18878,7 +19110,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#273",
    "nodeType": "animationCurve"
@@ -18898,7 +19130,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#272",
    "nodeType": "animationCurve"
@@ -18918,7 +19150,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#271",
    "nodeType": "animationCurve"
@@ -18938,7 +19170,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#270",
    "nodeType": "animationCurve"
@@ -18955,7 +19187,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#165",
    "nodeType": "animationCurve"
@@ -19007,7 +19239,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#162",
    "nodeType": "animationCurve"
@@ -19027,7 +19259,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#267",
    "nodeType": "animationCurve"
@@ -19047,7 +19279,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#268",
    "nodeType": "animationCurve"
@@ -19064,7 +19296,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#211",
    "nodeType": "animationCurve"
@@ -19082,7 +19314,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#214",
    "nodeType": "animationCurve"
@@ -19102,7 +19334,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#274",
    "nodeType": "animationCurve"
@@ -19138,7 +19370,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#210",
    "nodeType": "animationCurve"
@@ -19155,7 +19387,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#213",
    "nodeType": "animationCurve"
@@ -19173,7 +19405,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#164",
    "nodeType": "animationCurve"
@@ -19192,7 +19424,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#215",
    "nodeType": "animationCurve"
@@ -19212,7 +19444,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#159",
    "nodeType": "animationCurve"
@@ -19229,7 +19461,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#212",
    "nodeType": "animationCurve"
@@ -19249,7 +19481,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#156",
    "nodeType": "animationCurve"
@@ -19267,7 +19499,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#161",
    "nodeType": "animationCurve"
@@ -19286,7 +19518,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#128",
    "nodeType": "animationCurve"
@@ -19306,7 +19538,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#157",
    "nodeType": "animationCurve"
@@ -19324,7 +19556,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#163",
    "nodeType": "animationCurve"
@@ -19344,7 +19576,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#160",
    "nodeType": "animationCurve"
@@ -19362,7 +19594,8 @@
       { "varType": "nodeId" }
      ]
     },
-    "postInfinity": { "value": 1, "varType": "enum" }
+    "postInfinity": { "value": 1, "varType": "enum" },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#140",
    "nodeType": "animationCurve"
@@ -19381,7 +19614,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#126",
    "nodeType": "animationCurve"
@@ -19401,7 +19634,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#97",
    "nodeType": "animationCurve"
@@ -19420,7 +19653,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#101",
    "nodeType": "animationCurve"
@@ -19471,7 +19704,8 @@
       { "varType": "nodeId" }
      ]
     },
-    "postInfinity": { "value": 1, "varType": "enum" }
+    "postInfinity": { "value": 1, "varType": "enum" },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "animationCurve#139",
    "nodeType": "animationCurve"
@@ -19491,7 +19725,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#78",
    "nodeType": "animationCurve"
@@ -19579,7 +19813,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#131",
    "nodeType": "animationCurve"
@@ -19649,7 +19883,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#21",
    "nodeType": "animationCurve"
@@ -19669,7 +19903,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#26",
    "nodeType": "animationCurve"
@@ -19689,7 +19923,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#23",
    "nodeType": "animationCurve"
@@ -19724,7 +19958,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#141",
    "nodeType": "animationCurve"
@@ -19741,7 +19975,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#124",
    "nodeType": "animationCurve"
@@ -19760,7 +19994,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#127",
    "nodeType": "animationCurve"
@@ -19779,7 +20013,7 @@
      ]
     },
     "postInfinity": { "value": 1, "varType": "enum" },
-    "time": { "disconnectTime": true, "value": 136.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#104",
    "nodeType": "animationCurve"
@@ -19815,7 +20049,8 @@
       { "varType": "nodeId" },
       { "varType": "nodeId" }
      ]
-    }
+    },
+    "time": { "value": 36.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#308",
    "nodeType": "visibilityCurve"
@@ -19837,7 +20072,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#76",
    "nodeType": "animationCurve"
@@ -19862,7 +20097,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#109",
    "nodeType": "visibilityCurve"
@@ -19875,7 +20110,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#103",
    "nodeType": "visibilityCurve"
@@ -19909,7 +20144,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#65",
    "nodeType": "animationCurve"
@@ -19941,7 +20176,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "animationCurve#44",
    "nodeType": "animationCurve"
@@ -19954,7 +20189,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 136.0, "varType": "double" }
+    "time": { "value": 286.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#452",
    "nodeType": "visibilityCurve"
@@ -24663,7 +24898,7 @@
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Tear 2", "varType": "string" },
     "position": {
-     "value": { "x": 0.0, "y": -280.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -368.94312425277195, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "6f65c201-dbe5-418c-868a-9d4763d51f72", "varType": "string" }
@@ -26636,11 +26871,6 @@
      }
     },
     "colorId": { "value": 2, "varType": "int" },
-    "filters": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
     "inputPath": {
      "value": {
       "contours": [
@@ -26755,6 +26985,7 @@
      "varType": "editablePath2"
     },
     "niceName": { "value": "SVG Layer", "varType": "string" },
+    "on": { "value": false, "varType": "bool" },
     "position": {
      "value": { "x": -0.1335906982421875, "y": 1.0337371826171875, "z": 0.0 },
      "varType": "double3"
@@ -30564,7 +30795,7 @@
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Tear1", "varType": "string" },
     "position": {
-     "value": { "x": 0.0, "y": -180.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -268.94312425277195, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "6f65c201-dbe5-418c-868a-9d4763d51f72", "varType": "string" }
@@ -30854,9 +31085,8 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "is3d": { "value": true, "varType": "bool" },
     "niceName": { "value": "Coming up", "varType": "string" },
-    "on": { "value": false, "varType": "bool" },
     "position": {
-     "value": { "x": 1268.0, "y": 810.0, "z": 0.0 },
+     "value": { "x": 959.0, "y": 451.0, "z": 0.0 },
      "varType": "double3"
     },
     "rotation": {
@@ -56762,6 +56992,28 @@
   },
   {
    "attributes": {
+    "array": {
+     "list": [
+      {
+       "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+       "varType": "color"
+      },
+      {
+       "value": { "a": 255, "b": 160, "g": 230, "r": 251 },
+       "varType": "color"
+      }
+     ]
+    },
+    "autoIndex": { "value": false, "varType": "bool" },
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Color Array", "varType": "string" },
+    "uuid": { "value": "e3b4bbc5-ce3c-43cb-af02-6dd74e1efd0a", "varType": "string" }
+   },
+   "nodeId": "colorArray#4",
+   "nodeType": "colorArray"
+  },
+  {
+   "attributes": {
     "data": {
      "value": { "numValue": -1.0 },
      "varType": "keyData"
@@ -57399,10 +57651,366 @@
   },
   {
    "attributes": {
+    "array": {
+     "list": [
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" }
+     ]
+    },
+    "autoIndex": { "value": false, "varType": "bool" },
+    "colorId": { "value": 16, "varType": "int" },
+    "niceName": { "value": "Light Grad Switcher", "varType": "string" },
+    "uuid": { "value": "2428cc5a-c0ab-49df-87df-184d4a6cf0ad", "varType": "string" }
+   },
+   "nodeId": "shaderArray#4",
+   "nodeType": "shaderArray"
+  },
+  {
+   "attributes": {
     "niceName": { "value": "subUINodes", "varType": "string" },
     "uuid": { "value": "00ff2b55-e44b-4bd1-8880-99be358d581e", "varType": "string" }
    },
    "nodeId": "hiddenFolder#633",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Dark Switcher", "varType": "string" },
+    "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
+   },
+   "nodeId": "ifElse#13",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Light Grad Switcher", "varType": "string" },
+    "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
+   },
+   "nodeId": "ifElse#11",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" }
+     ]
+    },
+    "autoIndex": { "value": false, "varType": "bool" },
+    "colorId": { "value": 16, "varType": "int" },
+    "niceName": { "value": "Dark Switcher", "varType": "string" },
+    "uuid": { "value": "2428cc5a-c0ab-49df-87df-184d4a6cf0ad", "varType": "string" }
+   },
+   "nodeId": "shaderArray#5",
+   "nodeType": "shaderArray"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "niceName": { "value": "Light Grad Switcher 3", "varType": "string" },
+    "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
+   },
+   "nodeId": "ifElse#16",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" }
+     ]
+    },
+    "autoIndex": { "value": false, "varType": "bool" },
+    "colorId": { "value": 16, "varType": "int" },
+    "niceName": { "value": "Light Grad Switcher 3", "varType": "string" },
+    "uuid": { "value": "2428cc5a-c0ab-49df-87df-184d4a6cf0ad", "varType": "string" }
+   },
+   "nodeId": "shaderArray#8",
+   "nodeType": "shaderArray"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 180", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "4b5b4659-0a29-49cd-9de2-e3946fb62326", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#729",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "d1bf9901-fac1-434b-885c-377206a27a7f", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#641",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Light Switcher", "varType": "string" },
+    "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
+   },
+   "nodeId": "ifElse#14",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" }
+     ]
+    },
+    "autoIndex": { "value": false, "varType": "bool" },
+    "colorId": { "value": 16, "varType": "int" },
+    "niceName": { "value": "Light Grad Switcher 2", "varType": "string" },
+    "uuid": { "value": "2428cc5a-c0ab-49df-87df-184d4a6cf0ad", "varType": "string" }
+   },
+   "nodeId": "shaderArray#10",
+   "nodeType": "shaderArray"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" }
+     ]
+    },
+    "autoIndex": { "value": false, "varType": "bool" },
+    "colorId": { "value": 16, "varType": "int" },
+    "niceName": { "value": "Dark inverse Switcher", "varType": "string" },
+    "uuid": { "value": "2428cc5a-c0ab-49df-87df-184d4a6cf0ad", "varType": "string" }
+   },
+   "nodeId": "shaderArray#7",
+   "nodeType": "shaderArray"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "niceName": { "value": "Light Grad Switcher 2", "varType": "string" },
+    "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
+   },
+   "nodeId": "ifElse#18",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Dark Inverse Switcher", "varType": "string" },
+    "uuid": { "value": "9141f094-50e4-4f0d-b092-5faa57cbbece", "varType": "string" }
+   },
+   "nodeId": "ifElse#15",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" },
+      { "varType": "shaderData" }
+     ]
+    },
+    "autoIndex": { "value": false, "varType": "bool" },
+    "colorId": { "value": 16, "varType": "int" },
+    "niceName": { "value": "Light Switcher", "varType": "string" },
+    "uuid": { "value": "2428cc5a-c0ab-49df-87df-184d4a6cf0ad", "varType": "string" }
+   },
+   "nodeId": "shaderArray#6",
+   "nodeType": "shaderArray"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 500.0, "varType": "double" },
+    "uuid": { "value": "b212b92d-7a2f-48b2-999f-e4204a5210a9", "varType": "string" }
+   },
+   "nodeId": "keyframe#2118",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "610ae5c0-f00e-48cf-8c41-3631a470b27f", "varType": "string" }
+   },
+   "nodeId": "keyframe#2117",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 156", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "31868b37-f6fc-412f-963c-b18cf80ed6e3", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#558",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Conical Gradient 8", "varType": "string" },
+    "uuid": { "value": "26f2cce0-776a-484d-8fa5-2b4b80cb8634", "varType": "string" }
+   },
+   "nodeId": "conicalGradientShader#18",
+   "nodeType": "conicalGradientShader"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Shape Gradient 8", "varType": "string" },
+    "rotation": { "value": -45.0, "varType": "double" },
+    "uuid": { "value": "a764d0a7-d9e7-4eb3-b20d-e81245607123", "varType": "string" }
+   },
+   "nodeId": "shapeGradientShader#18",
+   "nodeType": "shapeGradientShader"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Radial Gradient 8", "varType": "string" },
+    "rotation": { "value": -45.0, "varType": "double" },
+    "uuid": { "value": "97763cb3-b49c-4697-863e-c469dbb9f149", "varType": "string" }
+   },
+   "nodeId": "radialGradientShader#18",
+   "nodeType": "radialGradientShader"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "3434bbc0-28a3-4f75-a53b-be07640d7e69", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#644",
    "nodeType": "hiddenFolder"
   }
  ],
