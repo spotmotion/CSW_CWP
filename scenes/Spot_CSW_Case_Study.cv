@@ -2299,6 +2299,8 @@
   { "from": "compNode#17.fps", "to": "frame#2.fps" },
   { "from": "compNode#6.fps", "to": "frame#1.fps" },
   { "from": "value#11.id", "to": "frame#1.time" },
+  { "from": "string#16.id", "to": "concatenateStringArray#1.array.0" },
+  { "from": "string#15.id", "to": "concatenateStringArray#1.array.2" },
   { "from": "concatenateStringArray#1.id", "to": "stringManipulator#10.generator" },
   { "from": "visibilityCurve#563.out", "to": "falloff#3.on" },
   { "from": "pointsToCurve#2.id", "to": "boundingBox#7.inputShapes.0" },
@@ -2515,8 +2517,8 @@
     { "path": "value#43.value" },
     { "path": "ifElse#5.condition" },
     { "path": "value#45.value" },
-    { "path": "concatenateStringArray#1.array.0" },
-    { "path": "concatenateStringArray#1.array.2" }
+    { "path": "string#16.string" },
+    { "path": "string#15.string" }
    ],
    "footerScript": "",
    "headerScript": ""
@@ -5563,7 +5565,7 @@
    "nodeId": "hiddenFolder#316"
   },
   {
-   "children": [ "stringManipulator#10" ],
+   "children": [ "string#16", "string#15", "stringManipulator#10" ],
    "nodeId": "string#13"
   },
   {
@@ -29719,7 +29721,7 @@
         "start": 0
        }
       ],
-      "text": "13:00"
+      "text": "12:00"
      },
      "varType": "richText"
     },
@@ -37120,7 +37122,7 @@
    "attributes": {
     "array": {
      "list": [
-      { "value": "13", "varType": "string" },
+      { "value": "12", "varType": "string" },
       { "value": ":", "varType": "string" },
       { "value": "00", "varType": "string" }
      ]
@@ -48807,7 +48809,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Time", "varType": "string" },
-    "string": { "value": "13:00", "varType": "string" },
+    "string": { "value": "12:00", "varType": "string" },
     "uuid": { "value": "f55745a2-9147-46fd-846d-eec6599d130b", "varType": "string" }
    },
    "hierarchyOffset": 26.0,
@@ -50892,6 +50894,16 @@
   },
   {
    "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Hours", "varType": "string" },
+    "string": { "value": "12", "varType": "string" },
+    "uuid": { "value": "018ad3ed-7f2b-4fa9-a71d-7abdd13ec4b9", "varType": "string" }
+   },
+   "nodeId": "string#16",
+   "nodeType": "string"
+  },
+  {
+   "attributes": {
     "niceName": { "value": "subUINodes", "varType": "string" },
     "uuid": { "value": "3434bbc0-28a3-4f75-a53b-be07640d7e69", "varType": "string" }
    },
@@ -51125,6 +51137,16 @@
    },
    "nodeId": "radialGradientShader#5",
    "nodeType": "radialGradientShader"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Minutes", "varType": "string" },
+    "string": { "value": "00", "varType": "string" },
+    "uuid": { "value": "018ad3ed-7f2b-4fa9-a71d-7abdd13ec4b9", "varType": "string" }
+   },
+   "nodeId": "string#15",
+   "nodeType": "string"
   },
   {
    "attributes": {
