@@ -241,6 +241,97 @@
           isPlaying: false,
         })
 
+        async function renderSceneToMp4(startFrame, endFrame) {
+          log(`renderMp4: startFrame=${startFrame}, endFrame=${endFrame}`)
+
+          if (typeof FFmpeg === "undefined") {
+            console.error("[CWP] FFmpeg is not defined. Make sure ffmpeg.min.js is loaded.")
+            return
+          }
+
+          const sceneStartFrame = app.getStartFrame()
+          const sceneEndFrame = app.getEndFrame()
+
+          if (
+            startFrame < sceneStartFrame || startFrame > sceneEndFrame ||
+            endFrame < sceneStartFrame || endFrame > sceneEndFrame ||
+            endFrame <= startFrame
+          ) {
+            throw new Error(
+              `[renderMp4] Invalid frame range: startFrame=${startFrame}, endFrame=${endFrame}, scene=[${sceneStartFrame}, ${sceneEndFrame}]`
+            )
+          }
+
+          const { createFFmpeg } = FFmpeg
+          const fps = app.getFPS()
+          const ffmpeg = createFFmpeg({ log: true })
+
+          const res = app.getSceneResolution()
+          const width = res.width
+          const height = res.height
+          const frames = []
+
+          const offscreen = document.createElement("canvas")
+          offscreen.width = width
+          offscreen.height = height
+          const ctx = offscreen.getContext("2d", { willReadFrequently: true })
+
+          if (!ctx) {
+            console.error("[CWP] renderMp4: failed to create 2D canvas context.")
+            return
+          }
+
+          app.stop()
+          stopPlaybackLoop()
+
+          log("renderMp4: capturing frames...")
+
+          for (let i = startFrame; i <= endFrame; i++) {
+            app.seekFrame(i)
+            app.render(surface)
+            ctx.drawImage(canvas, 0, 0, width, height)
+
+            const imageData = ctx.getImageData(0, 0, width, height)
+            const blob = await new Promise(resolve => {
+              const tempCanvas = document.createElement("canvas")
+              tempCanvas.width = width
+              tempCanvas.height = height
+              const tempCtx = tempCanvas.getContext("2d")
+              tempCtx.putImageData(imageData, 0, 0)
+              tempCanvas.toBlob(resolve, "image/png")
+            })
+
+            const buffer = new Uint8Array(await blob.arrayBuffer())
+            const relativeFrame = i - startFrame
+            frames.push({ name: `frame_${String(relativeFrame).padStart(4, "0")}.png`, data: buffer })
+          }
+
+          log("renderMp4: initializing FFmpeg...")
+          await ffmpeg.load()
+
+          for (const frame of frames) {
+            ffmpeg.FS("writeFile", frame.name, frame.data)
+          }
+
+          log("renderMp4: encoding...")
+          await ffmpeg.run(
+            "-framerate", String(fps),
+            "-i", "frame_%04d.png",
+            "-c:v", "libx264",
+            "-pix_fmt", "yuv420p",
+            "output.mp4"
+          )
+
+          const out = ffmpeg.FS("readFile", "output.mp4")
+          const url = URL.createObjectURL(new Blob([out.buffer], { type: "video/mp4" }))
+
+          const a = document.createElement("a")
+          a.href = url
+          a.download = "cavalry-recording.mp4"
+          log("renderMp4: downloading...")
+          a.click()
+        }
+
         log("Registering message listener")
 
         window.addEventListener("message", (event) => {
@@ -315,6 +406,14 @@
                   })
                   emitFrameUpdate()
                   break
+
+                case "renderMp4": {
+                  const { startFrame, endFrame } = data
+                  renderSceneToMp4(startFrame, endFrame).catch(err =>
+                    console.error("[CWP] renderMp4 failed", err)
+                  )
+                  break
+                }
               }
             } catch (err) {
               console.error("[CWP] player-control failed", err)
