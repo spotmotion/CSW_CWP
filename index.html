@@ -317,7 +317,7 @@
           const offscreen = document.createElement("canvas")
           offscreen.width = width
           offscreen.height = height
-          const ctx = offscreen.getContext("2d", { willReadFrequently: true })
+          const ctx = offscreen.getContext("2d")
 
           if (!ctx) {
             console.error("[CWP] renderMp4: failed to create 2D canvas context.")
@@ -343,16 +343,7 @@
             app.render(surface)
             ctx.drawImage(canvas, 0, 0, width, height)
 
-            const imageData = ctx.getImageData(0, 0, width, height)
-            const blob = await new Promise(resolve => {
-              const tempCanvas = document.createElement("canvas")
-              tempCanvas.width = width
-              tempCanvas.height = height
-              const tempCtx = tempCanvas.getContext("2d")
-              tempCtx.putImageData(imageData, 0, 0)
-              tempCanvas.toBlob(resolve, "image/png")
-            })
-
+            const blob = await new Promise(resolve => offscreen.toBlob(resolve, "image/png"))
             const buffer = new Uint8Array(await blob.arrayBuffer())
             const relativeFrame = i - startFrame
             frames.push({ name: `frame_${String(relativeFrame).padStart(4, "0")}.png`, data: buffer })
