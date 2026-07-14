@@ -308,6 +308,10 @@
           const fps = app.getFPS()
           const ffmpeg = new FFmpeg()
           ffmpeg.on("log", ({ message }) => log("[ffmpeg]", message))
+          ffmpeg.on("progress", ({ progress }) => {
+            const percent = Math.round(Math.min(Math.max(progress, 0), 1) * 100)
+            postToParent({ type: "render-progress", phase: "encode", percent })
+          })
 
           // Kick off loading the core now, in parallel with frame capture below, instead
           // of waiting until capture finishes to start it. Loading runs in ffmpeg's own
@@ -362,6 +366,9 @@
 
           log("renderMp4: capturing frames...")
 
+          const totalFrames = endFrame - startFrame + 1
+          let lastCapturePercent = -1
+
           for (let i = startFrame; i <= endFrame; i++) {
             app.setFrame(i)
             app.render(surface)
@@ -371,6 +378,12 @@
             const buffer = new Uint8Array(await blob.arrayBuffer())
             const relativeFrame = i - startFrame
             frames.push({ name: `frame_${String(relativeFrame).padStart(4, "0")}.png`, data: buffer })
+
+            const capturePercent = Math.round(((relativeFrame + 1) / totalFrames) * 100)
+            if (capturePercent !== lastCapturePercent) {
+              lastCapturePercent = capturePercent
+              postToParent({ type: "render-progress", phase: "capture", percent: capturePercent })
+            }
           }
 
           resizeViewportAndSurface()
