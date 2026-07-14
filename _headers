@@ -1,9 +1,6 @@
 /wasm-lib/CavalryWasm.wasm
   Content-Type: application/wasm
 
-/ffmpeg/ffmpeg-core.wasm
-  Content-Type: application/wasm
-
 /wasm-lib/CavalryWasm.data
   Cross-Origin-Resource-Policy: cross-origin
 

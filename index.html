@@ -358,9 +358,14 @@
           emitFrameUpdate()
 
           log("renderMp4: initializing FFmpeg...")
+          // The core itself (ffmpeg-core.wasm, ~30MB) exceeds Cloudflare Pages' 25MB
+          // per-file limit, so it's loaded from unpkg instead. That's fine: unlike
+          // ffmpeg.js's worker (which must be same-origin, hence self-hosted below),
+          // the worker fetches these via CORS, and unpkg sends ACAO: *.
+          const coreBaseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd"
           await ffmpeg.load({
-            coreURL: "/ffmpeg/ffmpeg-core.js",
-            wasmURL: "/ffmpeg/ffmpeg-core.wasm",
+            coreURL: `${coreBaseURL}/ffmpeg-core.js`,
+            wasmURL: `${coreBaseURL}/ffmpeg-core.wasm`,
           })
 
           for (const frame of frames) {
