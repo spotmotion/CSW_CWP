@@ -345,6 +345,8 @@
             "-framerate", String(fps),
             "-i", "frame_%04d.png",
             "-c:v", "libx264",
+            "-preset", "slow",
+            "-crf", "16",
             "-pix_fmt", "yuv420p",
             "output.mp4"
           )
