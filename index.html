@@ -309,6 +309,22 @@
           const ffmpeg = new FFmpeg()
           ffmpeg.on("log", ({ message }) => log("[ffmpeg]", message))
 
+          // Kick off loading the core now, in parallel with frame capture below, instead
+          // of waiting until capture finishes to start it. Loading runs in ffmpeg's own
+          // worker thread, so it overlaps with the main-thread capture work below - not
+          // a full hide in practice (likely CPU contention between the two), but it
+          // measurably cuts the load time that shows up after capture finishes.
+          //
+          // The core itself (ffmpeg-core.wasm, ~30MB) exceeds Cloudflare Pages' 25MB
+          // per-file limit, so it's loaded from unpkg instead. That's fine: unlike
+          // ffmpeg.js's worker (which must be same-origin, hence self-hosted separately),
+          // the worker fetches these via CORS, and unpkg sends ACAO: *.
+          const coreBaseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd"
+          const ffmpegLoadPromise = ffmpeg.load({
+            coreURL: `${coreBaseURL}/ffmpeg-core.js`,
+            wasmURL: `${coreBaseURL}/ffmpeg-core.wasm`,
+          })
+
           const res = app.getSceneResolution()
           const width = res.width
           const height = res.height
@@ -353,15 +369,7 @@
           emitFrameUpdate()
 
           log("renderMp4: initializing FFmpeg...")
-          // The core itself (ffmpeg-core.wasm, ~30MB) exceeds Cloudflare Pages' 25MB
-          // per-file limit, so it's loaded from unpkg instead. That's fine: unlike
-          // ffmpeg.js's worker (which must be same-origin, hence self-hosted below),
-          // the worker fetches these via CORS, and unpkg sends ACAO: *.
-          const coreBaseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd"
-          await ffmpeg.load({
-            coreURL: `${coreBaseURL}/ffmpeg-core.js`,
-            wasmURL: `${coreBaseURL}/ffmpeg-core.wasm`,
-          })
+          await ffmpegLoadPromise
 
           for (const frame of frames) {
             await ffmpeg.writeFile(frame.name, frame.data)
