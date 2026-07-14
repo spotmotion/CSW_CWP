@@ -302,7 +302,7 @@
           log("renderMp4: capturing frames...")
 
           for (let i = startFrame; i <= endFrame; i++) {
-            app.seekFrame(i)
+            app.setFrame(i)
             app.render(surface)
             ctx.drawImage(canvas, 0, 0, width, height)
 
