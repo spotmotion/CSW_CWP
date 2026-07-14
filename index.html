@@ -241,8 +241,23 @@
           isPlaying: false,
         })
 
+        async function ensureFFmpegLoaded() {
+          if (typeof FFmpeg !== "undefined") return
+          log("renderMp4: fetching FFmpeg.wasm...")
+          await new Promise((resolve, reject) => {
+            const script = document.createElement("script")
+            script.src = "https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"
+            script.onload = resolve
+            script.onerror = reject
+            document.head.appendChild(script)
+          })
+          log("renderMp4: FFmpeg.wasm ready")
+        }
+
         async function renderSceneToMp4(startFrame, endFrame) {
           log(`renderMp4: startFrame=${startFrame}, endFrame=${endFrame}`)
+
+          await ensureFFmpegLoaded()
 
           if (typeof FFmpeg === "undefined") {
             console.error("[CWP] FFmpeg is not defined. Make sure ffmpeg.min.js is loaded.")
