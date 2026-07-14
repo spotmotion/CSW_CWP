@@ -56,6 +56,17 @@
       let animationFrameId = 0
       let playbackLoopRunning = false
 
+      let speakerName = ""
+      let talkTitle = ""
+
+      function slugifyForFilename(value) {
+        return value
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "")
+      }
+
       function postToParent(message) {
         window.parent.postMessage(message, "*")
       }
@@ -223,6 +234,11 @@
           log("Scene resolution:", SCENE_WIDTH, "x", SCENE_HEIGHT)
         }
 
+        // Seed the export filename fields from the scene's own defaults, in case
+        // Framer never sends a set-attribute for one (e.g. left at its placeholder).
+        speakerName = String(app.getAttribute("string#12", "string") ?? "")
+        talkTitle = String(app.getAttribute("string#14", "string") ?? "")
+
         resizeViewportAndSurface()
         window.addEventListener("resize", resizeViewportAndSurface)
 
@@ -365,10 +381,13 @@
           const out = await ffmpeg.readFile("output.mp4")
           const url = URL.createObjectURL(new Blob([out.buffer], { type: "video/mp4" }))
 
+          const filenameParts = [slugifyForFilename(speakerName), slugifyForFilename(talkTitle)].filter(Boolean)
+          const filename = filenameParts.length ? `${filenameParts.join("_")}.mp4` : "cavalry-recording.mp4"
+
           const a = document.createElement("a")
           a.href = url
-          a.download = "cavalry-recording.mp4"
-          log("renderMp4: downloading...")
+          a.download = filename
+          log("renderMp4: downloading...", filename)
           a.click()
         }
 
@@ -470,6 +489,14 @@
               const attr = path.slice(path.indexOf(".") + 1)
 
               app.setAttribute(nodeId, attr, value)
+
+              if (path === "string#12.string") {
+                speakerName = String(value)
+              }
+
+              if (path === "string#14.string") {
+                talkTitle = String(value)
+              }
 
               if (path === "compNode#1.resolution") {
                 const [w, h] = value
