@@ -58,6 +58,7 @@
 
       let speakerName = ""
       let talkTitle = ""
+      let isRendering = false
 
       function slugifyForFilename(value) {
         return value
@@ -278,6 +279,9 @@
         }
 
         async function renderSceneToMp4(startFrame, endFrame) {
+          if (typeof startFrame !== "number") startFrame = app.getStartFrame()
+          if (typeof endFrame !== "number") endFrame = app.getEndFrame()
+
           log(`renderMp4: startFrame=${startFrame}, endFrame=${endFrame}`)
 
           await ensureFFmpegLoaded()
@@ -394,6 +398,8 @@
           a.download = filename
           log("renderMp4: downloading...", filename)
           a.click()
+
+          postToParent({ type: "render-complete", filename })
         }
 
         log("Registering message listener")
@@ -472,10 +478,21 @@
                   break
 
                 case "renderMp4": {
+                  if (isRendering) {
+                    log("renderMp4: ignoring request, a render is already in progress")
+                    break
+                  }
                   const { startFrame, endFrame } = data
-                  renderSceneToMp4(startFrame, endFrame).catch(err =>
-                    console.error("[CWP] renderMp4 failed", err)
-                  )
+                  isRendering = true
+                  postToParent({ type: "render-start" })
+                  renderSceneToMp4(startFrame, endFrame)
+                    .catch(err => {
+                      console.error("[CWP] renderMp4 failed", err)
+                      postToParent({ type: "render-error", message: err.message })
+                    })
+                    .finally(() => {
+                      isRendering = false
+                    })
                   break
                 }
               }
