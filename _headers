@@ -1,8 +1,7 @@
-/*
-  Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
-
 /wasm-lib/CavalryWasm.wasm
+  Content-Type: application/wasm
+
+/ffmpeg/ffmpeg-core.wasm
   Content-Type: application/wasm
 
 /wasm-lib/CavalryWasm.data

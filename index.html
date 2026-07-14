@@ -241,16 +241,23 @@
           isPlaying: false,
         })
 
-        async function ensureFFmpegLoaded() {
-          if (typeof FFmpeg !== "undefined") return
-          log("renderMp4: fetching FFmpeg.wasm...")
-          await new Promise((resolve, reject) => {
+        function loadScript(src) {
+          return new Promise((resolve, reject) => {
             const script = document.createElement("script")
-            script.src = "https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"
+            script.src = src
             script.onload = resolve
             script.onerror = reject
             document.head.appendChild(script)
           })
+        }
+
+        async function ensureFFmpegLoaded() {
+          if (typeof FFmpegWASM !== "undefined") return
+          log("renderMp4: fetching FFmpeg.wasm...")
+          // Self-hosted rather than pulled from a CDN: the FFmpeg worker script needs to
+          // be same-origin (browsers refuse to construct a Worker from a cross-origin
+          // script URL), and self-hosting also avoids depending on unpkg's uptime.
+          await loadScript("/ffmpeg/ffmpeg.js")
           log("renderMp4: FFmpeg.wasm ready")
         }
 
@@ -259,8 +266,8 @@
 
           await ensureFFmpegLoaded()
 
-          if (typeof FFmpeg === "undefined") {
-            console.error("[CWP] FFmpeg is not defined. Make sure ffmpeg.min.js is loaded.")
+          if (typeof FFmpegWASM === "undefined") {
+            console.error("[CWP] FFmpegWASM is not defined. Make sure ffmpeg.js is loaded.")
             return
           }
 
@@ -277,9 +284,10 @@
             )
           }
 
-          const { createFFmpeg } = FFmpeg
+          const { FFmpeg } = FFmpegWASM
           const fps = app.getFPS()
-          const ffmpeg = createFFmpeg({ log: true })
+          const ffmpeg = new FFmpeg()
+          ffmpeg.on("log", ({ message }) => log("[ffmpeg]", message))
 
           const res = app.getSceneResolution()
           const width = res.width
@@ -334,14 +342,17 @@
           emitFrameUpdate()
 
           log("renderMp4: initializing FFmpeg...")
-          await ffmpeg.load()
+          await ffmpeg.load({
+            coreURL: "/ffmpeg/ffmpeg-core.js",
+            wasmURL: "/ffmpeg/ffmpeg-core.wasm",
+          })
 
           for (const frame of frames) {
-            ffmpeg.FS("writeFile", frame.name, frame.data)
+            await ffmpeg.writeFile(frame.name, frame.data)
           }
 
           log("renderMp4: encoding...")
-          await ffmpeg.run(
+          await ffmpeg.exec([
             "-framerate", String(fps),
             "-i", "frame_%04d.png",
             "-c:v", "libx264",
@@ -349,9 +360,9 @@
             "-crf", "12",
             "-pix_fmt", "yuv444p",
             "output.mp4"
-          )
+          ])
 
-          const out = ffmpeg.FS("readFile", "output.mp4")
+          const out = await ffmpeg.readFile("output.mp4")
           const url = URL.createObjectURL(new Blob([out.buffer], { type: "video/mp4" }))
 
           const a = document.createElement("a")
