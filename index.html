@@ -309,8 +309,21 @@
           const ffmpeg = new FFmpeg()
           ffmpeg.on("log", ({ message }) => log("[ffmpeg]", message))
           ffmpeg.on("progress", ({ progress }) => {
-            const percent = Math.round(Math.min(Math.max(progress, 0), 1) * 100)
+            const clamped = Math.min(Math.max(progress, 0), 1)
+            const percent = Math.round(clamped * 100)
             postToParent({ type: "render-progress", phase: "encode", percent })
+
+            // Purely a visual aid - scrub the on-screen preview across the frame range
+            // in step with encode progress, so it looks like the sequence is playing
+            // through a second time while ffmpeg works, rather than sitting frozen.
+            // Doesn't need to (and doesn't) correspond to the actual frame ffmpeg is
+            // encoding at that moment.
+            if (surface) {
+              const previewFrame = Math.round(startFrame + (endFrame - startFrame) * clamped)
+              app.setFrame(previewFrame)
+              app.render(surface)
+              emitFrameUpdate()
+            }
           })
 
           // Kick off loading the core now, in parallel with frame capture below, instead
@@ -372,6 +385,7 @@
           for (let i = startFrame; i <= endFrame; i++) {
             app.setFrame(i)
             app.render(surface)
+            emitFrameUpdate()
             ctx.drawImage(canvas, 0, 0, width, height)
 
             const blob = await new Promise(resolve => offscreen.toBlob(resolve, "image/png"))
