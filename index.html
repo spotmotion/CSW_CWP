@@ -326,8 +326,16 @@
           })
 
           const res = app.getSceneResolution()
-          const width = res.width
-          const height = res.height
+          // Capture at 2x the scene's native resolution, then downscale to native for
+          // delivery (see the ffmpeg -vf scale filter below). This is genuine
+          // supersampling - sharper anti-aliased edges in the delivered 1x video - not
+          // just a bigger intermediate. Confirmed via profiling that captured PNGs
+          // already contain any softness even at lossless encoding, so the fix has to
+          // happen upstream of ffmpeg, not in its settings.
+          const outputWidth = res.width
+          const outputHeight = res.height
+          const width = res.width * 2
+          const height = res.height * 2
           const frames = []
 
           const offscreen = document.createElement("canvas")
@@ -340,11 +348,11 @@
             return
           }
 
-          // Temporarily resize the existing on-screen canvas/surface to the full scene
-          // resolution for capture, instead of the viewport-fit size it normally runs
-          // at (which would otherwise produce upscaled, blurry frames). A second,
-          // simultaneous WebGL context was tried here first but reliably triggered
-          // CONTEXT_LOST_WEBGL, so we reuse the single existing context instead.
+          // Temporarily resize the existing on-screen canvas/surface to the capture
+          // resolution, instead of the viewport-fit size it normally runs at (which
+          // would otherwise produce upscaled, blurry frames). A second, simultaneous
+          // WebGL context was tried here first but reliably triggered CONTEXT_LOST_WEBGL,
+          // so we reuse the single existing context instead.
           canvas.width = width
           canvas.height = height
           surface = Module.makeWebGLSurfaceFromElement(canvas, width, height)
@@ -379,6 +387,7 @@
           await ffmpeg.exec([
             "-framerate", String(fps),
             "-i", "frame_%04d.png",
+            "-vf", `scale=${outputWidth}:${outputHeight}`,
             "-c:v", "libx264",
             "-preset", "medium",
             "-crf", "10",
