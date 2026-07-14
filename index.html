@@ -296,6 +296,14 @@
             return
           }
 
+          // Render into a canvas sized at the full scene resolution rather than the
+          // on-screen canvas, which is scaled down to fit the viewport and would
+          // otherwise produce upscaled, blurry frames.
+          const captureCanvas = document.createElement("canvas")
+          captureCanvas.width = width
+          captureCanvas.height = height
+          const captureSurface = Module.makeWebGLSurfaceFromElement(captureCanvas, width, height)
+
           app.stop()
           stopPlaybackLoop()
 
@@ -303,8 +311,8 @@
 
           for (let i = startFrame; i <= endFrame; i++) {
             app.setFrame(i)
-            app.render(surface)
-            ctx.drawImage(canvas, 0, 0, width, height)
+            app.render(captureSurface)
+            ctx.drawImage(captureCanvas, 0, 0, width, height)
 
             const imageData = ctx.getImageData(0, 0, width, height)
             const blob = await new Promise(resolve => {
@@ -320,6 +328,9 @@
             const relativeFrame = i - startFrame
             frames.push({ name: `frame_${String(relativeFrame).padStart(4, "0")}.png`, data: buffer })
           }
+
+          if (surface) app.render(surface)
+          emitFrameUpdate()
 
           log("renderMp4: initializing FFmpeg...")
           await ffmpeg.load()
