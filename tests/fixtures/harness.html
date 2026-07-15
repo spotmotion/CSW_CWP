@@ -6,16 +6,12 @@
   </head>
   <body style="margin: 0">
     <!--
-      Starts intentionally undersized to stand in for a Framer embed that hasn't
-      finished sizing the iframe by the time the player boots. resizeIframe() below
-      then simulates the parent's layout settling later, after player-ready.
+      Starts intentionally undersized (or at ?w=&h= if given) to stand in for a
+      Framer embed that hasn't finished sizing the iframe by the time the player
+      boots. resizeIframe() below then simulates the parent's layout settling
+      later, at whatever point the caller chooses.
     -->
-    <iframe
-      id="player"
-      name="player"
-      src="/index.html"
-      style="border: none; display: block; width: 200px; height: 200px"
-    ></iframe>
+    <iframe id="player" name="player" src="/index.html" style="border: none; display: block"></iframe>
     <script>
       window.__messages = []
       window.addEventListener("message", (event) => {
@@ -29,6 +25,9 @@
         iframe.style.width = width + "px"
         iframe.style.height = height + "px"
       }
+
+      const params = new URLSearchParams(location.search)
+      window.resizeIframe(Number(params.get("w")) || 200, Number(params.get("h")) || 200)
     </script>
   </body>
 </html>

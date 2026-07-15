@@ -92,10 +92,31 @@
       // downloading that is a legitimate slow load, not a hang, so this should only fire
       // for genuine stalls (a dropped connection, a promise that never resolves).
       const BOOT_TIMEOUT_MS = 45000
+      let bootComplete = false
       const bootWatchdog = setTimeout(() => {
         console.error("[CWP] Boot timed out after", BOOT_TIMEOUT_MS, "ms")
         showBootError("Cavalry Web Player is taking longer than expected to load.")
       }, BOOT_TIMEOUT_MS)
+
+      // CavalryModule.default()'s internal asset-package loader (see CavalryWasm.js)
+      // fetches CavalryWasm.data via a fire-and-forget async IIFE that isn't awaited
+      // by, or chained into, the promise this script awaits - so a fetch failure
+      // there (a dropped mobile connection, mid-download) never reaches the try/catch
+      // below. It only surfaces as an unhandled rejection, which otherwise left boot
+      // hanging silently until the full BOOT_TIMEOUT_MS watchdog above. Catch it here
+      // to fail fast instead.
+      window.addEventListener("unhandledrejection", (event) => {
+        if (bootComplete) return
+        console.error("[CWP] Unhandled rejection during boot", event.reason)
+        clearTimeout(bootWatchdog)
+        showBootError("Cavalry Web Player failed to start.")
+      })
+      window.addEventListener("error", (event) => {
+        if (bootComplete) return
+        console.error("[CWP] Uncaught error during boot", event.error || event.message)
+        clearTimeout(bootWatchdog)
+        showBootError("Cavalry Web Player failed to start.")
+      })
 
       function emitFrameUpdate() {
         if (!app) return
@@ -316,6 +337,7 @@
           isPlaying: false,
         })
 
+        bootComplete = true
         clearTimeout(bootWatchdog)
 
         function loadScript(src) {
@@ -635,6 +657,7 @@
 
         log("Running ✓")
       } catch (err) {
+        bootComplete = true
         clearTimeout(bootWatchdog)
         console.error("[CWP] Fatal error", err)
         showBootError("Cavalry Web Player failed to start.")

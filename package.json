@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:soak": "playwright test tests/soak.spec.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.0"
