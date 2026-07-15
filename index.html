@@ -224,6 +224,30 @@
         playbackLoopRunning = false
       }
 
+      // CavalryWasm.js's generated loader fetches the ~12MB .wasm and ~500KB .data
+      // with no explicit cache mode (see the fetch() and instantiateStreaming() call
+      // sites there). Browsers - Safari especially has a documented history of this -
+      // can end up serving a stale or partially-written disk-cache entry for a large
+      // streamed response, particularly if an earlier load was interrupted (a fast
+      // reload, a cancelled navigation). `cache: "reload"` forces every request for
+      // our own large/critical assets to bypass any cached response and revalidate
+      // from the network, without disabling caching entirely (unlike "no-store", a
+      // fresh response is still stored for the *next* load). Scoped to same-origin
+      // matching URLs so it doesn't force needless revalidation of third-party
+      // resources (e.g. ffmpeg's core, loaded from unpkg for renderMp4).
+      const originalFetch = window.fetch.bind(window)
+      window.fetch = (input, init) => {
+        const url = typeof input === "string" ? input : input?.url || ""
+        let sameOrigin = false
+        try {
+          sameOrigin = new URL(url, location.href).origin === location.origin
+        } catch {}
+        if (sameOrigin && /\.(wasm|data|cv|ttf)(\?|$)/.test(url)) {
+          return originalFetch(input, { ...init, cache: "reload" })
+        }
+        return originalFetch(input, init)
+      }
+
       try {
         log("Importing CavalryWasm.js")
         const CavalryModule = await import("/CavalryWasm.js")
