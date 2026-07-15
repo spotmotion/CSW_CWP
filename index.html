@@ -72,6 +72,31 @@
         window.parent.postMessage(message, "*")
       }
 
+      // Renders a visible retry state instead of leaving the page permanently blank -
+      // e.g. if a fetch stalls on a flaky mobile connection, or WASM instantiation hangs.
+      function showBootError(message) {
+        postToParent({ type: "player-error", message })
+        document.body.innerHTML = `
+          <div style="padding:16px;font-family:system-ui;color:#c00;text-align:center">
+            <strong>${message}</strong><br/>
+            <button id="cwp-retry" style="margin-top:8px;padding:6px 14px;">Retry</button>
+          </div>
+        `
+        document.getElementById("cwp-retry").addEventListener("click", () => location.reload())
+      }
+
+      // Boot = module import through the player-ready postMessage below. If that chain
+      // hasn't completed within BOOT_TIMEOUT_MS (e.g. a stalled fetch, or WASM
+      // instantiation hanging), surface a retry UI instead of an indefinitely blank canvas.
+      // Generous on purpose: the WASM binary alone is ~12MB, and a slow mobile connection
+      // downloading that is a legitimate slow load, not a hang, so this should only fire
+      // for genuine stalls (a dropped connection, a promise that never resolves).
+      const BOOT_TIMEOUT_MS = 45000
+      const bootWatchdog = setTimeout(() => {
+        console.error("[CWP] Boot timed out after", BOOT_TIMEOUT_MS, "ms")
+        showBootError("Cavalry Web Player is taking longer than expected to load.")
+      }, BOOT_TIMEOUT_MS)
+
       function emitFrameUpdate() {
         if (!app) return
         postToParent({
@@ -189,8 +214,12 @@
         })
 
         const loadedAssets = new Set()
+        // The parent page can fire cavalryAutoLoadAsset before `app` exists below (it
+        // doesn't wait for a ready signal). Queue those events instead of letting them
+        // throw into an unhandled rejection, and drain the queue once app is created.
+        const pendingAssetEvents = []
 
-        window.addEventListener("cavalryAutoLoadAsset", async (event) => {
+        async function handleAutoLoadAsset(event) {
           const { type, assetId, filename } = event.detail
           const key = `${assetId}:${filename}`
           if (loadedAssets.has(key)) {
@@ -199,27 +228,40 @@
           }
           loadedAssets.add(key)
 
-          if (type === "font") {
-            log("Auto-loading font:", filename)
-            const response = await fetch("/" + filename)
-            if (!response.ok) throw new Error(`Failed to fetch font: ${filename}`)
-            const data = await response.arrayBuffer()
-            Module.FS.writeFile(filename, new Uint8Array(data))
-            app.replaceFontAsset(filename, assetId)
-            if (surface) app.render(surface)
-            log("Font loaded:", filename)
-          }
+          try {
+            if (type === "font") {
+              log("Auto-loading font:", filename)
+              const response = await fetch("/" + filename)
+              if (!response.ok) throw new Error(`Failed to fetch font: ${filename}`)
+              const data = await response.arrayBuffer()
+              Module.FS.writeFile(filename, new Uint8Array(data))
+              app.replaceFontAsset(filename, assetId)
+              if (surface) app.render(surface)
+              log("Font loaded:", filename)
+            }
 
-          if (type === "image") {
-            log("Auto-loading image:", filename)
-            const response = await fetch("/" + filename)
-            if (!response.ok) throw new Error(`Failed to fetch image: ${filename}`)
-            const data = await response.arrayBuffer()
-            Module.FS.writeFile(filename, new Uint8Array(data))
-            app.replaceImageAsset(filename, assetId)
-            if (surface) app.render(surface)
-            log("Image loaded:", filename)
+            if (type === "image") {
+              log("Auto-loading image:", filename)
+              const response = await fetch("/" + filename)
+              if (!response.ok) throw new Error(`Failed to fetch image: ${filename}`)
+              const data = await response.arrayBuffer()
+              Module.FS.writeFile(filename, new Uint8Array(data))
+              app.replaceImageAsset(filename, assetId)
+              if (surface) app.render(surface)
+              log("Image loaded:", filename)
+            }
+          } catch (err) {
+            console.error("[CWP] Failed to auto-load asset", filename, err)
           }
+        }
+
+        window.addEventListener("cavalryAutoLoadAsset", (event) => {
+          if (!app) {
+            log("Queueing asset event received before app was ready:", event.detail?.filename)
+            pendingAssetEvents.push(event)
+            return
+          }
+          handleAutoLoadAsset(event)
         })
 
         log("Loading scene: Spot_CSW_Case_Study.cv")
@@ -227,6 +269,13 @@
 
         log("Creating app")
         app = Module.Cavalry.MakeWithPath(sceneFile)
+
+        if (pendingAssetEvents.length) {
+          log(`Processing ${pendingAssetEvents.length} queued asset event(s)`)
+          for (const event of pendingAssetEvents.splice(0)) {
+            handleAutoLoadAsset(event)
+          }
+        }
 
         const res = app.getSceneResolution()
         if (res && res.width > 0 && res.height > 0) {
@@ -241,7 +290,16 @@
         talkTitle = String(app.getAttribute("string#14", "string") ?? "")
 
         resizeViewportAndSurface()
-        window.addEventListener("resize", resizeViewportAndSurface)
+
+        // A native `resize` event only fires for actual window-size changes. When this
+        // player is embedded as a cross-origin iframe (e.g. in Framer), the parent page
+        // can resize the iframe element itself via CSS/layout after this script's first
+        // paint - Safari in particular doesn't reliably propagate that into a `resize`
+        // event on the iframe's own window, which left the canvas locked to a stale,
+        // often too-small size. ResizeObserver fires on any content-box size change of
+        // the observed element regardless of cause, so it catches that case too.
+        const resizeObserver = new ResizeObserver(() => resizeViewportAndSurface())
+        resizeObserver.observe(document.documentElement)
 
         // Start paused on frame 0
         app.setFrame(0)
@@ -257,6 +315,8 @@
           resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
           isPlaying: false,
         })
+
+        clearTimeout(bootWatchdog)
 
         function loadScript(src) {
           return new Promise((resolve, reject) => {
@@ -575,13 +635,9 @@
 
         log("Running ✓")
       } catch (err) {
+        clearTimeout(bootWatchdog)
         console.error("[CWP] Fatal error", err)
-        document.body.innerHTML = `
-          <div style="padding:16px;font-family:system-ui;color:#c00">
-            <strong>Cavalry Web Player failed to start.</strong><br/>
-            Open DevTools → Console for details.
-          </div>
-        `
+        showBootError("Cavalry Web Player failed to start.")
       }
     </script>
   </body>

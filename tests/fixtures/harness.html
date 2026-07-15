@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CWP test harness</title>
+  </head>
+  <body style="margin: 0">
+    <!--
+      Starts intentionally undersized to stand in for a Framer embed that hasn't
+      finished sizing the iframe by the time the player boots. resizeIframe() below
+      then simulates the parent's layout settling later, after player-ready.
+    -->
+    <iframe
+      id="player"
+      name="player"
+      src="/index.html"
+      style="border: none; display: block; width: 200px; height: 200px"
+    ></iframe>
+    <script>
+      window.__messages = []
+      window.addEventListener("message", (event) => {
+        if (event.data && typeof event.data === "object") {
+          window.__messages.push(event.data)
+        }
+      })
+
+      window.resizeIframe = (width, height) => {
+        const iframe = document.getElementById("player")
+        iframe.style.width = width + "px"
+        iframe.style.height = height + "px"
+      }
+    </script>
+  </body>
+</html>
