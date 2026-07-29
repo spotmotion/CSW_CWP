@@ -249,8 +249,21 @@
       }
 
       try {
+        // Importing "/CavalryWasm.js" directly hits a WebKit module-loader bug on
+        // hard refresh: confirmed via `sample` on a hung WebContent process that the
+        // hang is 100% inside JSC's module evaluation machinery (moduleLoaderEvaluate
+        // recursing into itself via MicrotaskQueue::enqueue, no fetch/network frames
+        // at all) - not a caching issue (ruled out; Cache-Control headers made no
+        // difference). Theory: WebKit's per-origin module registry still holds a
+        // stale/in-progress record for that exact URL from the previous document's
+        // teardown, and re-importing the same specifier collides with it. Importing
+        // a fresh Blob URL instead - unique per page load - can never collide with a
+        // prior registry entry for the real path.
         log("Importing CavalryWasm.js")
-        const CavalryModule = await import("/CavalryWasm.js")
+        const cavalrySource = await originalFetch("/CavalryWasm.js", { cache: "reload" }).then((r) => r.text())
+        const cavalryBlobUrl = URL.createObjectURL(new Blob([cavalrySource], { type: "text/javascript" }))
+        const CavalryModule = await import(cavalryBlobUrl)
+        URL.revokeObjectURL(cavalryBlobUrl)
 
         log("Initialising module")
         Module = await CavalryModule.default({
