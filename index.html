@@ -41,7 +41,20 @@
       <canvas id="canvas"></canvas>
     </div>
 
-    <script type="module">
+    <script>
+      // Classic script, not type="module": a live hard-refresh repro + `sample` on the
+      // hung WebContent process showed the hang is WebKit's own module-loader recursing
+      // on itself while evaluating a module script (moduleLoaderEvaluate calling back
+      // into itself via MicrotaskQueue::enqueue, no fetch/network frames involved) -
+      // and it reproduced identically even after importing CavalryWasm.js from a
+      // guaranteed-unique Blob URL, which rules out the *dynamically imported* module
+      // as the trigger. That leaves this script itself: as a `type="module"` script it
+      // participates in the same module registry/evaluation pipeline, so a hard refresh
+      // may be re-entering evaluation of a stale record for *this* script. Dynamic
+      // `import()` doesn't require its calling script to be a module, so dropping
+      // `type="module"` removes this script from that pipeline entirely; the async IIFE
+      // below replaces the top-level `await` that module scripts allow but classic
+      // scripts don't.
       const log = (...args) => console.log("[CWP]", ...args)
 
       const canvas = document.getElementById("canvas")
@@ -248,22 +261,10 @@
         return originalFetch(input, init)
       }
 
+      ;(async () => {
       try {
-        // Importing "/CavalryWasm.js" directly hits a WebKit module-loader bug on
-        // hard refresh: confirmed via `sample` on a hung WebContent process that the
-        // hang is 100% inside JSC's module evaluation machinery (moduleLoaderEvaluate
-        // recursing into itself via MicrotaskQueue::enqueue, no fetch/network frames
-        // at all) - not a caching issue (ruled out; Cache-Control headers made no
-        // difference). Theory: WebKit's per-origin module registry still holds a
-        // stale/in-progress record for that exact URL from the previous document's
-        // teardown, and re-importing the same specifier collides with it. Importing
-        // a fresh Blob URL instead - unique per page load - can never collide with a
-        // prior registry entry for the real path.
         log("Importing CavalryWasm.js")
-        const cavalrySource = await originalFetch("/CavalryWasm.js", { cache: "reload" }).then((r) => r.text())
-        const cavalryBlobUrl = URL.createObjectURL(new Blob([cavalrySource], { type: "text/javascript" }))
-        const CavalryModule = await import(cavalryBlobUrl)
-        URL.revokeObjectURL(cavalryBlobUrl)
+        const CavalryModule = await import("/CavalryWasm.js")
 
         log("Initialising module")
         Module = await CavalryModule.default({
@@ -699,6 +700,7 @@
         console.error("[CWP] Fatal error", err)
         showBootError("Cavalry Web Player failed to start.")
       }
+      })()
     </script>
   </body>
 </html>
