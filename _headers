@@ -1,8 +1,17 @@
+/CavalryWasm.js
+  Cache-Control: no-cache
+
 /wasm-lib/CavalryWasm.wasm
   Content-Type: application/wasm
+  Cache-Control: no-cache
 
 /wasm-lib/CavalryWasm.data
   Cross-Origin-Resource-Policy: cross-origin
+  Cache-Control: no-cache
 
 /scenes/*.cv
   Cross-Origin-Resource-Policy: cross-origin
+  Cache-Control: no-cache
+
+/*.ttf
+  Cache-Control: no-cache
