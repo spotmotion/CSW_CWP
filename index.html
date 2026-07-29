@@ -497,6 +497,22 @@
           app.stop()
           stopPlaybackLoop()
 
+          // makeWebGLSurfaceFromElement just above hands back a brand-new surface, and
+          // its first few render() calls don't actually reach the canvas yet - confirmed
+          // by screenshotting each captured frame during a live Chrome export: frames 0-2
+          // came back solid white (no draw at all) while later frames were correct, and
+          // the very first canvas.toBlob() call (whichever frame it lands on) absorbed a
+          // multi-second stall, consistent with deferred GPU work (shader compiles,
+          // texture uploads) only actually flushing once something forces a readback.
+          // A handful of cheap throwaway renders here forces that flush up front instead
+          // of on a real captured frame, fixing both the dropped-elements-on-export bug
+          // and the one-time stall (measured: ~9s stall on frame 0 down to a normal ~30ms
+          // once primed here).
+          app.setFrame(startFrame)
+          for (let priming = 0; priming < 5; priming++) {
+            app.render(surface)
+          }
+
           log("renderMp4: capturing frames...")
 
           const totalFrames = endFrame - startFrame + 1
