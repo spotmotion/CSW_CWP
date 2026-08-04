@@ -561,8 +561,8 @@
           const out = await ffmpeg.readFile("output.mp4")
           const url = URL.createObjectURL(new Blob([out.buffer], { type: "video/mp4" }))
 
-          const filenameParts = [slugifyForFilename(speakerName), slugifyForFilename(talkTitle)].filter(Boolean)
-          const filename = filenameParts.length ? `${filenameParts.join("_")}.mp4` : "cavalry-recording.mp4"
+          const slugSpeaker = slugifyForFilename(speakerName)
+          const filename = slugSpeaker ? `spotmotion_${slugSpeaker}.mp4` : "spotmotion_motiontoolkitexport.mp4"
 
           const a = document.createElement("a")
           a.href = url
